@@ -1,6 +1,6 @@
-import React from "react";
-import { ContactFormFinalPageContainer } from "./ContactFormFinalPage.styles";
-import { ContactFormFinalPageProps } from "./ContactFormFinalPage.types";
+import React from 'react';
+import { ContactFormFinalPageContainer } from './ContactFormFinalPage.styles';
+import { ContactFormFinalPageProps } from './ContactFormFinalPage.types';
 
 const ContactFormFinalPage: React.FC<ContactFormFinalPageProps> = ({
     succesMessage,

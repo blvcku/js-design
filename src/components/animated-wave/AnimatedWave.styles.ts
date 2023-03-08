@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { AnimatedWaveContainerProps } from "./AnimatedWave.types";
+import styled from 'styled-components';
+import { AnimatedWaveContainerProps } from './AnimatedWave.types';
 
 export const AnimatedWaveContainer = styled.div<AnimatedWaveContainerProps>`
     ${({ animate }) =>

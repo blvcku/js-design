@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ProgressBarContainerProps } from "./ProgressBar.types";
+import styled from 'styled-components';
+import { ProgressBarContainerProps } from './ProgressBar.types';
 
 export const ProgressBarWrapper = styled.div`
     --horizontal-padding: 14%;
@@ -23,7 +23,7 @@ export const ProgressBarContainer = styled.span<ProgressBarContainerProps>`
     z-index: -1;
     overflow: hidden;
     &::before {
-        content: "";
+        content: '';
         position: absolute;
         width: 100%;
         height: 100%;
@@ -36,27 +36,27 @@ export const ProgressBarContainer = styled.span<ProgressBarContainerProps>`
                 ${({ currentPage, numberOfPages }) => {
                     // First page
                     if (!currentPage)
-                        return "var(--indicator-width) / 2 + var(--horizontal-padding)";
+                        return 'var(--indicator-width) / 2 + var(--horizontal-padding)';
                     // Last page
-                    if (currentPage === numberOfPages) return "100%";
+                    if (currentPage === numberOfPages) return '100%';
                     // Pages in between
                     const transformMultiplier =
                         currentPage / (numberOfPages - 1);
                     const beforeLastStep = currentPage === numberOfPages - 1;
                     return `
-                    ${/* Get width of the bar without sides */ ""}
+                    ${/* Get width of the bar without sides */ ''}
                     (100% - 2 * var(--horizontal-padding))
                     ${
                         /* Get percentage that should be displayed by
-                    multiplying - cannot use x% because of css calc limitations */ ""
+                    multiplying - cannot use x% because of css calc limitations */ ''
                     }
                     * ${transformMultiplier}
-                    ${/* Add part that is before first step */ ""} 
+                    ${/* Add part that is before first step */ ''} 
                     + var(--horizontal-padding)
                     ${
-                        /* Prevent the bar from sticking out on the right side */ ""
+                        /* Prevent the bar from sticking out on the right side */ ''
                     }
-                    ${beforeLastStep ? "- var(--indicator-width) / 2" : ""} 
+                    ${beforeLastStep ? '- var(--indicator-width) / 2' : ''} 
                 `;
                 }}
             )

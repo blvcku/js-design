@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ButtonContainerProps } from "./Button.types";
+import styled from 'styled-components';
+import { ButtonContainerProps } from './Button.types';
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
     --padding-vertical: 0.7rem;
@@ -29,18 +29,18 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
         height: var(--icon-height);
         width: auto;
     }
-    svg[data-loading-wheel="true"] {
+    svg[data-loading-wheel='true'] {
         display: none;
         position: absolute;
         height: calc(2 * var(--font-size));
     }
     &:disabled {
-        svg[data-loading-wheel="true"] {
+        svg[data-loading-wheel='true'] {
             display: block;
         }
         &::before {
             transition: background 0.3s ease;
-            content: "";
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;

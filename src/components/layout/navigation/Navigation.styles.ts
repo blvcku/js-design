@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { NavigationExpandableContentProps } from "./Navigation.types";
+import styled from 'styled-components';
+import { NavigationExpandableContentProps } from './Navigation.types';
 
 export const NavigationContainer = styled.div`
     display: flex;

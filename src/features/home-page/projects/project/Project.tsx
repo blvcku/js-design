@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { ProjectProps } from "./Project.types";
-import { ProjectContainer } from "./Project.styles";
+import React from 'react';
+import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { ProjectProps } from './Project.types';
+import { ProjectContainer } from './Project.styles';
 
 const Project: React.FC<ProjectProps> = ({ slug, title, thumb }) => {
     const image = getImage(thumb);

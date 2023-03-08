@@ -1,5 +1,5 @@
-import { ContactFormField } from "./contact-form-field/ContactFormField.types";
-import { ContactFormFinalPageMessages } from "./contact-form-final-page/ContactFormFinalPage.types";
+import { ContactFormField } from './contact-form-field/ContactFormField.types';
+import { ContactFormFinalPageMessages } from './contact-form-final-page/ContactFormFinalPage.types';
 
 export type ContactFormFields<MessageFields> = Array<
     Array<ContactFormField<MessageFields>>

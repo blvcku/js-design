@@ -1,6 +1,6 @@
-import React from "react";
-import { NavButtonContainer } from "./NavButton.styles";
-import { NavButtonProps } from "./NavButton.types";
+import React from 'react';
+import { NavButtonContainer } from './NavButton.styles';
+import { NavButtonProps } from './NavButton.types';
 
 const NavButton: React.FC<NavButtonProps> = (props) => {
     const { children, active, onClick, ...buttonProps } = props;

@@ -1,5 +1,5 @@
-import { GatsbyConfig } from "gatsby";
-require("dotenv").config({
+import { GatsbyConfig } from 'gatsby';
+require('dotenv').config({
     path: `.env.${process.env.NODE_ENV}`,
 });
 
@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
     graphqlTypegen: true,
     plugins: [
         {
-            resolve: "gatsby-source-contentful",
+            resolve: 'gatsby-source-contentful',
             options: {
                 accessToken: process.env.CONTENTFUL_API_KEY,
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -44,21 +44,21 @@ const config: GatsbyConfig = {
                 rule: {
                     include: /\.inline\.svg$/,
                     omitKeys: [
-                        "xmlnsDc",
-                        "xmlnsCc",
-                        "xmlnsRdf",
-                        "xmlnsSvg",
-                        "xmlnsSodipodi",
-                        "xmlnsInkscape",
+                        'xmlnsDc',
+                        'xmlnsCc',
+                        'xmlnsRdf',
+                        'xmlnsSvg',
+                        'xmlnsSodipodi',
+                        'xmlnsInkscape',
                     ],
                 },
             },
         },
-        "gatsby-plugin-image",
-        "gatsby-plugin-sharp",
-        "gatsby-transformer-sharp",
-        "gatsby-plugin-styled-components",
-        "gatsby-plugin-anchor-links",
+        'gatsby-plugin-image',
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
+        'gatsby-plugin-styled-components',
+        'gatsby-plugin-anchor-links',
     ],
 };
 

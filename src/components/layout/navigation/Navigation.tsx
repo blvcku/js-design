@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import Logo from "../../../assets/icons/Logo.inline.svg";
-import LogoThick from "../../../assets/icons/LogoThick.inline.svg";
-import NavigationHamburger from "./navigation-hamburger/NavigationHamburger";
-import NavigationCollapseButton from "./navigation-collapse-button/NavigationCollapseButton";
+import React, { useState } from 'react';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import Logo from '../../../assets/icons/Logo.inline.svg';
+import LogoThick from '../../../assets/icons/LogoThick.inline.svg';
+import NavigationHamburger from './navigation-hamburger/NavigationHamburger';
+import NavigationCollapseButton from './navigation-collapse-button/NavigationCollapseButton';
 import {
     NavigationContainer,
     NavigationLogoContainer,
     NavigationExpandableContent,
     NavigationLinksContainer,
     NavigationLinkWrapper,
-} from "./Navigation.styles";
-import { NavigationLinks } from "./Navigation.types";
+} from './Navigation.styles';
+import { NavigationLinks } from './Navigation.types';
 
 const navigationLinks: NavigationLinks = [
     {
-        name: "Contact",
-        to: "/#contact",
+        name: 'Contact',
+        to: '/#contact',
     },
     {
-        name: "Projects",
-        to: "/#projects",
+        name: 'Projects',
+        to: '/#projects',
     },
     {
-        name: "Home Page",
-        to: "/",
+        name: 'Home Page',
+        to: '/',
     },
 ];
 

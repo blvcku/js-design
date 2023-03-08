@@ -1,7 +1,7 @@
-import React from "react";
-import ProfessionalServiceIcon from "../../../../assets/icons/ProfessionalService.inline.svg";
-import QuickCompletitionTimeIcon from "../../../../assets/icons/QuickCompletitionTime.inline.svg";
-import { AboutBadgesContainer, AboutBadge } from "./AboutBadges.styles";
+import React from 'react';
+import ProfessionalServiceIcon from '../../../../assets/icons/ProfessionalService.inline.svg';
+import QuickCompletitionTimeIcon from '../../../../assets/icons/QuickCompletitionTime.inline.svg';
+import { AboutBadgesContainer, AboutBadge } from './AboutBadges.styles';
 
 const AboutBadges: React.FC = () => {
     return (

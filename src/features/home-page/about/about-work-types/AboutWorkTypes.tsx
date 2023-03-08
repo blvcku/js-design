@@ -1,12 +1,12 @@
-import React from "react";
-import UiDesignIcon from "../../../../assets/icons/UiDesign.inline.svg";
-import BannersIcon from "../../../../assets/icons/Banners.inline.svg";
-import LogoIcon from "../../../../assets/icons/LogoIcon.inline.svg";
+import React from 'react';
+import UiDesignIcon from '../../../../assets/icons/UiDesign.inline.svg';
+import BannersIcon from '../../../../assets/icons/Banners.inline.svg';
+import LogoIcon from '../../../../assets/icons/LogoIcon.inline.svg';
 import {
     AboutWorkTypesContainer,
     AboutWorkTypesList,
     AboutWorkType,
-} from "./AboutWorkTypes.styles";
+} from './AboutWorkTypes.styles';
 
 const AboutWorkTypes: React.FC = () => {
     return (

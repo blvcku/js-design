@@ -1,4 +1,4 @@
-import { ProjectProps } from "./project/Project.types";
+import { ProjectProps } from './project/Project.types';
 
 export interface ProjectsProps {
     projectsList: Array<ProjectProps>;

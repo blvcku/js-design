@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import { ContactFormContainer } from "./ContactForm.styles";
-import { ContactFormProps, ContactFormAnswers } from "./ContactForm.types";
-import { ContactFormFieldChangeEvent } from "./contact-form-field/ContactFormField.types";
-import ProgressBar from "../../../../components/progress-bar/ProgressBar";
-import ContactFormButtons from "./contact-form-buttons/ContactFormButtons";
-import ContactFormField from "./contact-form-field/ContactFormField";
-import ContactFormFinalPage from "./contact-form-final-page/ContactFormFinalPage";
+import React, { useState, useRef } from 'react';
+import { ContactFormContainer } from './ContactForm.styles';
+import { ContactFormProps, ContactFormAnswers } from './ContactForm.types';
+import { ContactFormFieldChangeEvent } from './contact-form-field/ContactFormField.types';
+import ProgressBar from '../../../../components/progress-bar/ProgressBar';
+import ContactFormButtons from './contact-form-buttons/ContactFormButtons';
+import ContactFormField from './contact-form-field/ContactFormField';
+import ContactFormFinalPage from './contact-form-final-page/ContactFormFinalPage';
 
 const ContactForm = <MessageFields extends ContactFormAnswers>({
     succesMessage,
@@ -21,7 +21,7 @@ const ContactForm = <MessageFields extends ContactFormAnswers>({
         fields.reduce(
             (acc, fieldsPage) => (
                 fieldsPage.forEach(
-                    ({ name }) => (acc = { ...acc, [name]: "" })
+                    ({ name }) => (acc = { ...acc, [name]: '' })
                 ),
                 acc
             ),

@@ -1,10 +1,10 @@
-import React from "react";
-import { ButtonContainer } from "./Button.styles";
+import React from 'react';
+import { ButtonContainer } from './Button.styles';
 import {
     ButtonProps,
     ButtonSizeVariants,
     ButtonColorVariants,
-} from "./Button.types";
+} from './Button.types';
 
 const Button: React.FC<ButtonProps> = (props) => {
     const {

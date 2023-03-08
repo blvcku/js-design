@@ -1,16 +1,16 @@
-import React from "react";
-import FirstWave from "../../../assets/images/Wave1.inline.svg";
-import SecondWave from "../../../assets/images/Wave2.inline.svg";
-import Logo from "../../../assets/icons/Logo.inline.svg";
-import AboutBadges from "./about-badges/AboutBadges";
-import AboutWorkTypes from "./about-work-types/AboutWorkTypes";
+import React from 'react';
+import FirstWave from '../../../assets/images/Wave1.inline.svg';
+import SecondWave from '../../../assets/images/Wave2.inline.svg';
+import Logo from '../../../assets/icons/Logo.inline.svg';
+import AboutBadges from './about-badges/AboutBadges';
+import AboutWorkTypes from './about-work-types/AboutWorkTypes';
 import {
     AboutContainer,
     AboutContentContainer,
     AboutWaveContainer,
     AboutAnimatedWaveContainer,
     AboutLogoContainer,
-} from "./About.styles";
+} from './About.styles';
 
 const About: React.FC = () => {
     return (

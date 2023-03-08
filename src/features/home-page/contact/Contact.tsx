@@ -1,28 +1,28 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { ContactContainer } from "./Contact.styles";
-import ContactForm from "./contact-form/ContactForm";
-import { ContactFormFields } from "./contact-form/ContactForm.types";
-import { ContactFormFieldVariants } from "./contact-form/contact-form-field/ContactFormField.types";
-import { sendMessage } from "./Contact.service";
-import { ContactMessage } from "./Contact.types";
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import { ContactContainer } from './Contact.styles';
+import ContactForm from './contact-form/ContactForm';
+import { ContactFormFields } from './contact-form/ContactForm.types';
+import { ContactFormFieldVariants } from './contact-form/contact-form-field/ContactFormField.types';
+import { sendMessage } from './Contact.service';
+import { ContactMessage } from './Contact.types';
 
 const fields: ContactFormFields<ContactMessage> = [
     [
         {
-            name: "name",
-            type: "text",
-            placeholder: "Your Name...",
-            errorMessage: "This field is required!",
+            name: 'name',
+            type: 'text',
+            placeholder: 'Your Name...',
+            errorMessage: 'This field is required!',
             required: true,
             maxLength: 100,
             as: ContactFormFieldVariants.input,
         },
         {
-            name: "email",
-            type: "email",
-            placeholder: "Your Email...",
-            errorMessage: "Please, enter a valid email address!",
+            name: 'email',
+            type: 'email',
+            placeholder: 'Your Email...',
+            errorMessage: 'Please, enter a valid email address!',
             required: true,
             maxLength: 100,
             as: ContactFormFieldVariants.input,
@@ -30,9 +30,9 @@ const fields: ContactFormFields<ContactMessage> = [
     ],
     [
         {
-            name: "message",
-            placeholder: "Your Text...",
-            errorMessage: "This field is required!",
+            name: 'message',
+            placeholder: 'Your Text...',
+            errorMessage: 'This field is required!',
             required: true,
             maxLength: 1000,
             as: ContactFormFieldVariants.textarea,

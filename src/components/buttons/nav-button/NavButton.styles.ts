@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { NavButtonContainerProps } from "./NavButton.types";
+import styled from 'styled-components';
+import { NavButtonContainerProps } from './NavButton.types';
 
 export const NavButtonContainer = styled.button<NavButtonContainerProps>`
     --indicator-size: 0.5rem;
@@ -15,7 +15,7 @@ export const NavButtonContainer = styled.button<NavButtonContainerProps>`
     background: none;
     border: none;
     transition: font-weight 0.1s ease;
-    span[data-active-indicator="true"] {
+    span[data-active-indicator='true'] {
         width: var(--indicator-size);
         height: auto;
         aspect-ratio: 1/1;

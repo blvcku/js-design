@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProjectsContainer = styled.section`
     padding-inline: 1rem;
@@ -57,7 +57,7 @@ export const ProjectsList = styled.ul`
     &:empty {
         aspect-ratio: var(--grid-columns) / 1;
         &::before {
-            content: "No projects in this category yet!";
+            content: 'No projects in this category yet!';
             position: absolute;
             width: 100%;
             left: 50%;

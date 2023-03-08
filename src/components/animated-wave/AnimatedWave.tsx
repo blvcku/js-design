@@ -1,7 +1,7 @@
-import React from "react";
-import Logo from "../../assets/icons/Logo.inline.svg";
-import { AnimatedWaveContainer } from "./AnimatedWave.styles";
-import { AnimatedWaveProps } from "./AnimatedWave.types";
+import React from 'react';
+import Logo from '../../assets/icons/Logo.inline.svg';
+import { AnimatedWaveContainer } from './AnimatedWave.styles';
+import { AnimatedWaveProps } from './AnimatedWave.types';
 
 const AnimatedWave: React.FC<AnimatedWaveProps> = ({
     animate,

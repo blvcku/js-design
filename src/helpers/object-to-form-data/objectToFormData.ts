@@ -1,4 +1,4 @@
-import { DataObject } from "./objectToFormData.types";
+import { DataObject } from './objectToFormData.types';
 
 const objectToFormData = <T extends DataObject>(object: T) =>
     Object.keys(object).reduce((formData, key) => {

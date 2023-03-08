@@ -1,7 +1,7 @@
-import React from "react";
-import Img from "../../assets/images/Header.png";
-import useSiteMetadata from "../../hooks/useSiteMetadata";
-import { SEOProps, SEOPageTypes } from "./SEO.types";
+import React from 'react';
+import Img from '../../assets/images/Header.png';
+import useSiteMetadata from '../../hooks/useSiteMetadata';
+import { SEOProps, SEOPageTypes } from './SEO.types';
 
 const SEO: React.FC<SEOProps> = (props) => {
     const {

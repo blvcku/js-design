@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
     ProgressBarWrapper,
     ProgressBarContainer,
     ProgressBarIndicatorsContainer,
     ProgressBarIndicator,
-} from "./ProgressBar.styles";
-import { ProgressBarProps } from "./ProgressBar.types";
+} from './ProgressBar.styles';
+import { ProgressBarProps } from './ProgressBar.types';
 
 const ProgressBar: React.FC<ProgressBarProps> = ({
     currentPage,
@@ -22,7 +22,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
             <ProgressBarIndicatorsContainer>
                 {steps.map((step) => (
                     <ProgressBarIndicator
-                        aria-current={currentPage === step ? "step" : false}
+                        aria-current={currentPage === step ? 'step' : false}
                         key={step}
                     >
                         {step + 1}

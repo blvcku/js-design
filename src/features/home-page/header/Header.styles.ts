@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
     padding-inline: 1rem;
@@ -41,8 +41,8 @@ export const HeaderContentContainer = styled.div`
         display: grid;
         grid-template-columns: auto 1fr auto;
         grid-template-areas:
-            "h1 img socials"
-            "h2 img h3";
+            'h1 img socials'
+            'h2 img h3';
         h1,
         h2,
         h3 {

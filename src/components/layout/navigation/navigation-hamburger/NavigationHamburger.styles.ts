@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const NavigationHamburgerContainer = styled.button`
     border: 3px solid var(--color-tertiary-100);

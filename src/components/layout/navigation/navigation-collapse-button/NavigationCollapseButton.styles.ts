@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const NavigationCollapseButtonContainer = styled.button`
     width: 2.2rem;

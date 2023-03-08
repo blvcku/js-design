@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
     ProjectsContainer,
     ProjectsHeadContainer,
     ProjectsList,
-} from "./Projects.styles";
-import NavButton from "../../../components/buttons/nav-button/NavButton";
-import Project from "./project/Project";
-import { ProjectsProps } from "./Projects.types";
-import { ProjectCategories } from "./project/Project.types";
+} from './Projects.styles';
+import NavButton from '../../../components/buttons/nav-button/NavButton';
+import Project from './project/Project';
+import { ProjectsProps } from './Projects.types';
+import { ProjectCategories } from './project/Project.types';
 
 const Projects: React.FC<ProjectsProps> = ({ projectsList }) => {
     const [activeCategory, setActiveCategory] = useState(

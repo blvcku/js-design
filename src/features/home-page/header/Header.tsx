@@ -1,11 +1,11 @@
-import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import HeaderLinks from "./header-links/HeaderLinks";
+import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import HeaderLinks from './header-links/HeaderLinks';
 import {
     HeaderContainer,
     HeaderContentContainer,
     HeaderImageWrapper,
-} from "./Header.styles";
+} from './Header.styles';
 
 const Header: React.FC = () => {
     return (

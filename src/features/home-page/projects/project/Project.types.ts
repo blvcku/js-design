@@ -1,9 +1,9 @@
-import { IGatsbyImageData } from "gatsby-plugin-image";
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
 export enum ProjectCategories {
-    logo = "logo",
-    uiDesign = "ui-design",
-    other = "other",
+    logo = 'logo',
+    uiDesign = 'ui-design',
+    other = 'other',
 }
 
 export interface ProjectProps {
