@@ -35,7 +35,11 @@ export const AboutWaveContainer = styled.div`
     }
 `;
 
-export const AboutAnimatedWaveContainer = styled.div``;
+export const AboutAnimatedWaveContainer = styled.div`
+    & > svg {
+        color:var(--color-secondary-100);
+    }
+`;
 
 export const AboutLogoContainer = styled.div`
     position: absolute;

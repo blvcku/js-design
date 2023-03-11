@@ -32,7 +32,7 @@ const SEO: React.FC<SEOProps> = (props) => {
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <meta name="theme-color" content="#EBF2F2" />
+            <meta name="theme-color" content="var(--color-primary-200)" />
             <meta name="color-scheme" content="light" />
             <meta property="og:title" content={title} />
             <meta property="og:type" content={type} />
