@@ -1,27 +1,11 @@
 import { GatsbyConfig } from 'gatsby';
+import siteMetadata from './src/config/siteMetadata.config';
 require('dotenv').config({
     path: `.env.${process.env.NODE_ENV}`,
 });
 
 const config: GatsbyConfig = {
-    siteMetadata: {
-        title: `JS Design`,
-        siteURL: `https://www.yourdomain.tld`,
-        description: `Description`,
-        keywords: `key, words`,
-        facebook: {
-            url: `https://www.facebook.com/jacek.szczypior.77`,
-            name: `Jacek Szczypior`,
-        },
-        instagram: {
-            url: `https://www.instagram.com/js_designofficial/`,
-            name: `Jacek 004`,
-        },
-        behance: {
-            url: `https://www.behance.net/JSDsg`,
-            name: `JSDsgn`,
-        },
-    },
+    siteMetadata: siteMetadata,
     graphqlTypegen: true,
     plugins: [
         {

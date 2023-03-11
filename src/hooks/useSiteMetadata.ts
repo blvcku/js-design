@@ -1,31 +1,8 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-interface SiteMetadataProps {
-    site: {
-        siteMetadata: {
-            title: string;
-            description: string;
-            keywords: string;
-            siteURL: string;
-            facebook: {
-                url: string;
-                name: string;
-            };
-            instagram: {
-                url: string;
-                name: string;
-            };
-            behance: {
-                url: string;
-                name: string;
-            };
-        };
-    };
-}
-
 const useSiteMetadata = () => {
-    const { site } = useStaticQuery<SiteMetadataProps>(graphql`
-        query SiteMetaData {
+    const { site } = useStaticQuery<Queries.SiteMetadataQuery>(graphql`
+        query SiteMetadata {
             site {
                 siteMetadata {
                     title
@@ -48,7 +25,7 @@ const useSiteMetadata = () => {
             }
         }
     `);
-
+    if (!site) throw new Error('Site metadata not found');
     return site.siteMetadata;
 };
 

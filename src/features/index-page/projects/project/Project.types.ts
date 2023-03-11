@@ -7,8 +7,10 @@ export enum ProjectCategories {
 }
 
 export interface ProjectProps {
-    category?: ProjectCategories;
-    slug?: string;
-    title?: string;
-    thumb?: IGatsbyImageData;
+    category: ProjectCategories;
+    slug: string;
+    title: string;
+    thumb: {
+        gatsbyImageData: IGatsbyImageData;
+    };
 }

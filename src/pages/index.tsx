@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
 import SEO from '../components/seo/SEO';
-import Header from '../features/home-page/header/Header';
-import About from '../features/home-page/about/About';
-import Contact from '../features/home-page/contact/Contact';
-import Projects from '../features/home-page/projects/Projects';
-import { ProjectsProps } from '../features/home-page/projects/Projects.types';
+import Header from '../features/index-page/header/Header';
+import About from '../features/index-page/about/About';
+import Contact from '../features/index-page/contact/Contact';
+import Projects from '../features/index-page/projects/Projects';
+import { ProjectsProps } from '../features/index-page/projects/Projects.types';
 
 type QueryData = {
     allContentfulProjects: ProjectsProps;
