@@ -51,8 +51,8 @@ const Navigation: React.FC = () => {
                 <NavigationExpandableContent expanded={expanded}>
                     <NavigationCollapseButton handleCollapse={handleCollapse} />
                     <NavigationLinksContainer>
-                        {navigationLinks.map(({ name, to }, index) => (
-                            <NavigationLinkWrapper key={index}>
+                        {navigationLinks.map(({ name, to }) => (
+                            <NavigationLinkWrapper key={name}>
                                 <AnchorLink to={to}>{name}</AnchorLink>
                             </NavigationLinkWrapper>
                         ))}

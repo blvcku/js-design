@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import HeaderLinks from './header-links/HeaderLinks';
+import HeaderSocialLinks from './header-social-links/HeaderSocialLinks';
 import {
     HeaderContainer,
     HeaderContentContainer,
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                 <h3>
                     JS <span>Design</span>
                 </h3>
-                <HeaderLinks />
+                <HeaderSocialLinks />
             </HeaderContentContainer>
         </HeaderContainer>
     );

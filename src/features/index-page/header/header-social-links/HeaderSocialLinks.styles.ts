@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderLinksContainer = styled.ul`
+export const HeaderSocialLinksContainer = styled.ul`
     margin-top: 8rem;
     grid-area: socials;
     display: none;
@@ -13,7 +13,7 @@ export const HeaderLinksContainer = styled.ul`
         display: block;
         color: var(--color-secondary-300);
     }
-    @media (min-width: 1000px) {
+    @media (min-width: 1050px) {
         display: flex;
     }
 `;

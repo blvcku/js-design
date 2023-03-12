@@ -1,9 +1,9 @@
 import React from 'react';
-import GlobalLayout from './src/components/layout/global-layout/GlobalLayout';
+import Layout from './src/components/layout/layout/Layout';
 import { GatsbyBrowser } from 'gatsby';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
     element,
 }) => {
-    return <GlobalLayout>{element}</GlobalLayout>;
+    return <Layout>{element}</Layout>;
 };

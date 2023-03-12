@@ -9,7 +9,7 @@ export const AboutBadgesContainer = styled.ul`
     gap: 2rem;
     flex-direction: row;
     align-items: stretch;
-    @media (min-width: 940px) {
+    @media (min-width: 1050px) {
         display: flex;
     }
 `;

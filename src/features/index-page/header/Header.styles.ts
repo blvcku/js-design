@@ -37,7 +37,7 @@ export const HeaderContentContainer = styled.div`
         order: 2;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1050px) {
         display: grid;
         grid-template-columns: auto 1fr auto;
         grid-template-areas:
@@ -54,17 +54,10 @@ export const HeaderContentContainer = styled.div`
         h2,
         h3 {
             align-self: end;
-            margin-bottom: 2rem;
+            margin-bottom: 6rem;
         }
         h1 {
             margin-top: 8rem;
-        }
-    }
-
-    @media (min-width: 1050px) {
-        h2,
-        h3 {
-            margin-bottom: 6rem;
         }
     }
 `;
@@ -73,7 +66,7 @@ export const HeaderImageWrapper = styled.div`
     grid-area: img;
     order: 1;
     margin-top: 2.5rem;
-    @media (min-width: 1000px) {
+    @media (min-width: 1050px) {
         margin-top: 0;
     }
 `;

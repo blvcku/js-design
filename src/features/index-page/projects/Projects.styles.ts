@@ -34,7 +34,7 @@ export const ProjectsHeadContainer = styled.div`
             text-align: start;
         }
     }
-    @media (min-width: 900px) {
+    @media (min-width: 1050px) {
         nav {
             column-gap: 5rem;
         }
@@ -67,7 +67,7 @@ export const ProjectsList = styled.ul`
             font-size: var(--fs-md);
         }
     }
-    @media (min-width: 450px) {
+    @media (min-width: 500px) {
         padding-inline: 0;
         --margin-top: 2rem;
         --grid-columns: 2;

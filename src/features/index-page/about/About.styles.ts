@@ -5,7 +5,7 @@ export const AboutContainer = styled.section``;
 export const AboutContentContainer = styled.div`
     background: var(--color-secondary-100);
     color: var(--color-primary-200);
-    padding: max(8vw, 3rem) 1rem;
+    padding: max(10vw, 3.5rem) 1rem;
     & > p {
         font-weight: 500;
         font-size: var(--fs-lg);
@@ -21,15 +21,14 @@ export const AboutContentContainer = styled.div`
             }
         }
     }
-    @media (min-width: 1921px) {
-        padding: 6vw;
+    @media(min-width:1600px){
+        padding: max(6vw, 9.5rem) 1rem;
     }
 `;
 
 export const AboutWaveContainer = styled.div`
     position: relative;
     & > svg {
-        width: 100%;
         color: var(--color-secondary-100);
         display: block;
     }
@@ -56,13 +55,25 @@ export const AboutLogoContainer = styled.div`
     & > svg {
         width: 5.5vw;
         height: auto;
-        min-width: 3.5rem;
+        min-width: 3rem;
         color: var(--color-secondary-200);
     }
-    @media (min-width: 450px) {
+    @media (min-width: 500px) {
         bottom: -3vw;
+        padding:3vw;
+        & > svg{
+            width:10vw;
+        }
     }
-    @media (min-width: 900px) {
+    @media (min-width: 1050px) {
         padding: 2vw;
+        & > svg{
+            width:7vw;
+        }
+    }
+    @media(min-width: 1600px){
+        & > svg{
+            width:5.5vw;
+        }
     }
 `;

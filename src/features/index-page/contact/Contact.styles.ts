@@ -21,7 +21,7 @@ export const ContactContainer = styled.section`
     & > div:nth-child(2) {
         display: none;
     }
-    @media (min-width: 1100px) {
+    @media (min-width: 1050px) {
         margin-top: 7rem;
         display: grid;
         grid-template-columns: 1fr 1.3fr;

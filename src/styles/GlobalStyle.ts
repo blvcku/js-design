@@ -13,13 +13,13 @@ export default createGlobalStyle`
 
         --color-error: #b91c1c;
 
-        --fs-sm:.9rem;
-        --fs-base:1.1rem;
-        --fs-md:1.4rem;
-        --fs-lg:clamp(1.5rem, 5vw, 2rem);
-        --fs-xl:clamp(1.8rem, 6vw, 2.4rem);
-        --fs-2xl:clamp(2.2rem, 7vw, 3rem);
-        --fs-3xl:clamp(2.5rem, 9vw, 4rem);
+        --fs-sm: .9rem;
+        --fs-base: 1.1rem;
+        --fs-md: 1.4rem;
+        --fs-lg: clamp(1.5rem, 5vw, 2rem);
+        --fs-xl: clamp(1.8rem, 6vw, 2.4rem);
+        --fs-2xl: clamp(2.2rem, 7vw, 3rem);
+        --fs-3xl: clamp(2.5rem, 9vw, 4rem);
 
         --shadow-1: 0px 3px 6px #00000029;
         --shadow-2: inset 0px 3px 6px #0000005E;

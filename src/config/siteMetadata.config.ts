@@ -9,7 +9,7 @@ const siteMetadata: Queries.SiteMetadata = {
     },
     instagram: {
         url: `https://www.instagram.com/js_designofficial/`,
-        name: `Jacek 004`,
+        name: `js_designofficial`,
     },
     behance: {
         url: `https://www.behance.net/JSDsg`,

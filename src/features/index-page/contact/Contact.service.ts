@@ -1,5 +1,5 @@
 import { ContactSendMessage } from './Contact.types';
-import objectToFormData from '../../../helpers/object-to-form-data/objectToFormData';
+import objectToFormData from '../../../helpers/objectToFormData';
 
 export const sendMessage: ContactSendMessage = async (data) => {
     const url = process.env.GATSBY_CONTACT_ENDPOINT;

@@ -40,7 +40,7 @@ export const NavigationExpandableContent = styled.div<NavigationExpandableConten
     top: 0;
     right: 0;
     z-index: 100;
-    max-width: calc(100vw - 1rem);
+    max-width: min(300px, calc(100vw - 1rem));
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -64,10 +64,6 @@ export const NavigationExpandableContent = styled.div<NavigationExpandableConten
         height: auto;
         align-self: center;
         color: var(--color-primary-200);
-    }
-
-    @media (min-width: 310px) {
-        max-width: 300px;
     }
 `;
 

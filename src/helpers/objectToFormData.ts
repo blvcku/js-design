@@ -1,4 +1,6 @@
-import { DataObject } from './objectToFormData.types';
+interface DataObject {
+    [key: string]: string | Blob;
+}
 
 const objectToFormData = <T extends DataObject>(object: T) =>
     Object.keys(object).reduce((formData, key) => {

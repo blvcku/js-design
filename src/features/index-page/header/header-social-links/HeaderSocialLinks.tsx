@@ -3,13 +3,13 @@ import FacebookLogo from '../../../../assets/icons/FacebookLogo.inline.svg';
 import InstagramLogo from '../../../../assets/icons/InstagramLogo.inline.svg';
 import BehanceLogo from '../../../../assets/icons/BehanceLogo.inline.svg';
 import useSiteMetadata from '../../../../hooks/useSiteMetadata';
-import { HeaderLinksContainer } from './HeaderLinks.styles';
+import { HeaderSocialLinksContainer } from './HeaderSocialLinks.styles';
 
-const HeaderLinks = () => {
+const HeaderSocialLinks = () => {
     const { facebook, instagram, behance } = useSiteMetadata();
 
     return (
-        <HeaderLinksContainer>
+        <HeaderSocialLinksContainer>
             <li>
                 <a
                     aria-label="My facebook"
@@ -40,8 +40,8 @@ const HeaderLinks = () => {
                     <BehanceLogo />
                 </a>
             </li>
-        </HeaderLinksContainer>
+        </HeaderSocialLinksContainer>
     );
 };
 
-export default HeaderLinks;
+export default HeaderSocialLinks;

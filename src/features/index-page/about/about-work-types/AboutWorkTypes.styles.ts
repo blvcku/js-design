@@ -10,7 +10,7 @@ export const AboutWorkTypesContainer = styled.div`
         font-weight: 900;
         text-align: center;
     }
-    @media (min-width: 940px) {
+    @media (min-width: 1050px) {
         margin-top: 5rem;
         & > h2 {
             text-align: start;
@@ -24,7 +24,7 @@ export const AboutWorkTypesList = styled.ul`
     justify-content: space-around;
     gap: 4rem;
     flex-direction: column;
-    @media (min-width: 940px) {
+    @media (min-width: 1050px) {
         margin-top: 5rem;
         flex-direction: row;
         gap: 2rem;
