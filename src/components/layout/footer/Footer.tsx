@@ -1,6 +1,5 @@
-import React from 'react';
-import { FooterContainer, FooterContentContainer } from './Footer.styles';
-import FooterWave from '../../../assets/images/WaveFooter.inline.svg';
+import { FooterContainer } from './Footer.styles';
+import FooterWave from '@/assets/images/WaveFooter.inline.svg';
 
 const Footer: React.FC = () => {
     return (

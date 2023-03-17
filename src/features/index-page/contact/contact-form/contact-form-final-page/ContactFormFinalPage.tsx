@@ -1,4 +1,3 @@
-import React from 'react';
 import { ContactFormFinalPageContainer } from './ContactFormFinalPage.styles';
 import { ContactFormFinalPageProps } from './ContactFormFinalPage.types';
 

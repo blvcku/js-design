@@ -1,15 +1,17 @@
-import { GatsbyConfig } from 'gatsby';
+import type { GatsbyConfig } from 'gatsby';
 import siteMetadata from './src/config/siteMetadata.config';
-require('dotenv').config({
+import path from 'path';
+require(`dotenv`).config({
     path: `.env.${process.env.NODE_ENV}`,
 });
 
 const config: GatsbyConfig = {
-    siteMetadata: siteMetadata,
+    siteMetadata,
     graphqlTypegen: true,
+    jsxRuntime: `automatic`,
     plugins: [
         {
-            resolve: 'gatsby-source-contentful',
+            resolve: `gatsby-source-contentful`,
             options: {
                 accessToken: process.env.CONTENTFUL_API_KEY,
                 spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -19,7 +21,7 @@ const config: GatsbyConfig = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/src/assets/images/`,
+                path: path.join(__dirname, `src/assets/images/`),
             },
         },
         {
@@ -28,21 +30,21 @@ const config: GatsbyConfig = {
                 rule: {
                     include: /\.inline\.svg$/,
                     omitKeys: [
-                        'xmlnsDc',
-                        'xmlnsCc',
-                        'xmlnsRdf',
-                        'xmlnsSvg',
-                        'xmlnsSodipodi',
-                        'xmlnsInkscape',
+                        `xmlnsDc`,
+                        `xmlnsCc`,
+                        `xmlnsRd`,
+                        `xmlnsSvg`,
+                        `xmlnsSodipodi`,
+                        `xmlnsInkscape`,
                     ],
                 },
             },
         },
-        'gatsby-plugin-image',
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
-        'gatsby-plugin-styled-components',
-        'gatsby-plugin-anchor-links',
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-styled-components`,
+        `gatsby-plugin-anchor-links`,
     ],
 };
 

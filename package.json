@@ -1,40 +1,88 @@
 {
-  "name": "js-design",
-  "version": "1.0.0",
-  "private": true,
-  "description": "js-design",
-  "author": "Piotr Orzechowski",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "gatsby": "^4.24.4",
-    "gatsby-plugin-anchor-links": "^1.2.1",
-    "gatsby-plugin-image": "^2.24.0",
-    "gatsby-plugin-react-svg": "^3.3.0",
-    "gatsby-plugin-sharp": "^4.24.0",
-    "gatsby-plugin-styled-components": "^5.24.0",
-    "gatsby-source-contentful": "^7.22.0",
-    "gatsby-source-filesystem": "^4.24.0",
-    "gatsby-transformer-sharp": "^4.24.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "styled-components": "^5.3.6"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.45",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "@types/styled-components": "^5.1.26",
-    "babel-plugin-styled-components": "^2.0.7",
-    "typescript": "^4.8.3"
-  }
+	"name": "js-design",
+	"description": "js-design",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Piotr Orzechowski",
+	"keywords": [
+		"gatsby",
+		"typescript"
+	],
+	"scripts": {
+		"start": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"type-check": "tsc --noEmit",
+		"lint": "eslint --ignore-path .gitignore \"./**/*.+(ts|js|tsx)\"",
+		"format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|tsx)\" --write",
+		"postinstall": "husky install",
+		"test": "vitest",
+		"test:watch": "vitest watch",
+		"prepare": "husky install"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"lint-staged": {
+		"./**/*.{ts,js,jsx,tsx}": [
+			"eslint --ignore-path .gitignore --fix",
+			"prettier --ignore-path .gitignore --write"
+		]
+	},
+	"dependencies": {
+		"gatsby": "5.7.0",
+		"gatsby-plugin-anchor-links": "1.2.1",
+		"gatsby-plugin-image": "3.7.0",
+		"gatsby-plugin-react-svg": "3.3.0",
+		"gatsby-plugin-sharp": "5.7.0",
+		"gatsby-plugin-styled-components": "6.7.0",
+		"gatsby-source-contentful": "8.7.0",
+		"gatsby-source-filesystem": "5.7.0",
+		"gatsby-transformer-sharp": "5.7.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"styled-components": "5.3.9",
+		"tsconfig-paths-webpack-plugin": "4.0.1"
+	},
+	"devDependencies": {
+		"@babel/preset-react": "7.18.6",
+		"@babel/preset-typescript": "7.21.0",
+		"@commitlint/cli": "17.4.4",
+		"@commitlint/config-conventional": "17.4.4",
+		"@testing-library/dom": "9.0.1",
+		"@testing-library/jest-dom": "5.16.5",
+		"@testing-library/react": "14.0.0",
+		"@testing-library/react-hooks": "8.0.1",
+		"@types/node": "18.15.3",
+		"@types/react": "18.0.28",
+		"@types/react-dom": "18.0.11",
+		"@types/styled-components": "5.1.26",
+		"@types/testing-library__jest-dom": "5.14.5",
+		"@typescript-eslint/eslint-plugin": "5.55.0",
+		"@typescript-eslint/parser": "5.55.0",
+		"@vitejs/plugin-react": "3.1.0",
+		"babel-plugin-styled-components": "2.0.7",
+		"babel-preset-gatsby": "3.7.0",
+		"c8": "7.13.0",
+		"eslint": "8.36.0",
+		"eslint-config-prettier": "8.7.0",
+		"eslint-config-standard": "17.0.0",
+		"eslint-import-resolver-typescript": "3.5.3",
+		"eslint-plugin-import": "2.27.5",
+		"eslint-plugin-jsx-a11y": "6.7.1",
+		"eslint-plugin-n": "15.6.1",
+		"eslint-plugin-prettier": "4.2.1",
+		"eslint-plugin-promise": "6.1.1",
+		"eslint-plugin-react": "7.32.2",
+		"eslint-plugin-react-hooks": "4.6.0",
+		"husky": "^8.0.0",
+		"identity-obj-proxy": "3.0.0",
+		"jsdom": "21.1.1",
+		"lint-staged": "13.2.0",
+		"prettier": "2.8.4",
+		"typescript": "4.9.5",
+		"vite-tsconfig-paths": "4.0.5",
+		"vitest": "0.29.2"
+	}
 }

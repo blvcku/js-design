@@ -1,5 +1,4 @@
-import React from 'react';
-import GlobalStyle from '../../../styles/GlobalStyle';
+import GlobalStyle from '@/styles/GlobalStyle';
 import { GlobalLayoutProps } from './GlobalLayout.types';
 import { GlobalLayoutContainer } from './GlobalLayout.styles';
 import Navigation from '../navigation/Navigation';

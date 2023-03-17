@@ -37,7 +37,7 @@ export const AboutWaveContainer = styled.div`
 
 export const AboutAnimatedWaveContainer = styled.div`
     & > svg {
-        color:var(--color-secondary-100);
+        color: var(--color-secondary-100);
     }
 `;
 

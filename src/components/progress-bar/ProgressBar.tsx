@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     ProgressBarWrapper,
     ProgressBarContainer,
@@ -22,7 +21,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
             <ProgressBarIndicatorsContainer>
                 {steps.map((step) => (
                     <ProgressBarIndicator
-                        aria-current={currentPage === step ? 'step' : false}
+                        aria-current={currentPage === step ? `step` : false}
                         key={step}
                     >
                         {step + 1}

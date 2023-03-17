@@ -1,6 +1,5 @@
-import React from 'react';
-import Img from '../../assets/images/Header.png';
-import useSiteMetadata from '../../hooks/useSiteMetadata';
+import Img from '@/assets/images/Header.png';
+import useSiteMetadata from '@/hooks/useSiteMetadata';
 import { SEOProps, SEOPageTypes } from './SEO.types';
 
 const SEO: React.FC<SEOProps> = (props) => {
@@ -42,14 +41,10 @@ const SEO: React.FC<SEOProps> = (props) => {
             <meta property="og:url" content={siteURL} />
             <link rel="canonical" href={siteURL} />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link
-                rel="preconnect"
-                href="https://fonts.gstatic.com"
-                crossOrigin="true"
-            />
-            <link
-                href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
                 rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
             />
             {children}
         </>

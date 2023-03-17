@@ -4,5 +4,5 @@ export interface ProgressBarContainerProps {
 }
 
 export interface ProgressBarProps extends ProgressBarContainerProps {
-    //extendable someday
+    // extendable someday
 }
