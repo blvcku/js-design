@@ -1,4 +1,3 @@
-import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import HeaderSocialLinks from './header-social-links/HeaderSocialLinks';
 import {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavButtonContainer } from './NavButton.styles';
 import { NavButtonProps } from './NavButton.types';
 

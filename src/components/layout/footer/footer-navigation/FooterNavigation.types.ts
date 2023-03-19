@@ -1,4 +1,4 @@
-export interface FooterNavigationLink{
+export interface FooterNavigationLink {
     name: string;
     to: string;
 }

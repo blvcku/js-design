@@ -1,11 +1,10 @@
-import React from 'react';
-import FacebookLogo from '../../../../assets/icons/FacebookLogo.inline.svg';
-import InstagramLogo from '../../../../assets/icons/InstagramLogo.inline.svg';
-import BehanceLogo from '../../../../assets/icons/BehanceLogo.inline.svg';
-import useSiteMetadata from '../../../../hooks/useSiteMetadata';
+import FacebookLogo from '@/assets/icons/FacebookLogo.inline.svg';
+import InstagramLogo from '@/assets/icons/InstagramLogo.inline.svg';
+import BehanceLogo from '@/assets/icons/BehanceLogo.inline.svg';
+import useSiteMetadata from '@/hooks/useSiteMetadata';
 import { HeaderSocialLinksContainer } from './HeaderSocialLinks.styles';
 
-const HeaderSocialLinks = () => {
+const HeaderSocialLinks: React.FC = () => {
     const { facebook, instagram, behance } = useSiteMetadata();
 
     return (

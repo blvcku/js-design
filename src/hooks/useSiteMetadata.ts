@@ -25,7 +25,7 @@ const useSiteMetadata = () => {
             }
         }
     `);
-    if (!site) throw new Error('Site metadata not found');
+    if (!site) throw new Error(`Site metadata not found`);
     return site.siteMetadata;
 };
 

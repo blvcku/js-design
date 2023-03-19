@@ -1,6 +1,6 @@
 export enum ContactFormFieldVariants {
-    input = 'input',
-    textarea = 'textarea',
+    input = `input`,
+    textarea = `textarea`,
 }
 
 export interface ContactFormInput<FieldsNames extends string>

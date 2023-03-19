@@ -1,11 +1,10 @@
-import React from 'react';
-import ArrowIcon from '../../../../../assets/icons/Arrow.inline.svg';
+import ArrowIcon from '@/assets/icons/Arrow.inline.svg';
 import { ContactFormButtonsWrapper } from './ContactFormButtons.styles';
-import Button from '../../../../../components/buttons/button/Button';
+import Button from '@/components/buttons/button/Button';
 import {
     ButtonSizeVariants,
     ButtonColorVariants,
-} from '../../../../../components/buttons/button/Button.types';
+} from '@/components/buttons/button/Button.types';
 import { ContactFormButtonsProps } from './ContactFormButtons.types';
 
 const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
@@ -23,7 +22,7 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
     };
 
     const handleSubmitClick: React.MouseEventHandler<HTMLButtonElement> = (
-        e
+        e,
     ) => {
         if (!validateForm()) return e.preventDefault();
     };

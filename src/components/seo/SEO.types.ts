@@ -1,6 +1,6 @@
 export enum SEOPageTypes {
-    website = 'website',
-    article = 'article',
+    website = `website`,
+    article = `article`,
 }
 
 export interface SEOProps {

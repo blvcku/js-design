@@ -1,5 +1,5 @@
 import React from 'react';
-import GlobalStyle from '../../../styles/GlobalStyle';
+import GlobalStyle from '@/styles/GlobalStyle';
 import { LayoutProps } from './Layout.types';
 import { LayoutContainer } from './Layout.styles';
 import Navigation from '../navigation/Navigation';

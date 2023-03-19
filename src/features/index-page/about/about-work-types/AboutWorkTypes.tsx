@@ -1,7 +1,6 @@
-import React from 'react';
-import UiDesignIcon from '../../../../assets/icons/UiDesign.inline.svg';
-import BannersIcon from '../../../../assets/icons/Banners.inline.svg';
-import LogoIcon from '../../../../assets/icons/LogoIcon.inline.svg';
+import UiDesignIcon from '@/assets/icons/UiDesign.inline.svg';
+import BannersIcon from '@/assets/icons/Banners.inline.svg';
+import LogoIcon from '@/assets/icons/LogoIcon.inline.svg';
 import {
     AboutWorkTypesContainer,
     AboutWorkTypesList,

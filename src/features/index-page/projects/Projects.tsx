@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
     ProjectsContainer,
     ProjectsHeadContainer,
     ProjectsList,
 } from './Projects.styles';
-import NavButton from '../../../components/buttons/nav-button/NavButton';
+import NavButton from '@/components/buttons/nav-button/NavButton';
 import Project from './project/Project';
 import { ProjectsProps } from './Projects.types';
 import { ProjectCategories } from './project/Project.types';
 
 const Projects: React.FC<ProjectsProps> = ({ projectsList }) => {
     const [activeCategory, setActiveCategory] = useState(
-        ProjectCategories.logo
+        ProjectCategories.logo,
     );
 
     const handleChangeFilter = (
         e: React.MouseEvent<HTMLButtonElement>,
-        category: ProjectCategories
+        category: ProjectCategories,
     ) => {
         e.preventDefault();
         setActiveCategory(category);

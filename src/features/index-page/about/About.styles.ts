@@ -21,7 +21,7 @@ export const AboutContentContainer = styled.div`
             }
         }
     }
-    @media(min-width:1600px){
+    @media (min-width: 1600px) {
         padding: max(6vw, 9.5rem) 1rem;
     }
 `;
@@ -36,7 +36,7 @@ export const AboutWaveContainer = styled.div`
 
 export const AboutAnimatedWaveContainer = styled.div`
     & > svg {
-        color:var(--color-secondary-100);
+        color: var(--color-secondary-100);
     }
 `;
 
@@ -60,20 +60,20 @@ export const AboutLogoContainer = styled.div`
     }
     @media (min-width: 500px) {
         bottom: -3vw;
-        padding:3vw;
-        & > svg{
-            width:10vw;
+        padding: 3vw;
+        & > svg {
+            width: 10vw;
         }
     }
     @media (min-width: 1050px) {
         padding: 2vw;
-        & > svg{
-            width:7vw;
+        & > svg {
+            width: 7vw;
         }
     }
-    @media(min-width: 1600px){
-        & > svg{
-            width:5.5vw;
+    @media (min-width: 1600px) {
+        & > svg {
+            width: 5.5vw;
         }
     }
 `;
