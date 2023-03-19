@@ -7,8 +7,10 @@ require(`dotenv`).config({
 
 const config: GatsbyConfig = {
     siteMetadata,
-    graphqlTypegen: true,
     jsxRuntime: `automatic`,
+    graphqlTypegen: {
+        typesOutputPath: `./src/__generated__/gatsby-types.d.ts`,
+    },
     plugins: [
         {
             resolve: `gatsby-source-contentful`,
