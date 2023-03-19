@@ -9,6 +9,7 @@
 # gatsby
 .cache/
 public/
+src/__generated__
 
 # production
 /build
