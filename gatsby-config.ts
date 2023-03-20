@@ -42,11 +42,16 @@ const config: GatsbyConfig = {
                 },
             },
         },
+        {
+            resolve: `gatsby-plugin-anchor-links`,
+            options: {
+                offset: -100,
+            },
+        },
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-styled-components`,
-        `gatsby-plugin-anchor-links`,
     ],
 };
 

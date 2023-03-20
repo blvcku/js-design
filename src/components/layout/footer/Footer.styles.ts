@@ -18,13 +18,19 @@ export const FooterContentContainer = styled.div`
     background-color: var(--color-secondary-100);
     max-width: max(calc(100vw) - 800px, 1250px);
     margin-inline: auto;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     & > p {
         font-size: var(--fs-base);
         text-align: center;
         margin-top: 2rem;
-        grid-column: span 2;
+    }
+    @media (min-width: 800px) {
+        padding-top: 0;
+        grid-template-columns: 1fr 1fr;
+        & > p {
+            grid-column: span 2;
+        }
     }
 `;

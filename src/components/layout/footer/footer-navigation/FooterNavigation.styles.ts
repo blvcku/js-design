@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterNavigationContainer = styled.nav`
-    text-align: end;
+    text-align: center;
     & > h2 {
         font-size: var(--fs-lg);
         font-weight: 600;
@@ -10,6 +10,9 @@ export const FooterNavigationContainer = styled.nav`
     & > h3 {
         font-size: var(--fs-md);
         font-weight: 400;
+    }
+    @media (min-width: 800px) {
+        text-align: end;
     }
 `;
 

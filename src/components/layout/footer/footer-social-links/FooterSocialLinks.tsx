@@ -23,7 +23,7 @@ const FooterSocialLinks: React.FC = () => {
                         href={facebook.url}
                     >
                         <FacebookLogo />
-                        {facebook.name}
+                        <p>{facebook.name}</p>
                     </a>
                 </FooterSocialLinkWrapper>
                 <FooterSocialLinkWrapper>
@@ -34,7 +34,7 @@ const FooterSocialLinks: React.FC = () => {
                         href={instagram.url}
                     >
                         <InstagramLogo />
-                        {instagram.name}
+                        <p>{instagram.name}</p>
                     </a>
                 </FooterSocialLinkWrapper>
                 <FooterSocialLinkWrapper>
@@ -45,7 +45,7 @@ const FooterSocialLinks: React.FC = () => {
                         href={behance.url}
                     >
                         <BehanceLogo />
-                        {behance.name}
+                        <p>{behance.name}</p>
                     </a>
                 </FooterSocialLinkWrapper>
             </FooterSocialLinksList>
