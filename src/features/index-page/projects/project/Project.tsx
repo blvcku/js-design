@@ -6,7 +6,7 @@ import { ProjectContainer } from './Project.styles';
 const Project: React.FC<ProjectProps> = ({ slug, title, thumb }) => {
     const image = getImage(thumb);
 
-    if (!image) return null;
+    if (!image || !title || !slug) return null;
 
     return (
         <ProjectContainer aria-label={title}>

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
     ProjectsContainer,
     ProjectsHeadContainer,
@@ -6,17 +5,15 @@ import {
 } from './Projects.styles';
 import NavButton from '@/components/buttons/nav-button/NavButton';
 import Project from './project/Project';
-import { ProjectsProps } from './Projects.types';
-import { ProjectCategories } from './project/Project.types';
+import useProjects from './useProjects';
 
-const Projects: React.FC<ProjectsProps> = ({ projectsList }) => {
-    const [activeCategory, setActiveCategory] = useState(
-        ProjectCategories.logo,
-    );
+const Projects: React.FC = () => {
+    const { categories, activeCategory, setActiveCategory, projects } =
+        useProjects();
 
-    const handleChangeFilter = (
+    const handleChangeCategory = (
         e: React.MouseEvent<HTMLButtonElement>,
-        category: ProjectCategories,
+        category: string,
     ) => {
         e.preventDefault();
         setActiveCategory(category);
@@ -27,44 +24,26 @@ const Projects: React.FC<ProjectsProps> = ({ projectsList }) => {
             <ProjectsHeadContainer>
                 <h2>Projects:</h2>
                 <nav aria-label="projects navigation">
-                    <NavButton
-                        active={activeCategory === ProjectCategories.logo}
-                        onClick={(e) =>
-                            handleChangeFilter(e, ProjectCategories.logo)
-                        }
-                    >
-                        Logo
-                    </NavButton>
-                    <NavButton
-                        active={activeCategory === ProjectCategories.uiDesign}
-                        onClick={(e) =>
-                            handleChangeFilter(e, ProjectCategories.uiDesign)
-                        }
-                    >
-                        UI Design
-                    </NavButton>
-                    <NavButton
-                        active={activeCategory === ProjectCategories.other}
-                        onClick={(e) =>
-                            handleChangeFilter(e, ProjectCategories.other)
-                        }
-                    >
-                        Other
-                    </NavButton>
+                    {categories.map((category) => (
+                        <NavButton
+                            key={category}
+                            active={activeCategory === category}
+                            onClick={(e) => handleChangeCategory(e, category)}
+                        >
+                            {category}
+                        </NavButton>
+                    ))}
                 </nav>
             </ProjectsHeadContainer>
             <ProjectsList>
-                {projectsList
-                    .filter(({ category }) => category === activeCategory)
-                    .map(({ title, slug, thumb, category }) => (
-                        <Project
-                            key={slug}
-                            title={title}
-                            slug={slug}
-                            thumb={thumb}
-                            category={category}
-                        />
-                    ))}
+                {projects.map(({ title, slug, thumb }) => (
+                    <Project
+                        key={slug}
+                        title={title}
+                        slug={slug}
+                        thumb={thumb}
+                    />
+                ))}
             </ProjectsList>
         </ProjectsContainer>
     );

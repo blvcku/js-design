@@ -1,16 +1,9 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 
-export enum ProjectCategories {
-    logo = `logo`,
-    uiDesign = `ui-design`,
-    other = `other`,
-}
-
 export interface ProjectProps {
-    category: ProjectCategories;
-    slug: string;
-    title: string;
+    slug: string | null;
+    title: string | null;
     thumb: {
-        gatsbyImageData: IGatsbyImageData;
-    };
+        gatsbyImageData: IGatsbyImageData | null;
+    } | null;
 }
