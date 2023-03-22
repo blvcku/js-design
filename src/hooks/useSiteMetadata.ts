@@ -1,32 +1,11 @@
-import { useStaticQuery, graphql } from 'gatsby';
+import { useContext } from 'react';
+import { SiteMetadataContext } from '@/contexts/SiteMetadataContext';
 
 const useSiteMetadata = () => {
-    const { site } = useStaticQuery<Queries.SiteMetadataQuery>(graphql`
-        query SiteMetadata {
-            site {
-                siteMetadata {
-                    title
-                    description
-                    keywords
-                    siteURL
-                    facebook {
-                        url
-                        name
-                    }
-                    instagram {
-                        url
-                        name
-                    }
-                    behance {
-                        url
-                        name
-                    }
-                }
-            }
-        }
-    `);
-    if (!site) throw new Error(`Site metadata not found`);
-    return site.siteMetadata;
+    const context = useContext(SiteMetadataContext);
+    if (context === undefined)
+        throw new Error(`useSiteMetadata must be within SiteMetadataProvider`);
+    return context;
 };
 
 export default useSiteMetadata;

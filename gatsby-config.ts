@@ -1,58 +1,24 @@
 import type { GatsbyConfig } from 'gatsby';
-import siteMetadata from './src/config/siteMetadata.config';
-import path from 'path';
-require(`dotenv`).config({
+// Do not use prefix paths here because plugin responsible for this is initialized later
+// Check for reference: https://www.gatsbyjs.com/docs/conceptual/overview-of-the-gatsby-build-process/
+import siteMetadata from './src/gatsby/siteMetadata';
+import plugins from './src/gatsby/plugins';
+import dotenv from 'dotenv';
+
+dotenv.config({
     path: `.env.${process.env.NODE_ENV}`,
 });
 
 const config: GatsbyConfig = {
     siteMetadata,
+    plugins: plugins(
+        process.env.CONTENTFUL_API_KEY,
+        process.env.CONTENTFUL_SPACE_ID,
+    ),
     jsxRuntime: `automatic`,
     graphqlTypegen: {
         typesOutputPath: `./src/__generated__/gatsby-types.d.ts`,
     },
-    plugins: [
-        {
-            resolve: `gatsby-source-contentful`,
-            options: {
-                accessToken: process.env.CONTENTFUL_API_KEY,
-                spaceId: process.env.CONTENTFUL_SPACE_ID,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: path.join(__dirname, `src/assets/images/`),
-            },
-        },
-        {
-            resolve: `gatsby-plugin-react-svg`,
-            options: {
-                rule: {
-                    include: /\.inline\.svg$/,
-                    omitKeys: [
-                        `xmlnsDc`,
-                        `xmlnsCc`,
-                        `xmlnsRd`,
-                        `xmlnsSvg`,
-                        `xmlnsSodipodi`,
-                        `xmlnsInkscape`,
-                    ],
-                },
-            },
-        },
-        {
-            resolve: `gatsby-plugin-anchor-links`,
-            options: {
-                offset: -100,
-            },
-        },
-        `gatsby-plugin-image`,
-        `gatsby-plugin-sharp`,
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-styled-components`,
-    ],
 };
 
 export default config;

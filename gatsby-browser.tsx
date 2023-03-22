@@ -1,8 +1,4 @@
-import Layout from '@/components/layout/layout/Layout';
-import { GatsbyBrowser } from 'gatsby';
+import wrapPageElement from '@/gatsby/wrapPageElement';
+import wrapRootElement from '@/gatsby/wrapRootElement';
 
-export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
-    element,
-}) => {
-    return <Layout>{element}</Layout>;
-};
+export { wrapPageElement, wrapRootElement };
