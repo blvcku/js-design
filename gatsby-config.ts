@@ -18,6 +18,7 @@ const config: GatsbyConfig = {
     jsxRuntime: `automatic`,
     graphqlTypegen: {
         typesOutputPath: `./src/__generated__/gatsby-types.d.ts`,
+        documentSearchPaths: [`./src/gatsby`],
     },
 };
 
