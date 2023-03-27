@@ -43,10 +43,6 @@ const GlobalStyle = createGlobalStyle`
         background:var(--color-primary-200);
     }
 
-    h1,h2,h3,h4,h5,h6{
-        font-weight:700;
-    }
-
     ul, ol{
         list-style:none;
     }
