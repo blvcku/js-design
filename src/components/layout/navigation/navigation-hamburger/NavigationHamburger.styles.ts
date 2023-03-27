@@ -8,7 +8,6 @@ export const NavigationHamburgerContainer = styled.button`
 `;
 
 export const NavigationHamburgerWrapper = styled.span`
-    diplay: block;
     padding: 0.6rem;
     display: flex;
     flex-direction: column;

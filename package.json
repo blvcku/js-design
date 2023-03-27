@@ -15,6 +15,9 @@
 		"clean": "gatsby clean",
 		"type-check": "tsc --noEmit",
 		"lint": "eslint --ignore-path .gitignore \"./**/*.+(ts|tsx|js|jsx)\"",
+		"lint:fix": "eslint --ignore-path .gitignore \"./**/*.+(ts|tsx|js|jsx)\" --fix",
+		"lint:css": "stylelint --ignore-path .gitignore \"./**/*.+(ts|tsx|js|jsx)\"",
+		"lint:css:fix": "stylelint --ignore-path .gitignore \"./**/*.+(ts|tsx|js|jsx)\" --fix",
 		"format": "prettier --ignore-path .gitignore \"./**/*.+(ts|tsx|js|jsx)\" --write",
 		"postinstall": "husky install",
 		"test": "vitest",
@@ -27,6 +30,7 @@
 	"lint-staged": {
 		"./**/*.{ts,js,jsx,tsx}": [
 			"eslint --ignore-path .gitignore --fix",
+			"stylelint --ignore-path .gitignore --fix",
 			"prettier --ignore-path .gitignore --write"
 		]
 	},
@@ -76,11 +80,16 @@
 		"eslint-plugin-promise": "6.1.1",
 		"eslint-plugin-react": "7.32.2",
 		"eslint-plugin-react-hooks": "4.6.0",
+		"eslint-plugin-styled-components-a11y": "0.1.0",
 		"husky": "8.0.3",
 		"identity-obj-proxy": "3.0.0",
 		"jsdom": "21.1.1",
 		"lint-staged": "13.2.0",
+		"postcss-styled-syntax": "0.4.0",
 		"prettier": "2.8.4",
+		"stylelint": "15.3.0",
+		"stylelint-config-recommended": "11.0.0",
+		"stylelint-config-styled-components": "0.1.1",
 		"typescript": "4.9.5",
 		"vite-tsconfig-paths": "4.0.5",
 		"vitest": "0.29.2"

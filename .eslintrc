@@ -12,13 +12,14 @@
         "es6": true,
         "node": true
     },
-    "plugins": ["react", "jsx-a11y", "prettier", "@typescript-eslint"],
+    "plugins": ["react", "jsx-a11y", "prettier", "@typescript-eslint", "styled-components-a11y"],
     "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
         "plugin:react-hooks/recommended",
         "standard",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:styled-components-a11y/recommended"
     ],
     "rules": {
         "no-undef":"off",

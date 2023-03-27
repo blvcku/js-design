@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
             <NavigationLogoContainer>
                 <LogoThick />
             </NavigationLogoContainer>
-            <nav aria-expanded={expanded}>
+            <nav>
                 <NavigationHamburger handleExpand={handleExpand} />
                 <NavigationExpandableContent expanded={expanded}>
                     <NavigationCollapseButton handleCollapse={handleCollapse} />

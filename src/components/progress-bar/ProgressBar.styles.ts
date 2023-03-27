@@ -51,7 +51,7 @@ export const ProgressBarContainer = styled.span<ProgressBarContainerProps>`
                     multiplying - cannot use x% because of css calc limitations */ ``
                     }
                     * ${transformMultiplier}
-                    ${/* Add part that is before first step */ ``} 
+                    ${/* Add part that is before first step */ ``}
                     + var(--horizontal-padding)
                     ${
                         /* Prevent the bar from sticking out on the right side */ ``
