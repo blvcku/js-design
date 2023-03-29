@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { NavigationExpandableContentProps } from './Navigation.types';
 
 export const NavigationContainer = styled.div`
@@ -15,7 +16,7 @@ export const NavigationContainer = styled.div`
     }
 `;
 
-export const NavigationLogoContainer = styled.div`
+export const NavigationLogoContainer = styled(AnchorLink)`
     background: var(--color-secondary-100);
     padding: 0.5rem;
     border-radius: 50%;
@@ -75,13 +76,11 @@ export const NavigationLinksContainer = styled.ul`
     gap: 0.5rem;
 `;
 
-export const NavigationLinkWrapper = styled.li`
-    a {
-        color: var(--color-primary-200);
-        text-decoration: none;
-        font-size: var(--fs-md);
-        line-height: 1.5;
-        border-right: 1px solid var(--color-primary-200);
-        padding: 0.15rem 0.5rem 0.15rem;
-    }
+export const NavigationLink = styled(AnchorLink)`
+    color: var(--color-primary-200);
+    text-decoration: none;
+    font-size: var(--fs-md);
+    line-height: 1.5;
+    border-right: 1px solid var(--color-primary-200);
+    padding: 0.15rem 0.5rem 0.15rem;
 `;

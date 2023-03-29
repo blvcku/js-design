@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import Logo from '@/assets/icons/Logo.inline.svg';
 import LogoThick from '@/assets/icons/LogoThick.inline.svg';
 import NavigationHamburger from './navigation-hamburger/NavigationHamburger';
@@ -9,7 +8,7 @@ import {
     NavigationLogoContainer,
     NavigationExpandableContent,
     NavigationLinksContainer,
-    NavigationLinkWrapper,
+    NavigationLink,
 } from './Navigation.styles';
 import { NavigationLinks } from './Navigation.types';
 
@@ -43,7 +42,7 @@ const Navigation: React.FC = () => {
 
     return (
         <NavigationContainer>
-            <NavigationLogoContainer>
+            <NavigationLogoContainer to="/">
                 <LogoThick />
             </NavigationLogoContainer>
             <nav>
@@ -52,9 +51,9 @@ const Navigation: React.FC = () => {
                     <NavigationCollapseButton handleCollapse={handleCollapse} />
                     <NavigationLinksContainer>
                         {navigationLinks.map(({ name, to }) => (
-                            <NavigationLinkWrapper key={name}>
-                                <AnchorLink to={to}>{name}</AnchorLink>
-                            </NavigationLinkWrapper>
+                            <li key={name}>
+                                <NavigationLink to={to}>{name}</NavigationLink>
+                            </li>
                         ))}
                     </NavigationLinksContainer>
                     <Logo />
