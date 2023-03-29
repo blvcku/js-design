@@ -18,7 +18,7 @@ const Header: React.FC = () => {
                         quality={100}
                         layout="fullWidth"
                         placeholder="blurred"
-                        src="../../../assets/images/Header.png"
+                        src="../../../../assets/images/Header.png"
                         alt="Jacek Szczypior"
                     />
                 </HeaderImageWrapper>

@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
                 <StaticImage
                     layout="fullWidth"
                     placeholder="blurred"
-                    src="../../../assets/images/Contact.png"
+                    src="../../../../assets/images/Contact.png"
                     alt=""
                 />
             </div>
