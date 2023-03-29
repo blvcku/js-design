@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LayoutContainer = styled.div`
+export const DefaultLayoutContainer = styled.div`
     position: relative;
     max-width: 100vw;
     overflow: hidden;

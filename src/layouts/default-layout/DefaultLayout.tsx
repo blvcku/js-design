@@ -1,18 +1,18 @@
 import React from 'react';
 import GlobalStyle from '@/styles/GlobalStyle';
-import { LayoutProps } from './Layout.types';
-import { LayoutContainer } from './Layout.styles';
+import { DefaultLayoutProps } from './DefaultLayout.types';
+import { DefaultLayoutContainer } from './DefaultLayout.styles';
 import Navigation from '../navigation/Navigation';
 import Footer from '../footer/Footer';
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<DefaultLayoutProps> = ({ children }) => {
     return (
-        <LayoutContainer>
+        <DefaultLayoutContainer>
             <Navigation />
             {children}
             <Footer />
             <GlobalStyle />
-        </LayoutContainer>
+        </DefaultLayoutContainer>
     );
 };
 
