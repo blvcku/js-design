@@ -1,13 +1,13 @@
 import styled from 'styled-components';
+import { media, layout } from '@/styles/Mixins';
 
 export const ProjectsContainer = styled.section`
-    padding-inline: 1rem;
+    scroll-margin-top: 3rem;
     margin-top: 1rem;
 `;
 
 export const ProjectsHeadContainer = styled.div`
-    max-width: 1250px;
-    margin-inline: auto;
+    ${layout.standard.default}
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ export const ProjectsHeadContainer = styled.div`
         row-gap: 0.5rem;
         flex-wrap: wrap;
     }
-    @media (min-width: 800px) {
+    ${media.md} {
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
@@ -34,7 +34,7 @@ export const ProjectsHeadContainer = styled.div`
             text-align: start;
         }
     }
-    @media (min-width: 1050px) {
+    ${media.lg} {
         nav {
             column-gap: 5rem;
         }
@@ -45,14 +45,13 @@ export const ProjectsList = styled.ul`
     --margin-top: 1.5rem;
     --grid-columns: 1;
     --grid-rows: auto;
-    padding-inline: 7%;
+    ${layout.standard.default}
+    padding-inline: 15%;
     margin-top: var(--margin-top);
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     gap: 0.5rem;
-    max-width: 1250px;
-    margin-inline: auto;
     position: relative;
     &:empty {
         aspect-ratio: var(--grid-columns) / 1;
@@ -64,15 +63,15 @@ export const ProjectsList = styled.ul`
             text-align: center;
             top: calc(50% - var(--margin-top));
             transform: translate(-50%, -50%);
-            font-size: var(--fs-md);
+            font-size: var(--fs-base);
         }
     }
-    @media (min-width: 500px) {
-        padding-inline: 0;
+    ${media.sm} {
+        ${layout.standard.default}
         --margin-top: 2rem;
         --grid-columns: 2;
     }
-    @media (min-width: 800px) {
+    ${media.md} {
         --margin-top: 3rem;
         --grid-columns: 3;
         --grid-rows: 2;

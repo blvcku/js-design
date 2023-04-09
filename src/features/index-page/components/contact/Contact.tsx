@@ -2,7 +2,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { ContactContainer } from './Contact.styles';
 import ContactForm from './contact-form/ContactForm';
 import { ContactFormFields } from './contact-form/ContactForm.types';
-import { ContactFormFieldVariants } from './contact-form/contact-form-field/ContactFormField.types';
+import { ContactFormFieldVariant } from './contact-form/contact-form-field/ContactFormField.types';
 import { sendMessage } from './Contact.service';
 import { ContactMessage } from './Contact.types';
 
@@ -15,7 +15,7 @@ const fields: ContactFormFields<ContactMessage> = [
             errorMessage: `This field is required!`,
             required: true,
             maxLength: 100,
-            as: ContactFormFieldVariants.input,
+            as: ContactFormFieldVariant.INPUT,
         },
         {
             name: `email`,
@@ -24,7 +24,7 @@ const fields: ContactFormFields<ContactMessage> = [
             errorMessage: `Please, enter a valid email address!`,
             required: true,
             maxLength: 100,
-            as: ContactFormFieldVariants.input,
+            as: ContactFormFieldVariant.INPUT,
         },
     ],
     [
@@ -34,7 +34,7 @@ const fields: ContactFormFields<ContactMessage> = [
             errorMessage: `This field is required!`,
             required: true,
             maxLength: 1000,
-            as: ContactFormFieldVariants.textarea,
+            as: ContactFormFieldVariant.TEXT_AREA,
         },
     ],
 ];
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
                 <StaticImage
                     layout="fullWidth"
                     placeholder="blurred"
-                    src="../../../../assets/images/Contact.png"
+                    src="../../../../assets/images/contact.png"
                     alt=""
                 />
             </div>

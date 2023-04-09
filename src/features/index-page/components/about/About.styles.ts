@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { media } from '@/styles/Mixins';
 
 export const AboutContainer = styled.section``;
 
 export const AboutContentContainer = styled.div`
     background: var(--color-secondary-100);
     color: var(--color-primary-200);
-    padding: max(10vw, 3.5rem) 1rem;
+    padding: max(10vw, 3.5rem) 0;
     & > p {
         font-weight: 500;
         font-size: var(--fs-lg);
@@ -16,13 +17,13 @@ export const AboutContentContainer = styled.div`
             font-weight: 600;
             max-width: 25ch;
             margin-top: 2rem;
-            @media (min-width: 500px) {
+            ${media.sm} {
                 margin-top: 3.5rem;
             }
         }
     }
-    @media (min-width: 1600px) {
-        padding: max(6vw, 9.5rem) 1rem;
+    ${media.xl} {
+        padding: max(6vw, 9.5rem) 0;
     }
 `;
 
@@ -58,20 +59,20 @@ export const AboutLogoContainer = styled.div`
         min-width: 3rem;
         color: var(--color-secondary-200);
     }
-    @media (min-width: 500px) {
+    ${media.sm} {
         bottom: -3vw;
         padding: 3vw;
         & > svg {
             width: 10vw;
         }
     }
-    @media (min-width: 1050px) {
+    ${media.lg} {
         padding: 2vw;
         & > svg {
             width: 7vw;
         }
     }
-    @media (min-width: 1600px) {
+    ${media.xl} {
         & > svg {
             width: 5.5vw;
         }

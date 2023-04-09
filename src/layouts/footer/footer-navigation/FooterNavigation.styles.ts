@@ -1,17 +1,18 @@
 import styled from 'styled-components';
+import { media } from '@/styles/Mixins';
 
 export const FooterNavigationContainer = styled.nav`
     text-align: center;
     & > h2 {
-        font-size: var(--fs-lg);
+        font-size: var(--fs-md);
         font-weight: 600;
         text-transform: uppercase;
     }
     & > h3 {
-        font-size: var(--fs-md);
+        font-size: var(--fs-base);
         font-weight: 400;
     }
-    @media (min-width: 800px) {
+    ${media.md} {
         text-align: end;
     }
 `;
@@ -28,6 +29,6 @@ export const FooterNavigationLinkWrapper = styled.li`
         color: inherit;
         text-transform: uppercase;
         text-decoration: none;
-        font-size: var(--fs-base);
+        font-size: var(--fs-sm);
     }
 `;

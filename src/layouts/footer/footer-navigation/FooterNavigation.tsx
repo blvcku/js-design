@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { Link } from 'gatsby';
 import {
     FooterNavigationContainer,
     FooterNavigationLinkWrapper,
@@ -38,7 +38,7 @@ const FooterNavigation: React.FC = () => {
             <FooterNavigationLinksContainer>
                 {footerNavigationLinks.map(({ name, to }) => (
                     <FooterNavigationLinkWrapper key={name}>
-                        <AnchorLink to={to}>{name}</AnchorLink>
+                        <Link to={to}>{name}</Link>
                     </FooterNavigationLinkWrapper>
                 ))}
             </FooterNavigationLinksContainer>

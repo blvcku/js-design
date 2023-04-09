@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import { media } from '@/styles/Mixins';
 
 export const FooterSocialLinksContainer = styled.div`
     grid-row: 2;
     & > h2 {
         font-weight: 600;
-        font-size: var(--fs-lg);
+        font-size: var(--fs-md);
         text-transform: uppercase;
         display: none;
     }
-    @media (min-width: 800px) {
+    ${media.md} {
         grid-row: auto;
         & > h2 {
             display: block;
@@ -23,7 +24,7 @@ export const FooterSocialLinksList = styled.ul`
     margin-top: 1.5rem;
     margin-inline: auto;
     width: max-content;
-    @media (min-width: 800px) {
+    ${media.md} {
         flex-direction: column;
         margin-top: 1.25rem;
         width: auto;
@@ -32,7 +33,7 @@ export const FooterSocialLinksList = styled.ul`
 
 export const FooterSocialLinkWrapper = styled.li`
     a {
-        --font-size: var(--fs-base);
+        --font-size: var(--fs-sm);
         width: max-content;
         gap: 1rem;
         display: flex;
@@ -46,7 +47,7 @@ export const FooterSocialLinkWrapper = styled.li`
         & > p {
             display: none;
         }
-        @media (min-width: 800px) {
+        ${media.md} {
             & > p {
                 display: block;
             }

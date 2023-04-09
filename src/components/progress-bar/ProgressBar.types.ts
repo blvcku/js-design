@@ -3,6 +3,4 @@ export interface ProgressBarContainerProps {
     numberOfPages: number;
 }
 
-export interface ProgressBarProps extends ProgressBarContainerProps {
-    // extendable someday
-}
+export type ProgressBarProps = ProgressBarContainerProps;

@@ -1,18 +1,19 @@
 import styled from 'styled-components';
-import { ButtonContainerProps } from './Button.types';
 
-export const ButtonContainer = styled.button<ButtonContainerProps>`
-    --padding-vertical: 0.7rem;
-    --font-size: var(--fs-base);
-    --bg-color: var(--color-secondary-100);
-    --icon-height: calc(var(--font-size) * 1.2);
-    color: var(--color-primary-200);
-    font-size: var(--font-size);
-    padding-inline: 3.6rem;
-    ${({ sizeVariant }) => sizeVariant}
-    ${({ colorVariant }) => colorVariant}
-    background-color:var(--bg-color);
-    min-height: calc(var(--icon-height) + 2 * var(--padding-vertical));
+export const ButtonContainer = styled.button`
+    --button-padding-inline: 3.6rem;
+    --button-padding-vertical: 0.7rem;
+    --button-font-size: var(--fs-sm);
+    --button-background-color: var(--color-secondary-100);
+    --button-text-color: var(--color-primary-200);
+    --button-icon-height: calc(var(--button-font-size) * 1.2);
+    color: var(--button-text-color);
+    font-size: var(--button-font-size);
+    padding-inline: var(--button-padding-inline);
+    background-color: var(--button-background-color);
+    min-height: calc(
+        var(--button-icon-height) + 2 * var(--button-padding-vertical)
+    );
     position: relative;
     border-radius: 12px;
     box-shadow: var(--shadow-1);
@@ -26,13 +27,13 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     svg,
     img {
         display: block;
-        height: var(--icon-height);
+        height: var(--button-icon-height);
         width: auto;
     }
     svg[data-loading-wheel='true'] {
         display: none;
         position: absolute;
-        height: calc(2 * var(--font-size));
+        height: calc(2 * var(--button-font-size));
     }
     &:disabled {
         svg[data-loading-wheel='true'] {
@@ -44,7 +45,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
             position: absolute;
             width: 100%;
             height: 100%;
-            background: var(--bg-color);
+            background: var(--button-background-color);
         }
     }
 `;

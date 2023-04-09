@@ -1,25 +1,25 @@
-export enum ContactFormFieldVariants {
-    input = `input`,
-    textarea = `textarea`,
+export enum ContactFormFieldVariant {
+    INPUT = `input`,
+    TEXT_AREA = `textarea`,
 }
 
-export interface ContactFormInput<FieldsNames extends string>
+export interface ContactFormInput<FieldNames extends string>
     extends React.InputHTMLAttributes<HTMLInputElement> {
-    name: FieldsNames;
+    name: FieldNames;
     type: React.HTMLInputTypeAttribute;
     placeholder: string;
     errorMessage: string;
     maxLength: number;
-    as: ContactFormFieldVariants.input;
+    as: ContactFormFieldVariant.INPUT;
 }
 
-export interface ContactFormTextArea<FieldsNames extends string>
+export interface ContactFormTextArea<FieldNames extends string>
     extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-    name: FieldsNames;
+    name: FieldNames;
     placeholder: string;
     errorMessage: string;
     maxLength: number;
-    as: ContactFormFieldVariants.textarea;
+    as: ContactFormFieldVariant.TEXT_AREA;
 }
 
 export type ContactFormField<MessageFields> =

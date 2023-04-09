@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '@/styles/Mixins';
 import { AnimatedWaveContainerProps } from './AnimatedWave.types';
 
 export const AnimatedWaveContainer = styled.div<AnimatedWaveContainerProps>`
@@ -37,10 +38,10 @@ export const AnimatedWaveContainer = styled.div<AnimatedWaveContainerProps>`
             min-width: 3.5rem;
             color: var(--color-secondary-200);
         }
-        @media (min-width: 450px) {
+        ${media.sm} {
             bottom: -3vw;
         }
-        @media (min-width: 900px) {
+        ${media.md} {
             padding: 2vw;
         }
     }

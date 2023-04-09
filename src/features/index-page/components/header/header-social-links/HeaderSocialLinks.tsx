@@ -1,6 +1,6 @@
-import FacebookLogo from '@/assets/icons/FacebookLogo.inline.svg';
-import InstagramLogo from '@/assets/icons/InstagramLogo.inline.svg';
-import BehanceLogo from '@/assets/icons/BehanceLogo.inline.svg';
+import FacebookLogo from '@/assets/icons/facebook-logo.inline.svg';
+import InstagramLogo from '@/assets/icons/instagram-logo.inline.svg';
+import BehanceLogo from '@/assets/icons/behance-logo.inline.svg';
 import useSiteMetadata from '@/hooks/useSiteMetadata';
 import { HeaderSocialLinksContainer } from './HeaderSocialLinks.styles';
 

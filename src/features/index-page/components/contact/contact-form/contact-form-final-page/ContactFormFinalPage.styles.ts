@@ -6,7 +6,7 @@ export const ContactFormFinalPageContainer = styled.div`
     justify-content: center;
     align-items: center;
     & > p {
-        font-size: var(--fs-md);
+        font-size: var(--fs-base);
         text-align: center;
     }
 `;

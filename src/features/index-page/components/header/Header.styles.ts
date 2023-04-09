@@ -1,18 +1,12 @@
 import styled from 'styled-components';
+import { media, layout } from '@/styles/Mixins';
 
 export const HeaderContainer = styled.header`
-    padding-inline: 1rem;
-    position: relative;
-    overflow: hidden;
-`;
-
-export const HeaderContentContainer = styled.div`
+    ${layout.standard.default}
     margin-top: 1rem;
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
-    max-width: 1250px;
-    margin-inline: auto;
     h1,
     h2,
     h3 {
@@ -37,7 +31,7 @@ export const HeaderContentContainer = styled.div`
         order: 2;
     }
 
-    @media (min-width: 1050px) {
+    ${media.lg} {
         display: grid;
         grid-template-columns: auto 1fr auto;
         grid-template-areas:
@@ -66,7 +60,7 @@ export const HeaderImageWrapper = styled.div`
     grid-area: img;
     order: 1;
     margin-top: 2.5rem;
-    @media (min-width: 1050px) {
+    ${media.lg} {
         margin-top: 0;
     }
 `;

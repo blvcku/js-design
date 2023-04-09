@@ -1,45 +1,52 @@
-import Img from '@/assets/images/Header.png';
+import Img from '@/assets/images/header.png';
 import useSiteMetadata from '@/hooks/useSiteMetadata';
-import { SEOProps, SEOPageTypes } from './SEO.types';
+import { SEOProps, PageType } from './SEO.types';
 
-const SEO: React.FC<SEOProps> = (props) => {
+const SEO: React.FC<SEOProps> = ({
+    title,
+    description,
+    keywords,
+    img,
+    pathname,
+    type,
+    children,
+}) => {
     const {
-        title: baseTitle,
-        description: baseDescription,
-        keywords: baseKeywords,
-        siteURL: baseSiteURL,
+        title: defaultTitle,
+        description: defaultDescription,
+        keywords: defaultKeywords,
+        siteURL,
     } = useSiteMetadata();
 
-    const {
-        title = baseTitle,
-        description = baseDescription,
-        keywords = baseKeywords,
-        img = Img,
-        siteURL = baseSiteURL,
-        type = SEOPageTypes.website,
-        children,
-    } = props;
+    const seo = {
+        title: title || defaultTitle,
+        description: description || defaultDescription,
+        keywords: keywords?.toString() || defaultKeywords.toString(),
+        image: img || Img,
+        url: `${siteURL}${pathname || ``}`,
+        type: type || PageType.WEBSITE,
+    };
 
     return (
         <>
             <title>{title}</title>
-            <meta name="description" content={description} />
-            <meta name="keywords" content={keywords} />
+            <meta name="description" content={seo.description} />
+            <meta name="keywords" content={seo.keywords} />
             <meta charSet="UTF-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <meta name="theme-color" content="var(--color-primary-200)" />
+            <meta name="theme-color" content="#EBF2F2" />
             <meta name="color-scheme" content="light" />
-            <meta property="og:title" content={title} />
-            <meta property="og:type" content={type} />
-            <meta property="og:description" content={description} />
-            <meta property="og:image" content={img} />
-            <meta property="og:locale" content="pl-PL" />
-            <meta property="og:url" content={siteURL} />
-            <link rel="canonical" href={siteURL} />
+            <meta property="og:title" content={seo.title} />
+            <meta property="og:type" content={seo.type} />
+            <meta property="og:description" content={seo.description} />
+            <meta property="og:image" content={seo.image} />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:url" content={seo.url} />
+            <link rel="canonical" href={seo.url} />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link

@@ -1,14 +1,14 @@
-export enum SEOPageTypes {
-    website = `website`,
-    article = `article`,
+export enum PageType {
+    WEBSITE = `website`,
+    ARTICLE = `article`,
 }
 
 export interface SEOProps {
-    title?: string;
-    description?: string;
-    keywords?: string;
-    img?: string;
-    siteURL?: string;
-    type?: SEOPageTypes;
+    title?: Nullable<string>;
+    description?: Nullable<string>;
+    keywords?: Nullable<ReadonlyArray<Nullable<string>>>;
+    img?: Nullable<string>;
+    pathname?: Nullable<string>;
+    type?: PageType;
     children?: React.ReactNode;
 }

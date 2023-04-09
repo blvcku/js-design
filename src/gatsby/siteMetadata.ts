@@ -2,7 +2,7 @@ const siteMetadata: Queries.SiteMetadata = {
     title: `JS Design`,
     siteURL: `https://www.yourdomain.tld`,
     description: `Description`,
-    keywords: `key, words`,
+    keywords: [`key`, `words`],
     facebook: {
         url: `https://www.facebook.com/jacek.szczypior.77`,
         name: `Jacek Szczypior`,

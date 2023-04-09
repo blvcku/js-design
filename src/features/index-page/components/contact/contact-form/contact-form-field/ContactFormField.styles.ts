@@ -17,7 +17,7 @@ export const ContactFormFieldContainer = styled.label`
 `;
 
 export const ContactFormFieldElement = styled.input<ContactFormFieldElementProps>`
-    font-size: var(--fs-base);
+    font-size: var(--fs-sm);
     font-weight: 400;
     box-shadow: var(--shadow-4);
     border: 1px solid var(--color-secondary-300);
@@ -48,7 +48,7 @@ export const ContactFormFieldElement = styled.input<ContactFormFieldElementProps
 
 export const ContactFormFieldError = styled.p`
     display: none;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-xs);
     padding-inline: var(--padding-horizontal);
     position: absolute;
     top: calc(100% + 0.2rem);

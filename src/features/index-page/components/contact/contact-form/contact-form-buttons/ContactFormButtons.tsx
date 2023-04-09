@@ -1,10 +1,6 @@
-import ArrowIcon from '@/assets/icons/Arrow.inline.svg';
+import ArrowIcon from '@/assets/icons/arrow-horizontal.inline.svg';
 import { ContactFormButtonsWrapper } from './ContactFormButtons.styles';
 import Button from '@/components/buttons/button/Button';
-import {
-    ButtonSizeVariants,
-    ButtonColorVariants,
-} from '@/components/buttons/button/Button.types';
 import { ContactFormButtonsProps } from './ContactFormButtons.types';
 
 const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
@@ -45,18 +41,13 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
                     aria-label="Previous"
                     type="button"
                     onClick={handlePrevPage}
-                    colorVariant={ButtonColorVariants.dark}
-                    sizeVariant={ButtonSizeVariants.thin}
+                    style={{ paddingInline: `1.4rem` }}
                 >
                     <ArrowIcon />
                 </Button>
             ) : null}
             {currentPage < numberOfPages - 1 ? (
-                <Button
-                    type="button"
-                    onClick={handleNextPage}
-                    colorVariant={ButtonColorVariants.dark}
-                >
+                <Button type="button" onClick={handleNextPage}>
                     Next
                 </Button>
             ) : null}
@@ -64,7 +55,6 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
                 <Button
                     type="submit"
                     onClick={handleSubmitClick}
-                    colorVariant={ButtonColorVariants.dark}
                     disabled={loading}
                 >
                     Send

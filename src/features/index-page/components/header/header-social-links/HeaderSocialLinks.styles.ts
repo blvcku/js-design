@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from '@/styles/Mixins';
 
 export const HeaderSocialLinksContainer = styled.ul`
     margin-top: 8rem;
@@ -13,7 +14,7 @@ export const HeaderSocialLinksContainer = styled.ul`
         display: block;
         color: var(--color-secondary-300);
     }
-    @media (min-width: 1050px) {
+    ${media.lg} {
         display: flex;
     }
 `;

@@ -4,7 +4,7 @@ import {
     FooterContentWrapper,
     FooterContentContainer,
 } from './Footer.styles';
-import FooterWave from '@/assets/images/WaveFooter.inline.svg';
+import FooterWave from '@/assets/images/wave-footer.inline.svg';
 import FooterSocialLinks from './footer-social-links/FooterSocialLinks';
 import FooterNavigation from './footer-navigation/FooterNavigation';
 

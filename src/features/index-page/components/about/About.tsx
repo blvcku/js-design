@@ -1,6 +1,7 @@
-import FirstWave from '@/assets/images/Wave1.inline.svg';
-import SecondWave from '@/assets/images/Wave2.inline.svg';
-import Logo from '@/assets/icons/Logo.inline.svg';
+import FirstWave from '@/assets/images/wave-1.inline.svg';
+import SecondWave from '@/assets/images/wave-2.inline.svg';
+import Logo from '@/assets/icons/logo.inline.svg';
+import AboutDescription from './about-description/AboutDescription';
 import AboutBadges from './about-badges/AboutBadges';
 import AboutWorkTypes from './about-work-types/AboutWorkTypes';
 import {
@@ -21,11 +22,7 @@ const About: React.FC = () => {
                 <FirstWave />
             </AboutWaveContainer>
             <AboutContentContainer>
-                <p>
-                    I&apos;m a beginner graphic designer, it&apos;s also my
-                    hobby and something I enjoy doing!
-                </p>
-                <p>I&apos;ll be posting my designs here! Check them out</p>
+                <AboutDescription />
                 <AboutBadges />
                 <AboutWorkTypes />
             </AboutContentContainer>

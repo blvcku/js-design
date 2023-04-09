@@ -1,4 +1,2 @@
-import wrapPageElement from '@/gatsby/wrapPageElement';
-import wrapRootElement from '@/gatsby/wrapRootElement';
-
-export { wrapPageElement, wrapRootElement };
+export { default as wrapPageElement } from '@/gatsby/wrapPageElement';
+export { default as wrapRootElement } from '@/gatsby/wrapRootElement';

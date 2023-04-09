@@ -1,0 +1,26 @@
+import { PageProps, HeadProps } from 'gatsby';
+import { Main } from './styles/Index.styles';
+import SEO from '@/components/seo/SEO';
+import Header from './components/header/Header';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import Projects from './components/projects/Projects';
+
+const IndexPage: React.FC<PageProps> = () => {
+    return (
+        <>
+            <Header />
+            <Main>
+                <About />
+                <Projects />
+                <Contact />
+            </Main>
+        </>
+    );
+};
+
+export const Head: React.FC<HeadProps> = () => {
+    return <SEO />;
+};
+
+export default IndexPage;

@@ -1,6 +1,6 @@
-import UiDesignIcon from '@/assets/icons/UiDesign.inline.svg';
-import BannersIcon from '@/assets/icons/Banners.inline.svg';
-import LogoIcon from '@/assets/icons/LogoIcon.inline.svg';
+import UiDesignIcon from '@/assets/icons/ui-design.inline.svg';
+import BannersIcon from '@/assets/icons/banners.inline.svg';
+import LogoIcon from '@/assets/icons/logo-icon.inline.svg';
 import {
     AboutWorkTypesContainer,
     AboutWorkTypesList,

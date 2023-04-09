@@ -1,22 +1,23 @@
 import styled from 'styled-components';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { Link } from 'gatsby';
+import { media, layout } from '@/styles/Mixins';
 import { NavigationExpandableContentProps } from './Navigation.types';
 
 export const NavigationContainer = styled.div`
+    ${layout.large.viewportResponsive}
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-top: 2rem;
-    padding-inline: 1rem;
-    max-width: max(calc(100vw) - 480px, 1350px);
-    margin-inline: auto;
-    @media (min-width: 500px) {
-        padding-top: 3rem;
+    ${media.xs} {
         justify-content: space-between;
+    }
+    ${media.sm} {
+        padding-top: 3rem;
     }
 `;
 
-export const NavigationLogoContainer = styled(AnchorLink)`
+export const NavigationLogoContainer = styled(Link)`
     background: var(--color-secondary-100);
     padding: 0.5rem;
     border-radius: 50%;
@@ -30,7 +31,7 @@ export const NavigationLogoContainer = styled(AnchorLink)`
         height: auto;
         color: var(--color-primary-200);
     }
-    @media (min-width: 500px) {
+    ${media.xs} {
         display: grid;
     }
 `;
@@ -76,10 +77,10 @@ export const NavigationLinksContainer = styled.ul`
     gap: 0.5rem;
 `;
 
-export const NavigationLink = styled(AnchorLink)`
+export const NavigationLink = styled(Link)`
     color: var(--color-primary-200);
     text-decoration: none;
-    font-size: var(--fs-md);
+    font-size: var(--fs-base);
     line-height: 1.5;
     border-right: 1px solid var(--color-primary-200);
     padding: 0.15rem 0.5rem 0.15rem;

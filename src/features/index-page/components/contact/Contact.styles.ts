@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import { media, layout } from '@/styles/Mixins';
 
 export const ContactContainer = styled.section`
+    ${layout.standard.default}
+    scroll-margin-top: 7rem;
     margin-top: 4rem;
-    padding-inline: 1rem;
-    max-width: calc(1250px + 2rem);
-    margin-inline: auto;
     gap: 3rem;
     h2 {
         font-size: var(--fs-2xl);
@@ -13,7 +13,7 @@ export const ContactContainer = styled.section`
         text-align: center;
     }
     h3 {
-        font-size: var(--fs-lg);
+        font-size: var(--fs-md);
         font-weight: 500;
         margin-top: 2rem;
         text-align: center;
@@ -21,7 +21,7 @@ export const ContactContainer = styled.section`
     & > div:nth-child(2) {
         display: none;
     }
-    @media (min-width: 1050px) {
+    ${media.lg} {
         margin-top: 7rem;
         display: grid;
         grid-template-columns: 1fr 1.3fr;

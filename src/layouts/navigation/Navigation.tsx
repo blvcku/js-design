@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Logo from '@/assets/icons/Logo.inline.svg';
-import LogoThick from '@/assets/icons/LogoThick.inline.svg';
+import Logo from '@/assets/icons/logo.inline.svg';
+import LogoThick from '@/assets/icons/logo-thick.inline.svg';
 import NavigationHamburger from './navigation-hamburger/NavigationHamburger';
 import NavigationCollapseButton from './navigation-collapse-button/NavigationCollapseButton';
 import {

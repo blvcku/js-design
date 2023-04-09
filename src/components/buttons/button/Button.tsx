@@ -1,28 +1,11 @@
 import { ButtonContainer } from './Button.styles';
-import {
-    ButtonProps,
-    ButtonSizeVariants,
-    ButtonColorVariants,
-} from './Button.types';
+import { ButtonProps } from './Button.types';
 
 const Button: React.FC<ButtonProps> = (props) => {
-    const {
-        children,
-        disabled,
-        onClick,
-        sizeVariant = ButtonSizeVariants.wide,
-        colorVariant = ButtonColorVariants.light,
-        ...buttonProps
-    } = props;
+    const { children, disabled, onClick, ...buttonProps } = props;
 
     return (
-        <ButtonContainer
-            onClick={onClick}
-            disabled={disabled}
-            sizeVariant={sizeVariant}
-            colorVariant={colorVariant}
-            {...buttonProps}
-        >
+        <ButtonContainer onClick={onClick} disabled={disabled} {...buttonProps}>
             {children}
             {disabled ? (
                 <svg data-loading-wheel viewBox="0 0 50 50">
