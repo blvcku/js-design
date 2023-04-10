@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header`
 export const HeaderImageWrapper = styled.div`
     overflow: hidden;
     box-shadow: var(--shadow-5);
-    border: 2px solid var(--color-secondary-300);
+    border: 2px solid var(--color-secondary-400);
     border-radius: 15px 15px 15px 45px;
     aspect-ratio: 1/1;
     display: grid;

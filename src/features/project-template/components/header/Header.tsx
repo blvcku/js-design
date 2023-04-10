@@ -1,23 +1,21 @@
-import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import {
     HeaderContainer,
     HeaderImageWrapper,
     HeaderTitle,
 } from './Header.styles';
 import { HeaderProps } from './Header.types';
+import ImageRenderer from '@/components/image-renderer/ImageRenderer';
 
 const Header: React.FC<HeaderProps> = ({ banner, title }) => {
-    const img = getImage(banner);
-    if (!img) return null;
     return (
         <HeaderContainer>
             <HeaderImageWrapper>
-                <GatsbyImage
+                <ImageRenderer
+                    image={banner}
+                    alt={title}
                     loading="eager"
                     objectFit="contain"
                     objectPosition="center center"
-                    image={img}
-                    alt={title}
                 />
             </HeaderImageWrapper>
             <HeaderTitle>{title}</HeaderTitle>

@@ -9,6 +9,6 @@ export const ContactFormButtonsWrapper = styled.div`
     height: 100%;
     flex-grow: 1;
     button {
-        --button-background-color: var(--color-secondary-300);
+        --button-background-color: var(--color-secondary-400);
     }
 `;

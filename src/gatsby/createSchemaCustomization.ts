@@ -23,7 +23,12 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
             name: String!
         }
 
-        union ContentfulProjectContent = ContentfulTypography | ContentfulRichText | ContentfulAccordion | ContentfulColors
+        union ContentfulProjectContent = 
+            ContentfulTypography | 
+            ContentfulRichText | 
+            ContentfulAccordion | 
+            ContentfulColors | 
+            ContentfulIdea
 
         type ContentfulProject{
             createdAt: Date!
@@ -37,7 +42,11 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
             content: [ContentfulProjectContent!] @link(by: "id", from: "content___NODE")
         }
 
-        union ContentfulAccordionBody = ContentfulTypography | ContentfulRichText | ContentfulColors
+        union ContentfulAccordionBody = 
+            ContentfulTypography | 
+            ContentfulRichText | 
+            ContentfulColors | 
+            ContentfulIdea
 
         type ContentfulAccordion {
             title: String!
@@ -91,6 +100,13 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
         type ContentfulColors {
             marginTop: Int
             colors: [String!]
+        }
+
+        type ContentfulIdea {
+            marginTop: Int
+            firstImage: ContentfulAsset! @link(by: "id", from: "firstImage___NODE")
+            secondImage: ContentfulAsset! @link(by: "id", from: "secondImage___NODE")
+            equalToImage: ContentfulAsset! @link(by: "id", from: "equalToImage___NODE")
         }
     `);
 };

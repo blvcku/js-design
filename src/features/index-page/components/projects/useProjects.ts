@@ -29,6 +29,7 @@ const query = graphql`
                     title
                     thumb {
                         gatsbyImageData(width: 600)
+                        url
                     }
                 }
             }

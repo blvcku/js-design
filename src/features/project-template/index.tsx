@@ -23,9 +23,9 @@ const Project: React.FC<PageProps<Queries.ProjectQuery>> = ({ data }) => {
 };
 
 export const Head: React.FC<HeadProps<Queries.ProjectQuery>> = ({ data }) => {
-    const { title, description, keywords, thumb, slug } =
+    const { title, description, keywords, banner, slug } =
         data.contentfulProject || {};
-    const imgSrc = thumb && getSrc(thumb);
+    const imgSrc = banner && getSrc(banner);
     return (
         <SEO
             title={title}

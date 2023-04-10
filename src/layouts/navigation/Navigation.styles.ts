@@ -37,7 +37,7 @@ export const NavigationLogoContainer = styled(Link)`
 `;
 
 export const NavigationExpandableContent = styled.div<NavigationExpandableContentProps>`
-    background: var(--color-secondary-300);
+    background: var(--color-secondary-400);
     position: absolute;
     top: 0;
     right: 0;

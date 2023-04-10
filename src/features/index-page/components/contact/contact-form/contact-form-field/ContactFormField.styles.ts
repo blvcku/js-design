@@ -20,13 +20,13 @@ export const ContactFormFieldElement = styled.input<ContactFormFieldElementProps
     font-size: var(--fs-sm);
     font-weight: 400;
     box-shadow: var(--shadow-4);
-    border: 1px solid var(--color-secondary-300);
+    border: 1px solid var(--color-secondary-400);
     background: var(--color-primary-100);
     border-radius: 12px;
     padding: 0.8rem 1.2rem;
     width: 100%;
     &::placeholder {
-        color: var(--color-secondary-300);
+        color: var(--color-secondary-400);
         opacity: 0.5;
     }
     &:is(textarea) {

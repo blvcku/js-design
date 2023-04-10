@@ -12,7 +12,7 @@ export const HeaderSocialLinksContainer = styled.ul`
         width: 3.8rem;
         height: auto;
         display: block;
-        color: var(--color-secondary-300);
+        color: var(--color-secondary-400);
     }
     ${media.lg} {
         display: flex;

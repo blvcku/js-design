@@ -18,7 +18,7 @@ export const RichTextContainer = styled.div<RichTextContainerProps>`
     ul,
     ol {
         margin-block: 2rem;
-        color: var(--color-secondary-300);
+        color: var(--color-secondary-400);
         font-size: var(--fs-md);
         padding-left: 5rem;
         * {
@@ -56,13 +56,13 @@ export const RichTextContainer = styled.div<RichTextContainerProps>`
     table,
     td,
     th {
-        border: 2px solid var(--color-secondary-300);
+        border: 2px solid var(--color-secondary-400);
         padding: 1rem;
     }
     table {
         box-shadow: var(--shadow-1);
         font-size: var(--fs-base);
-        color: var(--color-secondary-300);
+        color: var(--color-secondary-400);
         border-collapse: collapse;
         * {
             margin-top: 0;
@@ -73,7 +73,7 @@ export const RichTextContainer = styled.div<RichTextContainerProps>`
     }
 
     blockquote {
-        color: var(--color-secondary-300);
+        color: var(--color-secondary-400);
         padding-left: 1.5rem;
         position: relative;
         &::before {
@@ -83,7 +83,7 @@ export const RichTextContainer = styled.div<RichTextContainerProps>`
             left: 0;
             height: 100%;
             width: 0.25rem;
-            background: var(--color-secondary-300);
+            background: var(--color-secondary-400);
         }
     }
 

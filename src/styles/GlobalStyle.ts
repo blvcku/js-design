@@ -8,8 +8,9 @@ const GlobalStyle = createGlobalStyle`
         --color-primary-200: #EBF2F2;
 
         --color-secondary-100: #397374;
-        --color-secondary-200: #2c3e40;
-        --color-secondary-300: #10403B;
+        --color-secondary-200: #127369;
+        --color-secondary-300: #2c3e40;
+        --color-secondary-400: #10403B;
 
         --color-tertiary-100: #051917;
 

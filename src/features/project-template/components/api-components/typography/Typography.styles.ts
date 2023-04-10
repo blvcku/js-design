@@ -9,7 +9,7 @@ import isNumber from '@/helpers/isNumber';
 
 export const TypographyContainer = styled.div<TypographyContainerProps>`
     display: inline-block;
-    color: var(--color-secondary-300);
+    color: var(--color-secondary-400);
     margin-left: 15%;
     margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `3rem`};

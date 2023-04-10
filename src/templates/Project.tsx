@@ -8,13 +8,12 @@ export const query = graphql`
             slug
             description
             keywords
-            thumb {
-                gatsbyImageData
-            }
             banner {
                 gatsbyImageData
+                url
             }
             content {
+                ...ContentfulIdea
                 ...ContentfulColors
                 ...ContentfulTypography
                 ...ContentfulRichText

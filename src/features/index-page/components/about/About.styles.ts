@@ -57,7 +57,7 @@ export const AboutLogoContainer = styled.div`
         width: 5.5vw;
         height: auto;
         min-width: 3rem;
-        color: var(--color-secondary-200);
+        color: var(--color-secondary-300);
     }
     ${media.sm} {
         bottom: -3vw;

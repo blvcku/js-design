@@ -15,7 +15,7 @@ export const AboutBadgesContainer = styled.ul`
 `;
 
 export const AboutBadge = styled.li`
-    background: var(--color-secondary-300);
+    background: var(--color-secondary-400);
     border: 15px solid var(--color-primary-200);
     border-radius: 15px;
     box-shadow: var(--shadow-2);

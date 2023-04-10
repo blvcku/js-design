@@ -4,7 +4,7 @@ import { ProgressBarContainerProps } from './ProgressBar.types';
 export const ProgressBarWrapper = styled.div`
     --horizontal-padding: 14%;
     --indicator-width: 2.8rem;
-    --bar-color: var(--color-secondary-300);
+    --bar-color: var(--color-secondary-400);
     position: relative;
     padding-inline: var(--horizontal-padding);
 `;

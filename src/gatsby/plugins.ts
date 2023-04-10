@@ -35,8 +35,17 @@ const plugins = (
             },
         },
     },
+    {
+        resolve: `gatsby-plugin-sharp`,
+        options: {
+            defaults: {
+                formats: [`auto`],
+                placeholder: `dominantColor`,
+                backgroundColor: `transparent`,
+            },
+        },
+    },
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
 ];
