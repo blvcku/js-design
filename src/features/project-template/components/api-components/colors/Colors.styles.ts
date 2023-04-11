@@ -3,7 +3,7 @@ import { media, pixelsToRem } from '@/styles/Mixins';
 import { ColorsContainerProps, ColorBoxProps } from './Colors.types';
 import isNumber from '@/helpers/isNumber';
 
-export const ColorsContainer = styled.section<ColorsContainerProps>`
+export const ColorsContainer = styled.ul<ColorsContainerProps>`
     margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `4rem`};
     display: grid;
