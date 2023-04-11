@@ -3,7 +3,7 @@ import { pixelsToRem } from '@/styles/Mixins';
 import { RichTextContainerProps } from './RichText.types';
 import isNumber from '@/helpers/isNumber';
 
-export const RichTextContainer = styled.div<RichTextContainerProps>`
+export const RichTextContainer = styled.section<RichTextContainerProps>`
     margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `3rem`};
     font-size: var(--fs-lg);

@@ -7,7 +7,7 @@ import {
 import { createFontFace, pixelsToRem } from '@/styles/Mixins';
 import isNumber from '@/helpers/isNumber';
 
-export const TypographyContainer = styled.div<TypographyContainerProps>`
+export const TypographyContainer = styled.section<TypographyContainerProps>`
     display: inline-block;
     color: var(--color-secondary-400);
     margin-left: 15%;

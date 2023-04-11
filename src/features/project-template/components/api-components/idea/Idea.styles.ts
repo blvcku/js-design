@@ -3,7 +3,7 @@ import { IdeaContainerProps } from './Idea.types';
 import isNumber from '@/helpers/isNumber';
 import { media, pixelsToRem } from '@/styles/Mixins';
 
-export const IdeaContainer = styled.div<IdeaContainerProps>`
+export const IdeaContainer = styled.section<IdeaContainerProps>`
     margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `4rem`};
     color: var(--color-secondary-200);
