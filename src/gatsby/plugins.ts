@@ -40,7 +40,7 @@ const plugins = (
         options: {
             defaults: {
                 formats: [`auto`],
-                placeholder: `dominantColor`,
+                placeholder: `blurred`,
                 backgroundColor: `transparent`,
             },
         },

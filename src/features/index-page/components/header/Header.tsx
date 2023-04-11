@@ -13,7 +13,6 @@ const Header: React.FC = () => {
                     loading="eager"
                     quality={100}
                     layout="fullWidth"
-                    placeholder="blurred"
                     src="../../../../assets/images/header.png"
                     alt="Jacek Szczypior"
                 />

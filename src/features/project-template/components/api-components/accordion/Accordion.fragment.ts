@@ -8,6 +8,7 @@ export const AccordionFragment = graphql`
         contentBottomMargin
         contentHorizontalMargin
         body {
+            ...ContentfulImage
             ...ContentfulIdea
             ...ContentfulColors
             ...ContentfulTypography

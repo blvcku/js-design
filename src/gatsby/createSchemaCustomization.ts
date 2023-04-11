@@ -28,7 +28,8 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
             ContentfulRichText | 
             ContentfulAccordion | 
             ContentfulColors | 
-            ContentfulIdea
+            ContentfulIdea |
+            ContentfulImage
 
         type ContentfulProject{
             createdAt: Date!
@@ -46,7 +47,8 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
             ContentfulTypography | 
             ContentfulRichText | 
             ContentfulColors | 
-            ContentfulIdea
+            ContentfulIdea |
+            ContentfulImage
 
         type ContentfulAccordion {
             title: String!
@@ -107,6 +109,12 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
             firstImage: ContentfulAsset! @link(by: "id", from: "firstImage___NODE")
             secondImage: ContentfulAsset! @link(by: "id", from: "secondImage___NODE")
             equalToImage: ContentfulAsset! @link(by: "id", from: "equalToImage___NODE")
+        }
+
+        type ContentfulImage {
+            marginTop: Int
+            roundedCorners: Boolean
+            image: ContentfulAsset! @link(by: "id", from: "image___NODE")
         }
     `);
 };
