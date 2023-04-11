@@ -1,22 +1,24 @@
 import { IGatsbyImageData, GatsbyImageProps } from 'gatsby-plugin-image';
 
+export interface ImageRendererImage {
+    gatsbyImageData: Nullable<IGatsbyImageData>;
+    url: Nullable<string>;
+}
+
 export interface ImageRendererPropsWithAlt
     extends Omit<GatsbyImageProps, `image` | `alt`> {
-    image: {
-        gatsbyImageData: Nullable<IGatsbyImageData>;
-        url: Nullable<string>;
-    };
+    image: Nullable<ImageRendererImage>;
     alt: string;
 }
 
 export interface ImageRendererPropsWithoutAlt
     extends Omit<GatsbyImageProps, `image` | `alt`> {
-    image: {
-        gatsbyImageData: Nullable<IGatsbyImageData>;
-        url: Nullable<string>;
-        title: Nullable<string>;
-        description: Nullable<string>;
-    };
+    image: Nullable<
+        ImageRendererImage & {
+            title: Nullable<string>;
+            description: Nullable<string>;
+        }
+    >;
 }
 
 export type ImageRendererProps =

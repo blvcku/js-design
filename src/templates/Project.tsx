@@ -13,6 +13,7 @@ export const query = graphql`
                 url
             }
             content {
+                ...ContentfulContentWrapper
                 ...ContentfulImage
                 ...ContentfulIdea
                 ...ContentfulColors

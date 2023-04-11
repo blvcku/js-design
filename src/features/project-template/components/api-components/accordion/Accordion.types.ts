@@ -4,5 +4,4 @@ export interface AccordionContainerProps {
 
 export interface AccordionContentContainerProps {
     contentBottomMargin: Nullable<number>;
-    contentHorizontalMargin: Nullable<number>;
 }

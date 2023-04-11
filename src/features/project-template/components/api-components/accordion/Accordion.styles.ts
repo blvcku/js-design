@@ -41,8 +41,4 @@ export const AccordionContentContainer = styled.div<AccordionContentContainerPro
         isNumber(contentBottomMargin)
             ? pixelsToRem(contentBottomMargin)
             : `3rem`};
-    padding-inline: ${({ contentHorizontalMargin }) =>
-        isNumber(contentHorizontalMargin)
-            ? pixelsToRem(contentHorizontalMargin)
-            : `0`};
 `;

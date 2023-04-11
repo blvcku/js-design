@@ -29,7 +29,8 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
             ContentfulAccordion | 
             ContentfulColors | 
             ContentfulIdea |
-            ContentfulImage
+            ContentfulImage |
+            ContentfulContentWrapper
 
         type ContentfulProject{
             createdAt: Date!
@@ -38,24 +39,39 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
             category: String!
             description: String
             keywords: [String!]
-            thumb: ContentfulAsset! @link(by: "id", from: "thumb___NODE")
-            banner: ContentfulAsset! @link(by: "id", from: "banner___NODE")
+            thumb: ContentfulAsset @link(by: "id", from: "thumb___NODE")
+            banner: ContentfulAsset @link(by: "id", from: "banner___NODE")
             content: [ContentfulProjectContent!] @link(by: "id", from: "content___NODE")
         }
 
-        union ContentfulAccordionBody = 
+        union ContentfulAccordionContent = 
             ContentfulTypography | 
             ContentfulRichText | 
             ContentfulColors | 
             ContentfulIdea |
-            ContentfulImage
+            ContentfulImage |
+            ContentfulContentWrapper
 
         type ContentfulAccordion {
             title: String!
             marginTop: Int
             contentBottomMargin: Int
+            content: [ContentfulAccordionContent!] @link(by: "id", from: "content___NODE")
+        }
+
+        union ContentfulContentWrapperContent = 
+            ContentfulTypography |
+            ContentfulRichText |
+            ContentfulColors |
+            ContentfulIdea |
+            ContentfulImage
+
+        type ContentfulContentWrapper {
             contentHorizontalMargin: Int
-            body: [ContentfulAccordionBody!] @link(by: "id", from: "body___NODE")
+            contentAlignInline: Boolean
+            contentAlignInlineBreakpoint: Int
+            contentHorizontalGap: Int
+            content: [ContentfulContentWrapperContent!] @link(by: "id", from: "content___NODE")
         }
 
         enum ContentfulTypographyWeight {
@@ -106,15 +122,15 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
 
         type ContentfulIdea {
             marginTop: Int
-            firstImage: ContentfulAsset! @link(by: "id", from: "firstImage___NODE")
-            secondImage: ContentfulAsset! @link(by: "id", from: "secondImage___NODE")
-            equalToImage: ContentfulAsset! @link(by: "id", from: "equalToImage___NODE")
+            firstImage: ContentfulAsset @link(by: "id", from: "firstImage___NODE")
+            secondImage: ContentfulAsset @link(by: "id", from: "secondImage___NODE")
+            equalToImage: ContentfulAsset @link(by: "id", from: "equalToImage___NODE")
         }
 
         type ContentfulImage {
             marginTop: Int
             roundedCorners: Boolean
-            image: ContentfulAsset! @link(by: "id", from: "image___NODE")
+            image: ContentfulAsset @link(by: "id", from: "image___NODE")
         }
     `);
 };

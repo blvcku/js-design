@@ -6,6 +6,7 @@ import Accordion from '../api-components/accordion/Accordion';
 import Colors from '../api-components/colors/Colors';
 import Idea from '../api-components/idea/Idea';
 import Image from '../api-components/image/Image';
+import ContentWrapper from '../api-components/content-wrapper/ContentWrapper';
 
 const ComponentMap: React.FC<ComponentMapProps> = ({ content }) => {
     return (
@@ -14,6 +15,8 @@ const ComponentMap: React.FC<ComponentMapProps> = ({ content }) => {
                 <React.Fragment key={index}>
                     {(() => {
                         switch (props.__typename) {
+                            case `ContentfulContentWrapper`:
+                                return <ContentWrapper {...props} />;
                             case `ContentfulImage`:
                                 return <Image {...props} />;
                             case `ContentfulIdea`:

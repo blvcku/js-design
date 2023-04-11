@@ -9,9 +9,8 @@ import ComponentMap from '../../component-map/ComponentMap';
 const Accordion: React.FC<Queries.ContentfulAccordionFragment> = ({
     marginTop,
     contentBottomMargin,
-    contentHorizontalMargin,
     title,
-    body,
+    content,
 }) => {
     return (
         <AccordionContainer marginTop={marginTop}>
@@ -21,9 +20,8 @@ const Accordion: React.FC<Queries.ContentfulAccordionFragment> = ({
             </AccordionTitle>
             <AccordionContentContainer
                 contentBottomMargin={contentBottomMargin}
-                contentHorizontalMargin={contentHorizontalMargin}
             >
-                <ComponentMap content={body} />
+                <ComponentMap content={content} />
             </AccordionContentContainer>
         </AccordionContainer>
     );
