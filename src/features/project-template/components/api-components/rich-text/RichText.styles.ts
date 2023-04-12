@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { pixelsToRem } from '@/styles/Mixins';
+import { media, pixelsToRem } from '@/styles/Mixins';
 import { RichTextContainerProps } from './RichText.types';
 import isNumber from '@/helpers/isNumber';
 
@@ -20,7 +20,7 @@ export const RichTextContainer = styled.section<RichTextContainerProps>`
         margin-block: 2rem;
         color: var(--color-secondary-400);
         font-size: var(--fs-md);
-        padding-left: 5rem;
+        padding-left: 3rem;
         * {
             margin-top: 1rem;
         }
@@ -29,6 +29,9 @@ export const RichTextContainer = styled.section<RichTextContainerProps>`
         }
         &:first-child {
             margin-top: 0;
+        }
+        ${media.sm} {
+            padding-left: 5rem;
         }
     }
 

@@ -35,8 +35,9 @@ const Navigation: React.FC = () => {
         setExpanded(true);
     };
 
-    const handleCollapse: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-        e.preventDefault();
+    const handleCollapse: React.MouseEventHandler<
+        HTMLButtonElement | HTMLAnchorElement
+    > = () => {
         setExpanded(false);
     };
 
@@ -52,7 +53,12 @@ const Navigation: React.FC = () => {
                     <NavigationLinksContainer>
                         {navigationLinks.map(({ name, to }) => (
                             <li key={name}>
-                                <NavigationLink to={to}>{name}</NavigationLink>
+                                <NavigationLink
+                                    onClick={handleCollapse}
+                                    to={to}
+                                >
+                                    {name}
+                                </NavigationLink>
                             </li>
                         ))}
                     </NavigationLinksContainer>

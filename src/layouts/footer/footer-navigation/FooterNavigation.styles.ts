@@ -4,13 +4,18 @@ import { media } from '@/styles/Mixins';
 export const FooterNavigationContainer = styled.nav`
     text-align: center;
     & > h2 {
-        font-size: var(--fs-md);
+        font-size: var(--fs-xl);
         font-weight: 600;
         text-transform: uppercase;
     }
     & > h3 {
         font-size: var(--fs-base);
         font-weight: 400;
+    }
+    ${media.custom(560)} {
+        & > h2 {
+            font-size: var(--fs-md);
+        }
     }
     ${media.md} {
         text-align: end;

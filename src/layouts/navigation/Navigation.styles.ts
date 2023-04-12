@@ -9,11 +9,9 @@ export const NavigationContainer = styled.div`
     justify-content: flex-end;
     align-items: center;
     padding-top: 2rem;
-    ${media.xs} {
-        justify-content: space-between;
-    }
     ${media.sm} {
         padding-top: 3rem;
+        justify-content: space-between;
     }
 `;
 
@@ -31,7 +29,7 @@ export const NavigationLogoContainer = styled(Link)`
         height: auto;
         color: var(--color-primary-200);
     }
-    ${media.xs} {
+    ${media.sm} {
         display: grid;
     }
 `;

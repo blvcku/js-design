@@ -4,7 +4,7 @@ import { media, layout } from '@/styles/Mixins';
 export const HeaderContainer = styled.header`
     ${layout.standard.default}
     display: grid;
-    margin-top: 2rem;
+    margin-top: 1rem;
     ${media.md} {
         margin-top: 5rem;
     }
@@ -18,7 +18,7 @@ export const HeaderImageWrapper = styled.div`
     aspect-ratio: 1/1;
     display: grid;
     grid-template-columns: 1fr;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
     ${media.sm} {
         aspect-ratio: 4/3;
     }

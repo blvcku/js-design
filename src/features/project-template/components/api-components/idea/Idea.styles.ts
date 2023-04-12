@@ -10,7 +10,7 @@ export const IdeaContainer = styled.section<IdeaContainerProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
     svg {
         max-width: 4rem;
         width: 100%;
@@ -20,7 +20,7 @@ export const IdeaContainer = styled.section<IdeaContainerProps>`
         zoom: 50%;
     }
     ${media.custom(450)} {
-        gap: 3.5rem;
+        gap: 4rem;
         svg {
             max-width: 4.5rem;
         }

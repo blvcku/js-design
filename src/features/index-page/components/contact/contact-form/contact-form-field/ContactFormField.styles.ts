@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 import { ContactFormFieldElementProps } from './ContactFormField.types';
+import { media } from '@/styles/Mixins';
 
 export const ContactFormFieldContainer = styled.label`
-    --padding-horizontal: 0;
+    --contact-form-field-padding-horizontal: 0;
     margin-bottom: 1.3rem;
-    padding-inline: var(--padding-horizontal);
+    padding-inline: var(--contact-form-field-padding-horizontal);
     position: relative;
     display: block;
     margin-top: 1.5rem;
     &:has(input) {
-        --padding-horizontal: 11%;
+        --contact-form-field-padding-horizontal: 9.5%;
+        ${media.md} {
+            --contact-form-field-padding-horizontal: 11%;
+        }
     }
     &:nth-of-type(1) {
         margin-top: 2.8rem;
@@ -49,7 +53,7 @@ export const ContactFormFieldElement = styled.input<ContactFormFieldElementProps
 export const ContactFormFieldError = styled.p`
     display: none;
     font-size: var(--fs-xs);
-    padding-inline: var(--padding-horizontal);
+    padding-inline: var(--contact-form-field-padding-horizontal);
     position: absolute;
     top: calc(100% + 0.2rem);
     left: 0;

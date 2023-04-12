@@ -6,7 +6,7 @@ export const ContactFormContainer = styled.form`
     min-height: 22.7rem;
     display: flex;
     flex-direction: column;
-    ${media.xs} {
+    ${media.md} {
         padding-inline: 9%;
     }
 `;

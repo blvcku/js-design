@@ -33,16 +33,16 @@ export const FooterSocialLinksList = styled.ul`
 
 export const FooterSocialLinkWrapper = styled.li`
     a {
-        --font-size: var(--fs-sm);
+        --footer-social-link-font-size: var(--fs-sm);
         width: max-content;
         gap: 1rem;
         display: flex;
         align-items: center;
         color: inherit;
-        font-size: var(--font-size);
+        font-size: var(--footer-social-link-font-size);
         text-decoration: none;
         svg {
-            width: calc(2 * var(--font-size));
+            width: calc(2 * var(--footer-social-link-font-size));
         }
         & > p {
             display: none;

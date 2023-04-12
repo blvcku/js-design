@@ -42,41 +42,43 @@ export const ProjectsHeadContainer = styled.div`
 `;
 
 export const ProjectsList = styled.ul`
-    --margin-top: 1.5rem;
-    --grid-columns: 1;
-    --grid-rows: auto;
+    --projects-list-margin-top: 1.5rem;
+    --projects-list-grid-columns: 1;
+    --projects-list-grid-rows: auto;
     ${layout.standard.default}
-    padding-inline: 15%;
-    margin-top: var(--margin-top);
+    padding-inline: 15% !important;
+    margin-top: var(--projects-list-margin-top);
     display: grid;
-    grid-template-columns: repeat(var(--grid-columns), 1fr);
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--projects-list-grid-columns), 1fr);
+    grid-template-rows: repeat(var(--projects-list-grid-rows), 1fr);
     gap: 0.5rem;
     position: relative;
     &:empty {
-        aspect-ratio: var(--grid-columns) / 1;
+        aspect-ratio: var(--projects-list-grid-columns) / 1;
         &::before {
             content: 'No projects in this category yet!';
             position: absolute;
             width: 100%;
             left: 50%;
             text-align: center;
-            top: calc(50% - var(--margin-top));
+            top: calc(50% - var(--projects-list-margin-top));
             transform: translate(-50%, -50%);
             font-size: var(--fs-base);
         }
     }
     ${media.sm} {
         ${layout.standard.default}
-        --margin-top: 2rem;
-        --grid-columns: 2;
+        --projects-list-margin-top: 2rem;
+        --projects-list-grid-columns: 2;
+        padding-inline: 2rem !important;
     }
     ${media.md} {
-        --margin-top: 3rem;
-        --grid-columns: 3;
-        --grid-rows: 2;
+        --projects-list-margin-top: 3rem;
+        --projects-list-grid-columns: 3;
+        --projects-list-grid-rows: 2;
         &:empty {
-            aspect-ratio: var(--grid-columns) / var(--grid-rows);
+            aspect-ratio: var(--projects-list-grid-columns) /
+                var(--projects-list-grid-rows);
         }
     }
 `;

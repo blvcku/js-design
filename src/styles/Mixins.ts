@@ -4,33 +4,6 @@ import { globalFontSizePercentage } from './GlobalStyle';
 export const pixelsToRem = (pixels: number) =>
     `${pixels / (globalFontSizePercentage / 6.25)}rem`;
 
-export const layout = {
-    standard: {
-        default: css`
-            max-width: 1280px;
-            padding-inline: 1rem;
-            margin-inline: auto;
-        `,
-        viewportResponsive: css`
-            max-width: max(calc(100vw) - 800px, 1280px);
-            padding-inline: 1rem;
-            margin-inline: auto;
-        `,
-    },
-    large: {
-        default: css`
-            max-width: 1350px;
-            padding-inline: 1rem;
-            margin-inline: auto;
-        `,
-        viewportResponsive: css`
-            max-width: max(calc(100vw) - 460px, 1350px);
-            padding-inline: 1rem;
-            margin-inline: auto;
-        `,
-    },
-};
-
 const customMedia = (minWidth: number) => `@media (min-width: ${minWidth}px)`;
 
 export const media = {
@@ -40,6 +13,45 @@ export const media = {
     md: customMedia(800),
     lg: customMedia(1050),
     xl: customMedia(1600),
+};
+
+export const layout = {
+    standard: {
+        default: css`
+            max-width: 1280px;
+            padding-inline: 1rem;
+            margin-inline: auto;
+            ${media.xs} {
+                padding-inline: 2rem;
+            }
+        `,
+        viewportResponsive: css`
+            max-width: max(calc(100vw) - 800px, 1280px);
+            padding-inline: 1rem;
+            margin-inline: auto;
+            ${media.xs} {
+                padding-inline: 2rem;
+            }
+        `,
+    },
+    large: {
+        default: css`
+            max-width: 1350px;
+            padding-inline: 1rem;
+            margin-inline: auto;
+            ${media.xs} {
+                padding-inline: 2rem;
+            }
+        `,
+        viewportResponsive: css`
+            max-width: max(calc(100vw) - 460px, 1350px);
+            padding-inline: 1rem;
+            margin-inline: auto;
+            ${media.xs} {
+                padding-inline: 2rem;
+            }
+        `,
+    },
 };
 
 export const createFontFace = (
