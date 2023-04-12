@@ -15,7 +15,7 @@ const SEO: React.FC<SEOProps> = ({
         title: defaultTitle,
         description: defaultDescription,
         keywords: defaultKeywords,
-        siteURL,
+        siteUrl,
     } = useSiteMetadata();
 
     const seo = {
@@ -23,7 +23,7 @@ const SEO: React.FC<SEOProps> = ({
         description: description || defaultDescription,
         keywords: keywords?.toString() || defaultKeywords.toString(),
         image: img || Img,
-        url: `${siteURL}${pathname || ``}`,
+        url: `${siteUrl}${pathname || ``}`,
         type: type || PageType.WEBSITE,
     };
 

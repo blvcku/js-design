@@ -10,7 +10,7 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
         
         type SiteMetadata {
             title: String!
-            siteURL: String!
+            siteUrl: String!
             description: String!
             keywords: [String!]!
             facebook: SiteMetadataSocial!
@@ -21,6 +21,28 @@ const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
         type SiteMetadataSocial {
             url: String!
             name: String!
+        }
+
+        type SitemapQuery {
+            allSitePage: SitemapAllSitePage!
+            allContentfulProject: SitemapAllContentfulProject!
+        }
+
+        type SitemapAllSitePage {
+            nodes: [SitemapSitePageNode!]!
+        }
+
+        type SitemapSitePageNode {
+            path: String!
+        }
+
+        type SitemapAllContentfulProject {
+            nodes: [SitemapContentfulProject!]
+        }
+
+        type SitemapContentfulProject {
+            updatedAt: String!
+            slug: String!
         }
 
         union ContentfulProjectContent = 

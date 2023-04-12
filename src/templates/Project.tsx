@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby';
+// export default
 export { default, Head } from '@/features/project-template';
 
 export const query = graphql`

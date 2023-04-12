@@ -30,7 +30,7 @@ const query = graphql`
                 title
                 description
                 keywords
-                siteURL
+                siteUrl
                 facebook {
                     url
                     name
