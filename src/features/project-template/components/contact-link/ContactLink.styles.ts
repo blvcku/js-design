@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { media } from '@/styles/Mixins';
 
 export const ContactLinkContainer = styled.section`
+    padding-inline: 1rem;
     text-align: center;
     text-transform: uppercase;
     margin-top: 4.5rem;

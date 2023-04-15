@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageProps, HeadProps } from 'gatsby';
 import { getSrc } from 'gatsby-plugin-image';
-import { Main } from './styles/Project.styles';
+import { Main, Article } from './styles/ProjectTemplate.styles';
 import SEO from '@/components/seo/SEO';
 import { PageType } from '@/components/seo/SEO.types';
 import Header from './components/header/Header';
@@ -15,7 +15,9 @@ const Project: React.FC<PageProps<Queries.ProjectQuery>> = ({ data }) => {
         <>
             <Header banner={banner} title={title} />
             <Main>
-                <ComponentMap content={content} />
+                <Article>
+                    <ComponentMap content={content} />
+                </Article>
                 <ContactLink />
             </Main>
         </>
