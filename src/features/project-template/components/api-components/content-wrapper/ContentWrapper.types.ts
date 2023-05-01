@@ -3,4 +3,5 @@ export interface ContentWrapperContainerProps {
     contentAlignInline: Nullable<boolean>;
     contentAlignInlineBreakpoint: Nullable<number>;
     contentHorizontalGap: Nullable<number>;
+    contentMarginTop: Nullable<number>;
 }

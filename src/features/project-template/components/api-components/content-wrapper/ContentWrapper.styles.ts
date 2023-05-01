@@ -8,6 +8,8 @@ export const ContentWrapperContainer = styled.div<ContentWrapperContainerProps>`
         isNumber(contentHorizontalMargin)
             ? pixelsToRem(contentHorizontalMargin)
             : `0`};
+    margin-top: ${({ contentMarginTop }) =>
+        isNumber(contentMarginTop) ? pixelsToRem(contentMarginTop) : `0`};
     ${({
         contentAlignInline,
         contentAlignInlineBreakpoint,

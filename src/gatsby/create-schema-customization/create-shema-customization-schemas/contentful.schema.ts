@@ -47,6 +47,7 @@ const contentfulSchema = `
         contentAlignInline: Boolean
         contentAlignInlineBreakpoint: Int
         contentHorizontalGap: Int
+        contentMarginTop: Int
         content: [ContentfulContentWrapperContent!] @link(by: "id", from: "content___NODE")
     }
 

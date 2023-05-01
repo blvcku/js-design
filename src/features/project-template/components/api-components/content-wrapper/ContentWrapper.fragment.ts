@@ -7,6 +7,7 @@ export const ContentWrapperFragment = graphql`
         contentAlignInline
         contentAlignInlineBreakpoint
         contentHorizontalGap
+        contentMarginTop
         content {
             ...ContentfulImage
             ...ContentfulIdea

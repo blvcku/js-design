@@ -6,6 +6,7 @@ const ContentWrapper: React.FC<Queries.ContentfulContentWrapperFragment> = ({
     contentAlignInline,
     contentAlignInlineBreakpoint,
     contentHorizontalGap,
+    contentMarginTop,
     content,
 }) => {
     return (
@@ -14,6 +15,7 @@ const ContentWrapper: React.FC<Queries.ContentfulContentWrapperFragment> = ({
             contentAlignInline={contentAlignInline}
             contentAlignInlineBreakpoint={contentAlignInlineBreakpoint}
             contentHorizontalGap={contentHorizontalGap}
+            contentMarginTop={contentMarginTop}
         >
             <ComponentMap content={content} />
         </ContentWrapperContainer>
