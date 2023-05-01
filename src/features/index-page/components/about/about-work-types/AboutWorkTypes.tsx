@@ -9,7 +9,7 @@ import {
 
 const AboutWorkTypes: React.FC = () => {
     return (
-        <AboutWorkTypesContainer>
+        <AboutWorkTypesContainer id="i-create">
             <h2>I create...</h2>
             <AboutWorkTypesList>
                 <AboutWorkType>

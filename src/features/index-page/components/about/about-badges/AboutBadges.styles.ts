@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 import { media, layout } from '@/styles/Mixins';
 
-export const AboutBadgesContainer = styled.ul`
+export const AboutBadgesContainer = styled.section`
     ${layout.standard.default}
     margin-top: 8rem;
     display: none;
+    ${media.lg} {
+        display: block;
+    }
+`;
+
+export const AboutBadgesList = styled.ul`
+    display: flex;
     justify-content: space-between;
     gap: 2rem;
     flex-direction: row;
     align-items: stretch;
-    ${media.lg} {
-        display: flex;
-    }
 `;
 
 export const AboutBadge = styled.li`

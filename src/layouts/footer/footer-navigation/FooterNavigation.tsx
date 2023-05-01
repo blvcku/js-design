@@ -13,12 +13,8 @@ const footerNavigationLinks: FooterNavigationLinks = [
         to: `/`,
     },
     {
-        name: `Skills`,
-        to: `/`,
-    },
-    {
         name: `I Create...`,
-        to: `/`,
+        to: `/#i-create`,
     },
     {
         name: `Projects`,

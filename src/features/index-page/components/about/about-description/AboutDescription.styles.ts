@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { media } from '@/styles/Mixins';
 
-export const AboutDescriptionContainer = styled.div`
+export const AboutDescriptionContainer = styled.section`
     padding-inline: 1rem;
     & > p {
         font-weight: 500;

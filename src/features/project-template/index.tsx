@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageProps, HeadProps } from 'gatsby';
 import { getSrc } from 'gatsby-plugin-image';
-import { Main, Article } from './styles/ProjectTemplate.styles';
+import { Main, Article } from './styles/index.styles';
 import SEO from '@/components/seo/SEO';
 import { PageType } from '@/components/seo/SEO.types';
 import Header from './components/header/Header';

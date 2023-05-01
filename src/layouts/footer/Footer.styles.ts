@@ -19,16 +19,17 @@ export const FooterContentContainer = styled.div`
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     display: grid;
-    & > p {
-        font-size: var(--fs-sm);
-        text-align: center;
-        margin-top: 2rem;
-    }
     ${media.md} {
         padding-top: 0;
         grid-template-columns: 1fr 1fr;
-        & > p {
-            grid-column: span 2;
-        }
+    }
+`;
+
+export const FooterCopyright = styled.p`
+    font-size: var(--fs-sm);
+    text-align: center;
+    margin-top: 2rem;
+    ${media.md} {
+        grid-column: span 2;
     }
 `;

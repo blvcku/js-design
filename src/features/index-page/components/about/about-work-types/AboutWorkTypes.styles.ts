@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { media, layout } from '@/styles/Mixins';
 
-export const AboutWorkTypesContainer = styled.div`
+export const AboutWorkTypesContainer = styled.section`
     ${layout.standard.default}
     margin-top: 3rem;
+    scroll-margin-top: 3rem;
     & > h2 {
         text-transform: uppercase;
         font-size: var(--fs-xl);

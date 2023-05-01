@@ -3,6 +3,7 @@ import {
     FooterContainer,
     FooterContentWrapper,
     FooterContentContainer,
+    FooterCopyright,
 } from './Footer.styles';
 import FooterWave from '@/assets/images/wave-footer.inline.svg';
 import FooterSocialLinks from './footer-social-links/FooterSocialLinks';
@@ -16,7 +17,9 @@ const Footer: React.FC = () => {
                 <FooterContentContainer>
                     <FooterSocialLinks />
                     <FooterNavigation />
-                    <p>Copyright© {new Date().getFullYear()} Jacek Szczypior</p>
+                    <FooterCopyright>
+                        Copyright© {new Date().getFullYear()} Jacek Szczypior
+                    </FooterCopyright>
                 </FooterContentContainer>
             </FooterContentWrapper>
         </FooterContainer>
