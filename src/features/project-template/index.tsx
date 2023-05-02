@@ -27,8 +27,11 @@ const Project: React.FC<PageProps<Queries.ProjectQuery>> = ({ data }) => {
     );
 };
 
-export const Head: React.FC<HeadProps<Queries.ProjectQuery>> = ({ data }) => {
-    const { title, description, keywords, banner, slug } =
+export const Head: React.FC<HeadProps<Queries.ProjectQuery>> = ({
+    data,
+    location,
+}) => {
+    const { title, description, keywords, banner } =
         data.contentfulProject || {};
     const imgSrc = banner && getSrc(banner);
     return (
@@ -37,7 +40,7 @@ export const Head: React.FC<HeadProps<Queries.ProjectQuery>> = ({ data }) => {
             description={description}
             keywords={keywords}
             img={imgSrc}
-            pathname={`/${slug}`}
+            pathname={location.pathname}
             type={PageType.ARTICLE}
         />
     );

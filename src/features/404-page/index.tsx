@@ -1,5 +1,6 @@
 import { PageProps, HeadProps } from 'gatsby';
 import SEO from '@/components/seo/SEO';
+import { PageType } from '@/components/seo/SEO.types';
 import {
     NotFoundPageContentContainer,
     NotFoundPageDescription,
@@ -21,8 +22,16 @@ const NotFoundPage: React.FC<PageProps> = () => {
     );
 };
 
-export const Head: React.FC<HeadProps> = () => {
-    return <SEO />;
+export const Head: React.FC<HeadProps> = ({ location }) => {
+    return (
+        <SEO
+            title="Not Found"
+            description="Sorry, the page you're looking for doesn't exist."
+            keywords={[`404`, `404 Page`, `Not found`, `Not found page`]}
+            pathname={location.pathname}
+            type={PageType.WEBSITE}
+        />
+    );
 };
 
 export default NotFoundPage;

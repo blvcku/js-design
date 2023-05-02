@@ -6,7 +6,6 @@ export const query = graphql`
     query Project($slug: String) {
         contentfulProject(slug: { eq: $slug }) {
             title
-            slug
             description
             keywords
             banner {
