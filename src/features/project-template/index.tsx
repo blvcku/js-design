@@ -1,7 +1,10 @@
 import React from 'react';
 import { PageProps, HeadProps } from 'gatsby';
 import { getSrc } from 'gatsby-plugin-image';
-import { Main, Article } from './styles/index.styles';
+import {
+    ProjectTemplateContentContainer,
+    ProjectTemplateArticle,
+} from './styles/index.styles';
 import SEO from '@/components/seo/SEO';
 import { PageType } from '@/components/seo/SEO.types';
 import Header from './components/header/Header';
@@ -14,12 +17,12 @@ const Project: React.FC<PageProps<Queries.ProjectQuery>> = ({ data }) => {
     return (
         <>
             <Header banner={banner} title={title} />
-            <Main>
-                <Article>
+            <ProjectTemplateContentContainer>
+                <ProjectTemplateArticle>
                     <ComponentMap content={content} />
-                </Article>
+                </ProjectTemplateArticle>
                 <ContactLink />
-            </Main>
+            </ProjectTemplateContentContainer>
         </>
     );
 };

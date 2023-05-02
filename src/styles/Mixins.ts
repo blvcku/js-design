@@ -19,6 +19,7 @@ export const layout = {
     standard: {
         default: css`
             max-width: 1280px;
+            width: 100%;
             padding-inline: 1rem;
             margin-inline: auto;
             ${media.xs} {
@@ -27,6 +28,7 @@ export const layout = {
         `,
         viewportResponsive: css`
             max-width: max(calc(100vw) - 800px, 1280px);
+            width: 100%;
             padding-inline: 1rem;
             margin-inline: auto;
             ${media.xs} {
@@ -37,6 +39,7 @@ export const layout = {
     large: {
         default: css`
             max-width: 1350px;
+            width: 100%;
             padding-inline: 1rem;
             margin-inline: auto;
             ${media.xs} {
@@ -45,6 +48,7 @@ export const layout = {
         `,
         viewportResponsive: css`
             max-width: max(calc(100vw) - 460px, 1350px);
+            width: 100%;
             padding-inline: 1rem;
             margin-inline: auto;
             ${media.xs} {

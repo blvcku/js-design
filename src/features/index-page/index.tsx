@@ -1,5 +1,5 @@
 import { PageProps, HeadProps } from 'gatsby';
-import { Main } from './styles/indes.styles';
+import { IndexPageContentContainer } from './styles/indes.styles';
 import SEO from '@/components/seo/SEO';
 import Header from './components/header/Header';
 import About from './components/about/About';
@@ -10,11 +10,11 @@ const IndexPage: React.FC<PageProps> = () => {
     return (
         <>
             <Header />
-            <Main>
+            <IndexPageContentContainer>
                 <About />
                 <Projects />
                 <Contact />
-            </Main>
+            </IndexPageContentContainer>
         </>
     );
 };
