@@ -3,7 +3,7 @@ const gatsbyPluginSharp = {
     options: {
         defaults: {
             formats: [`auto`],
-            placeholder: `blurred`,
+            placeholder: `none`,
             backgroundColor: `transparent`,
         },
     },

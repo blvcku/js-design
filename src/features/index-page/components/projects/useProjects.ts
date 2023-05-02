@@ -28,7 +28,7 @@ const query = graphql`
                     slug
                     title
                     thumb {
-                        gatsbyImageData(width: 600)
+                        gatsbyImageData(placeholder: NONE, width: 600)
                         url
                     }
                 }

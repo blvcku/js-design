@@ -10,7 +10,7 @@ export const query = graphql`
             description
             keywords
             banner {
-                gatsbyImageData
+                gatsbyImageData(placeholder: NONE)
                 url
             }
             content {

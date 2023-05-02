@@ -6,7 +6,7 @@ export const ImageFragment = graphql`
         marginTop
         roundedCorners
         image {
-            gatsbyImageData
+            gatsbyImageData(placeholder: NONE)
             url
             title
             description

@@ -5,19 +5,19 @@ export const IdeaFragment = graphql`
         __typename
         marginTop
         firstImage {
-            gatsbyImageData
+            gatsbyImageData(placeholder: NONE)
             url
             title
             description
         }
         secondImage {
-            gatsbyImageData
+            gatsbyImageData(placeholder: NONE)
             url
             title
             description
         }
         equalToImage {
-            gatsbyImageData
+            gatsbyImageData(placeholder: NONE)
             url
             title
             description

@@ -1,7 +1,8 @@
 const gatsbyOmniFontLoader = {
     resolve: `gatsby-omni-font-loader`,
     options: {
-        mode: `render-blocking`,
+        mode: `async`,
+        enableListener: true,
         preconnect: [`https://fonts.gstatic.com`],
         web: [
             {
