@@ -5,6 +5,7 @@ import gatsbyPluginReactSvg from './plugins-configs/gatsby-plugin-react-svg.conf
 import gatsbyPluginSharp from './plugins-configs/gatsby-plugin-sharp.config';
 import gatsbyPluginSitemap from './plugins-configs/gatsby-plugin-sitemap.config';
 import gatsbyPluginRobotsTxt from './plugins-configs/gatsby-plugin-robots-txt';
+import gatsbyOmniFontLoader from './plugins-configs/gatsby-omni-font-loader';
 
 const plugins: GatsbyConfig['plugins'] = [
     gatsbySourceContentful,
@@ -13,6 +14,7 @@ const plugins: GatsbyConfig['plugins'] = [
     gatsbySourceFilesystem,
     gatsbyPluginReactSvg,
     gatsbyPluginSharp,
+    gatsbyOmniFontLoader,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
