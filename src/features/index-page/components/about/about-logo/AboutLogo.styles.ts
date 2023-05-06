@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 import { media } from '@/styles/Mixins';
-import { AboutLogoElementWrapperProps } from './AboutLogo.types';
+import { AboutLogoContainerProps } from './AboutLogo.types';
+import AnimatedLogo from '@/components/animated-logo/AnimatedLogo';
 
-export const AboutLogoContainer = styled.div`
-    --about-logo-background-color: var(--color-primary-200);
+export const AboutLogoContainer = styled.div<AboutLogoContainerProps>`
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    background: var(--about-logo-background-color);
+    transform: translateX(-50%)
+        scale(${({ toggleAnimation }) => (toggleAnimation ? 1 : 0)});
+    transition: transform ${({ durationMs }) => durationMs}ms
+        cubic-bezier(0.17, 0.67, 0.45, 1.63);
+    background: var(--color-primary-200);
     box-shadow: var(--shadow-1);
     border-radius: 50%;
     padding: 1rem;
-    bottom: -5vw;
+    bottom: -7vw;
     aspect-ratio: 1/1;
     display: grid;
     place-items: center;
@@ -24,21 +27,17 @@ export const AboutLogoContainer = styled.div`
     }
 `;
 
-export const AboutLogoElementWrapper = styled.svg<AboutLogoElementWrapperProps>`
-    width: 5.5vw;
-    height: auto;
-    min-width: 3rem;
-    color: var(--color-secondary-300);
-    path {
-        /* TODO: Animate paths when isVisible is true */
-    }
+export const AboutLogoAnimatedLogo = styled(AnimatedLogo)`
+    --animated-logo-width: 5.5vw;
+    --animated-logo-height: auto;
+    min-width: 4rem;
     ${media.sm} {
-        width: 10vw;
+        --animated-logo-width: 10vw;
     }
     ${media.lg} {
-        width: 7vw;
+        --animated-logo-width: 8vw;
     }
     ${media.xl} {
-        width: 5.5vw;
+        --animated-logo-width: 6vw;
     }
 `;

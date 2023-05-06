@@ -1,3 +1,4 @@
-export interface AboutLogoElementWrapperProps {
-    isVisible: boolean;
+export interface AboutLogoContainerProps {
+    durationMs: number;
+    toggleAnimation: boolean;
 }
