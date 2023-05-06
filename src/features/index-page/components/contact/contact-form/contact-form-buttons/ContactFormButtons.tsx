@@ -1,6 +1,9 @@
 import ArrowIcon from '@/assets/icons/arrow-horizontal.inline.svg';
-import { ContactFormButtonsWrapper } from './ContactFormButtons.styles';
-import Button from '@/components/buttons/button/Button';
+import {
+    ContactFormButtonsWrapper,
+    ContactFormButtonsButton,
+    ContactFormButtonsButtonNarrow,
+} from './ContactFormButtons.styles';
 import { ContactFormButtonsProps } from './ContactFormButtons.types';
 
 const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
@@ -37,28 +40,30 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
     return (
         <ContactFormButtonsWrapper>
             {currentPage && currentPage !== numberOfPages ? (
-                <Button
+                <ContactFormButtonsButtonNarrow
                     aria-label="Previous"
                     type="button"
                     onClick={handlePrevPage}
-                    style={{ paddingInline: `1.4rem` }}
                 >
                     <ArrowIcon />
-                </Button>
+                </ContactFormButtonsButtonNarrow>
             ) : null}
             {currentPage < numberOfPages - 1 ? (
-                <Button type="button" onClick={handleNextPage}>
+                <ContactFormButtonsButton
+                    type="button"
+                    onClick={handleNextPage}
+                >
                     Next
-                </Button>
+                </ContactFormButtonsButton>
             ) : null}
             {currentPage === numberOfPages - 1 ? (
-                <Button
+                <ContactFormButtonsButton
                     type="submit"
                     onClick={handleSubmitClick}
                     disabled={loading}
                 >
                     Send
-                </Button>
+                </ContactFormButtonsButton>
             ) : null}
         </ContactFormButtonsWrapper>
     );

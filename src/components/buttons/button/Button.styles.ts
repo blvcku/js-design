@@ -4,7 +4,7 @@ export const ButtonContainer = styled.button`
     --button-padding-inline: 3.6rem;
     --button-padding-vertical: 0.7rem;
     --button-font-size: var(--fs-sm);
-    --button-background-color: var(--color-secondary-100);
+    --button-background-color: var(--color-secondary-400);
     --button-text-color: var(--color-primary-200);
     --button-icon-height: calc(var(--button-font-size) * 1.2);
     color: var(--button-text-color);
