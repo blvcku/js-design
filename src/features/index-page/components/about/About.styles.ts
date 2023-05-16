@@ -12,16 +12,11 @@ export const AboutContentContainer = styled.div`
     }
 `;
 
-export const AboutWaveContainer = styled.div`
+export const AboutWaveWrapper = styled.div`
     position: relative;
-    & > svg {
-        color: var(--color-secondary-100);
-        display: block;
-    }
 `;
 
-export const AboutAnimatedWaveContainer = styled.div`
-    & > svg {
-        color: var(--color-secondary-100);
-    }
+export const AboutWave = styled.svg`
+    color: var(--color-secondary-100);
+    display: block;
 `;

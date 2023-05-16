@@ -6,26 +6,24 @@ import AboutWorkTypes from './about-work-types/AboutWorkTypes';
 import {
     AboutContainer,
     AboutContentContainer,
-    AboutWaveContainer,
-    AboutAnimatedWaveContainer,
+    AboutWave,
+    AboutWaveWrapper,
 } from './About.styles';
 import AboutLogo from './about-logo/AboutLogo';
 
 const About: React.FC = () => {
     return (
         <AboutContainer>
-            <AboutWaveContainer>
+            <AboutWaveWrapper>
                 <AboutLogo />
-                <FirstWave />
-            </AboutWaveContainer>
+                <AboutWave as={FirstWave} />
+            </AboutWaveWrapper>
             <AboutContentContainer>
                 <AboutDescription />
                 <AboutBadges />
                 <AboutWorkTypes />
             </AboutContentContainer>
-            <AboutAnimatedWaveContainer>
-                <SecondWave />
-            </AboutAnimatedWaveContainer>
+            <AboutWave as={SecondWave} />
         </AboutContainer>
     );
 };
