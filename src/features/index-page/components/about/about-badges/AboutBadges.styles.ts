@@ -37,21 +37,30 @@ export const AboutBadge = styled.li`
     &:nth-of-type(3) {
         border-radius: 15px 45px 45px 15px;
     }
-    & > h2 {
-        font-size: var(--fs-base);
-        font-weight: 700;
-        text-transform: capitalize;
-        max-width: 15ch;
-        margin-inline: auto;
-        span {
-            font-size: var(--fs-3xl);
-            line-height: 1;
-            display: block;
-            margin-bottom: 1rem;
-        }
+`;
+
+export const AboutBadgeHeading = styled.h2`
+    font-size: var(--fs-base);
+    font-weight: 700;
+    text-transform: capitalize;
+    max-width: 15ch;
+    margin-inline: auto;
+    span {
+        font-size: var(--fs-3xl);
+        line-height: 1;
+        display: block;
+        margin-bottom: 1rem;
     }
-    & > svg {
-        width: 3rem;
-        height: auto;
-    }
+`;
+
+export const AboutBadgeHeadingSpan = styled.span`
+    font-size: var(--fs-3xl);
+    line-height: 1;
+    display: block;
+    margin-bottom: 1rem;
+`;
+
+export const AboutBadgeIcon = styled.svg`
+    width: 3rem;
+    height: auto;
 `;

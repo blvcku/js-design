@@ -1,4 +1,7 @@
-import { NavButtonContainer } from './NavButton.styles';
+import {
+    NavButtonContainer,
+    NavButtonActiveIndicator,
+} from './NavButton.styles';
 import { NavButtonProps } from './NavButton.types';
 
 const NavButton: React.FC<NavButtonProps> = (props) => {
@@ -12,7 +15,7 @@ const NavButton: React.FC<NavButtonProps> = (props) => {
             {...buttonProps}
         >
             {children}
-            <span data-active-indicator></span>
+            <NavButtonActiveIndicator></NavButtonActiveIndicator>
         </NavButtonContainer>
     );
 };

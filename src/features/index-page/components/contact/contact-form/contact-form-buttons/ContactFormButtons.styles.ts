@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from '@/components/buttons/button/Button';
+import Button from '@/components/styled-components/button/Button';
 
 export const ContactFormButtonsWrapper = styled.div`
     display: flex;

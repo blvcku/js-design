@@ -5,8 +5,9 @@ export const ContactFormFinalPageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    & > p {
-        font-size: var(--fs-base);
-        text-align: center;
-    }
+`;
+
+export const ContactFormFinalPageMessage = styled.p`
+    font-size: var(--fs-base);
+    text-align: center;
 `;

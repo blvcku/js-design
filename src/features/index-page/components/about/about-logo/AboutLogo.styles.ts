@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { media } from '@/styles/Mixins';
 import { AboutLogoContainerProps } from './AboutLogo.types';
-import AnimatedLogo from '@/components/animated-logo/AnimatedLogo';
+import AnimatedLogo from '@/components/styled-components/animated-logo/AnimatedLogo';
 
 export const AboutLogoContainer = styled.div<AboutLogoContainerProps>`
     position: absolute;

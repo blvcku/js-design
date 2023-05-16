@@ -12,5 +12,5 @@ export const ImageContainer = styled.div<ImageContainerProps>`
                   border-radius: 15px;
                   overflow: hidden;
               `
-            : ``}
+            : null}
 `;

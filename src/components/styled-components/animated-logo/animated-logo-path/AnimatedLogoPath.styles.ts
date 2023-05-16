@@ -11,5 +11,5 @@ export const AnimatedLogoPathElement = styled.path<AnimatedLogoPathElementProps>
                   transition: stroke-dashoffset ${durationMs}ms ease-out
                       ${delayMs}ms;
               `
-            : ``}
+            : null}
 `;

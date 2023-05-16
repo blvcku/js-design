@@ -16,19 +16,30 @@ const ImageRenderer: React.FC<ImageRendererProps> = (props) => {
     const altText = hasAlt(props)
         ? props.alt
         : props.image.title || props.image.description || ``;
-    const { image, ...imageProps } = props;
+    const { image, className, ...imageProps } = props;
     const { gatsbyImageData, url } = image;
 
     if (!gatsbyImageData) {
         if (!url) return null;
-        return <img src={url} alt={altText} />;
+        return (
+            <div className={className}>
+                <img src={url} alt={altText} />
+            </div>
+        );
     }
 
     const imageData = getImage(gatsbyImageData);
 
     if (!imageData) return null;
 
-    return <GatsbyImage {...imageProps} image={imageData} alt={altText} />;
+    return (
+        <GatsbyImage
+            {...imageProps}
+            className={className}
+            image={imageData}
+            alt={altText}
+        />
+    );
 };
 
 export default ImageRenderer;

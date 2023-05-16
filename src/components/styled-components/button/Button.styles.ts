@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import LoadingWheel from '@/assets/icons/loading-wheel.inline.svg';
+
+export const ButtonLoadingWheel = styled(LoadingWheel)`
+    display: none;
+    position: absolute;
+    height: calc(2 * var(--button-font-size));
+`;
 
 export const ButtonContainer = styled.button`
     --button-padding-inline: 3.6rem;
@@ -24,19 +31,16 @@ export const ButtonContainer = styled.button`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    svg,
+
+    svg:not([data-loading-wheel]),
     img {
         display: block;
         height: var(--button-icon-height);
         width: auto;
     }
-    svg[data-loading-wheel='true'] {
-        display: none;
-        position: absolute;
-        height: calc(2 * var(--button-font-size));
-    }
+
     &:disabled {
-        svg[data-loading-wheel='true'] {
+        ${ButtonLoadingWheel} {
             display: block;
         }
         &::before {

@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { ContactFormContainer } from './ContactForm.styles';
 import { ContactFormProps, ContactFormAnswers } from './ContactForm.types';
 import { ContactFormFieldChangeEvent } from './contact-form-field/ContactFormField.types';
-import ProgressBar from '@/components/progress-bar/ProgressBar';
+import ProgressBar from '@/components/styled-components/progress-bar/ProgressBar';
 import ContactFormButtons from './contact-form-buttons/ContactFormButtons';
 import ContactFormField from './contact-form-field/ContactFormField';
 import ContactFormFinalPage from './contact-form-final-page/ContactFormFinalPage';

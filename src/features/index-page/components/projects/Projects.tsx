@@ -1,9 +1,11 @@
 import {
     ProjectsContainer,
     ProjectsHeadContainer,
+    ProjectsHeading,
+    ProjectsNavContainer,
     ProjectsList,
 } from './Projects.styles';
-import NavButton from '@/components/buttons/nav-button/NavButton';
+import NavButton from '@/components/styled-components/nav-button/NavButton';
 import Project from './project/Project';
 import useProjects from './useProjects';
 
@@ -22,8 +24,8 @@ const Projects: React.FC = () => {
     return (
         <ProjectsContainer id="projects">
             <ProjectsHeadContainer>
-                <h2>Projects:</h2>
-                <nav aria-label="projects navigation">
+                <ProjectsHeading>Projects:</ProjectsHeading>
+                <ProjectsNavContainer aria-label="projects navigation">
                     {categories.map((category) => (
                         <NavButton
                             key={category}
@@ -33,7 +35,7 @@ const Projects: React.FC = () => {
                             {category}
                         </NavButton>
                     ))}
-                </nav>
+                </ProjectsNavContainer>
             </ProjectsHeadContainer>
             <ProjectsList>
                 {projects.map(({ title, slug, thumb }) => (

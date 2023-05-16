@@ -4,10 +4,34 @@ import {
     FooterContentWrapper,
     FooterContentContainer,
     FooterCopyright,
+    FooterSocialLinksWrapper,
+    FooterSocialLinks,
+    FooterHeadingFromMediumScreen,
+    FooterNavigationWrapper,
+    FooterHeading,
+    FooterSubHeading,
+    FooterNavigationLinks,
+    FooterWave,
 } from './Footer.styles';
-import FooterWave from '@/assets/images/wave-footer.inline.svg';
-import FooterSocialLinks from './footer-social-links/FooterSocialLinks';
-import FooterNavigation from './footer-navigation/FooterNavigation';
+
+const footerNavigationLinks = [
+    {
+        name: `Landing page`,
+        to: `/`,
+    },
+    {
+        name: `I Create...`,
+        to: `/#i-create`,
+    },
+    {
+        name: `Projects`,
+        to: `/#projects`,
+    },
+    {
+        name: `Contact`,
+        to: `/#contact`,
+    },
+];
 
 const Footer: React.FC = () => {
     return (
@@ -15,8 +39,17 @@ const Footer: React.FC = () => {
             <FooterWave />
             <FooterContentWrapper>
                 <FooterContentContainer>
-                    <FooterSocialLinks />
-                    <FooterNavigation />
+                    <FooterSocialLinksWrapper>
+                        <FooterHeadingFromMediumScreen>
+                            Find me on:
+                        </FooterHeadingFromMediumScreen>
+                        <FooterSocialLinks displayName={true} />
+                    </FooterSocialLinksWrapper>
+                    <FooterNavigationWrapper>
+                        <FooterHeading>Jacek Szczypior</FooterHeading>
+                        <FooterSubHeading>Graphic Designer</FooterSubHeading>
+                        <FooterNavigationLinks links={footerNavigationLinks} />
+                    </FooterNavigationWrapper>
                     <FooterCopyright>
                         Copyright© {new Date().getFullYear()} Jacek Szczypior
                     </FooterCopyright>

@@ -1,5 +1,11 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import { ContactContainer } from './Contact.styles';
+import {
+    ContactContainer,
+    ContactFormContainer,
+    ContactHeading,
+    ContactSubHeading,
+    ContactImageContainer,
+} from './Contact.styles';
 import ContactForm from './contact-form/ContactForm';
 import { ContactFormFields } from './contact-form/ContactForm.types';
 import { ContactFormFieldVariant } from './contact-form/contact-form-field/ContactFormField.types';
@@ -42,27 +48,27 @@ const fields: ContactFormFields<ContactMessage> = [
 const Contact: React.FC = () => {
     return (
         <ContactContainer id="contact">
-            <div>
-                <h2>Lets talk!</h2>
-                <h3>
+            <ContactFormContainer>
+                <ContactHeading>Lets talk!</ContactHeading>
+                <ContactSubHeading>
                     Don&apos;t wait till tomorrow!
                     <br /> Contact me today.
-                </h3>
+                </ContactSubHeading>
                 <ContactForm
                     fields={fields}
                     succesMessage="Message sent successfully!"
                     errorMessage="Failed to send your message, try again later."
                     sendMessage={sendMessage}
                 />
-            </div>
-            <div>
+            </ContactFormContainer>
+            <ContactImageContainer>
                 <StaticImage
                     layout="fullWidth"
                     placeholder="blurred"
                     src="../../../../assets/images/contact.png"
                     alt=""
                 />
-            </div>
+            </ContactImageContainer>
         </ContactContainer>
     );
 };

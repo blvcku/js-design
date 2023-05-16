@@ -5,24 +5,29 @@ import {
     AboutWorkTypesContainer,
     AboutWorkTypesList,
     AboutWorkType,
+    AboutWorkTypesHeading,
+    AboutWorkTypeHeading,
+    AboutWorkTypeIcon,
 } from './AboutWorkTypes.styles';
 
 const AboutWorkTypes: React.FC = () => {
     return (
         <AboutWorkTypesContainer id="i-create">
-            <h2>I create...</h2>
+            <AboutWorkTypesHeading>I create...</AboutWorkTypesHeading>
             <AboutWorkTypesList>
                 <AboutWorkType>
-                    <UiDesignIcon />
-                    <h3>UI Design</h3>
+                    <AboutWorkTypeIcon as={UiDesignIcon} />
+                    <AboutWorkTypeHeading>UI Design</AboutWorkTypeHeading>
                 </AboutWorkType>
                 <AboutWorkType>
-                    <BannersIcon />
-                    <h3>Banners, Leaflets</h3>
+                    <AboutWorkTypeIcon as={BannersIcon} />
+                    <AboutWorkTypeHeading>
+                        Banners, Leaflets
+                    </AboutWorkTypeHeading>
                 </AboutWorkType>
                 <AboutWorkType>
-                    <LogoIcon />
-                    <h3>Logo</h3>
+                    <AboutWorkTypeIcon as={LogoIcon} />
+                    <AboutWorkTypeHeading>Logo</AboutWorkTypeHeading>
                 </AboutWorkType>
             </AboutWorkTypesList>
         </AboutWorkTypesContainer>

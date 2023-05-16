@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
+import Logo from '@/assets/icons/logo.inline.svg';
+import LogoThick from '@/assets/icons/logo-thick.inline.svg';
 import { media, layout } from '@/styles/Mixins';
+import NavigationLinks from '@/components/unstyled-components/navigation-links/NavigationLinks';
+import { NavigationLink } from '@/components/unstyled-components/navigation-links/NavigationLinks.styles';
 import { NavigationExpandableContentProps } from './Navigation.types';
 
 export const NavigationContainer = styled.div`
@@ -23,18 +27,13 @@ export const NavigationLogoContainer = styled(Link)`
     display: none;
     place-items: center;
     box-shadow: var(--shadow-1);
-    & > svg {
-        display: block;
-        width: 2rem;
-        height: auto;
-        color: var(--color-primary-200);
-    }
     ${media.sm} {
         display: grid;
     }
 `;
 
 export const NavigationExpandableContent = styled.div<NavigationExpandableContentProps>`
+    --navigation-animation-duration: 0.3s;
     background: var(--color-secondary-400);
     position: absolute;
     top: 0;
@@ -47,39 +46,57 @@ export const NavigationExpandableContent = styled.div<NavigationExpandableConten
     gap: 2.5rem;
     box-shadow: var(--shadow-1);
     border-radius: 20px 0px 0px 20px;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    visibility: hidden;
     padding: 1.5rem 1.5rem 2rem;
     ${({ expanded }) =>
-        expanded &&
-        `
-        transform:translateX(0);
-        visibility:visible;
-    `}
-
-    & > svg {
-        display: block;
-        width: 3rem;
-        height: auto;
-        align-self: center;
-        color: var(--color-primary-200);
-    }
+        expanded
+            ? css`
+                  transition: transform var(--navigation-animation-duration)
+                      ease;
+                  transform: translateX(0);
+                  visibility: visible;
+              `
+            : css`
+                  transition: transform var(--navigation-animation-duration)
+                          ease,
+                      visibility 0s var(--navigation-animation-duration);
+                  transform: translateX(100%);
+                  visibility: hidden;
+                  user-select: none;
+                  pointer-events: none;
+                  * {
+                      user-select: none;
+                      pointer-events: none;
+                  }
+              `}
 `;
 
-export const NavigationLinksContainer = styled.ul`
+export const NavigationLogoSmall = styled(LogoThick)`
+    display: block;
+    width: 2rem;
+    height: auto;
+    color: var(--color-primary-200);
+`;
+
+export const NavigationLogo = styled(Logo)`
+    display: block;
+    width: 3rem;
+    height: auto;
+    align-self: center;
+    color: var(--color-primary-200);
+`;
+
+export const NavigationLinksStyled = styled(NavigationLinks)`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     align-self: center;
     gap: 0.5rem;
-`;
-
-export const NavigationLink = styled(Link)`
-    color: var(--color-primary-200);
-    text-decoration: none;
-    font-size: var(--fs-base);
-    line-height: 1.5;
-    border-right: 1px solid var(--color-primary-200);
-    padding: 0.15rem 0.5rem 0.15rem;
+    ${NavigationLink} {
+        color: var(--color-primary-200);
+        text-decoration: none;
+        font-size: var(--fs-base);
+        line-height: 1.5;
+        border-right: 1px solid var(--color-primary-200);
+        padding: 0.15rem 0.5rem 0.15rem;
+    }
 `;

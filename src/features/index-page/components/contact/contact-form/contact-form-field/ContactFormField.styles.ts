@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ContactFormFieldElementProps } from './ContactFormField.types';
 import { media } from '@/styles/Mixins';
 
@@ -39,14 +39,14 @@ export const ContactFormFieldElement = styled.input<ContactFormFieldElementProps
     }
     ${({ showError }) =>
         showError
-            ? `
-        &:invalid{
-            border:1px solid var(--color-error);
-            & ~ p{
-                display:block;
-            }
-        }
-    `
+            ? css`
+                  &:invalid {
+                      border: 1px solid var(--color-error);
+                      & ~ p {
+                          display: block;
+                      }
+                  }
+              `
             : null}
 `;
 

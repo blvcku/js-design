@@ -1,18 +1,16 @@
 import { useState } from 'react';
-import Logo from '@/assets/icons/logo.inline.svg';
-import LogoThick from '@/assets/icons/logo-thick.inline.svg';
 import NavigationHamburger from './navigation-hamburger/NavigationHamburger';
 import NavigationCollapseButton from './navigation-collapse-button/NavigationCollapseButton';
 import {
     NavigationContainer,
     NavigationLogoContainer,
     NavigationExpandableContent,
-    NavigationLinksContainer,
-    NavigationLink,
+    NavigationLinksStyled,
+    NavigationLogoSmall,
+    NavigationLogo,
 } from './Navigation.styles';
-import { NavigationLinks } from './Navigation.types';
 
-const navigationLinks: NavigationLinks = [
+const navigationLinks = [
     {
         name: `Contact`,
         to: `/#contact`,
@@ -44,25 +42,17 @@ const Navigation: React.FC = () => {
     return (
         <NavigationContainer>
             <NavigationLogoContainer to="/">
-                <LogoThick />
+                <NavigationLogoSmall />
             </NavigationLogoContainer>
             <nav>
-                <NavigationHamburger handleExpand={handleExpand} />
+                <NavigationHamburger
+                    expanded={expanded}
+                    handleExpand={handleExpand}
+                />
                 <NavigationExpandableContent expanded={expanded}>
                     <NavigationCollapseButton handleCollapse={handleCollapse} />
-                    <NavigationLinksContainer>
-                        {navigationLinks.map(({ name, to }) => (
-                            <li key={name}>
-                                <NavigationLink
-                                    onClick={handleCollapse}
-                                    to={to}
-                                >
-                                    {name}
-                                </NavigationLink>
-                            </li>
-                        ))}
-                    </NavigationLinksContainer>
-                    <Logo />
+                    <NavigationLinksStyled links={navigationLinks} />
+                    <NavigationLogo />
                 </NavigationExpandableContent>
             </nav>
         </NavigationContainer>

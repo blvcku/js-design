@@ -21,46 +21,6 @@ export const ColorsContainer = styled.ul<ColorsContainerProps>`
     }
 `;
 
-export const ColorContainer = styled.li`
-    &:first-of-type {
-        & > div {
-            border-radius: 45px 45px 15px 15px;
-        }
-    }
-    &:last-of-type {
-        & > div {
-            border-radius: 15px 15px 45px 45px;
-        }
-    }
-    ${media.sm} {
-        &:nth-of-type(odd) {
-            & > div {
-                border-radius: 45px 15px 15px 45px;
-            }
-        }
-        &:nth-of-type(even) {
-            & > div {
-                border-radius: 15px 45px 45px 15px;
-            }
-        }
-    }
-    ${media.md} {
-        & > div {
-            border-radius: 15px !important;
-        }
-        &:nth-of-type(3n + 1) {
-            & > div {
-                border-radius: 45px 15px 15px 45px !important;
-            }
-        }
-        &:nth-of-type(3n) {
-            & > div {
-                border-radius: 15px 45px 45px 15px !important;
-            }
-        }
-    }
-`;
-
 export const ColorBox = styled.div<ColorBoxProps>`
     background-color: ${({ backgroundColor }) => backgroundColor};
     width: 100%;
@@ -74,4 +34,44 @@ export const ColorName = styled.h2`
     font-size: var(--fs-md);
     text-align: center;
     margin-top: 1.5rem;
+`;
+
+export const ColorContainer = styled.li`
+    &:first-of-type {
+        ${ColorBox} {
+            border-radius: 45px 45px 15px 15px;
+        }
+    }
+    &:last-of-type {
+        ${ColorBox} {
+            border-radius: 15px 15px 45px 45px;
+        }
+    }
+    ${media.sm} {
+        &:nth-of-type(odd) {
+            ${ColorBox} {
+                border-radius: 45px 15px 15px 45px;
+            }
+        }
+        &:nth-of-type(even) {
+            ${ColorBox} {
+                border-radius: 15px 45px 45px 15px;
+            }
+        }
+    }
+    ${media.md} {
+        ${ColorBox} {
+            border-radius: 15px !important;
+        }
+        &:nth-of-type(3n + 1) {
+            ${ColorBox} {
+                border-radius: 45px 15px 15px 45px !important;
+            }
+        }
+        &:nth-of-type(3n) {
+            ${ColorBox} {
+                border-radius: 15px 45px 45px 15px !important;
+            }
+        }
+    }
 `;

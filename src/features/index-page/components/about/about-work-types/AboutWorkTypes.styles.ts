@@ -5,17 +5,18 @@ export const AboutWorkTypesContainer = styled.section`
     ${layout.standard.default}
     margin-top: 3rem;
     scroll-margin-top: 3rem;
-    & > h2 {
-        text-transform: uppercase;
-        font-size: var(--fs-xl);
-        font-weight: 900;
-        text-align: center;
-    }
     ${media.lg} {
         margin-top: 5rem;
-        & > h2 {
-            text-align: start;
-        }
+    }
+`;
+
+export const AboutWorkTypesHeading = styled.h2`
+    text-transform: uppercase;
+    font-size: var(--fs-xl);
+    font-weight: 900;
+    text-align: center;
+    ${media.lg} {
+        text-align: start;
     }
 `;
 
@@ -37,14 +38,16 @@ export const AboutWorkType = styled.li`
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    & > h3 {
-        font-weight: 500;
-        font-size: var(--fs-lg);
-        text-transform: uppercase;
-        text-align: center;
-    }
-    & > svg {
-        width: 7.5rem;
-        height: auto;
-    }
+`;
+
+export const AboutWorkTypeHeading = styled.h3`
+    font-weight: 500;
+    font-size: var(--fs-lg);
+    text-transform: uppercase;
+    text-align: center;
+`;
+
+export const AboutWorkTypeIcon = styled.svg`
+    width: 7.5rem;
+    height: auto;
 `;

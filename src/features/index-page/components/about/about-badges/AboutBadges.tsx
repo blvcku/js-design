@@ -4,6 +4,9 @@ import {
     AboutBadgesContainer,
     AboutBadgesList,
     AboutBadge,
+    AboutBadgeHeading,
+    AboutBadgeIcon,
+    AboutBadgeHeadingSpan,
 } from './AboutBadges.styles';
 
 const AboutBadges: React.FC = () => {
@@ -11,17 +14,20 @@ const AboutBadges: React.FC = () => {
         <AboutBadgesContainer>
             <AboutBadgesList>
                 <AboutBadge>
-                    <h2>
-                        <span>3+ </span>Years experience
-                    </h2>
+                    <AboutBadgeHeading>
+                        <AboutBadgeHeadingSpan>3+</AboutBadgeHeadingSpan>Years
+                        experience
+                    </AboutBadgeHeading>
                 </AboutBadge>
                 <AboutBadge>
-                    <ProfessionalServiceIcon />
-                    <h2>Professional service</h2>
+                    <AboutBadgeIcon as={ProfessionalServiceIcon} />
+                    <AboutBadgeHeading>Professional service</AboutBadgeHeading>
                 </AboutBadge>
                 <AboutBadge>
-                    <QuickCompletitionTimeIcon />
-                    <h2>Quick completition time</h2>
+                    <AboutBadgeIcon as={QuickCompletitionTimeIcon} />
+                    <AboutBadgeHeading>
+                        Quick completition time
+                    </AboutBadgeHeading>
                 </AboutBadge>
             </AboutBadgesList>
         </AboutBadgesContainer>

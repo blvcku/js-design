@@ -1,4 +1,7 @@
-import { ContactFormFinalPageContainer } from './ContactFormFinalPage.styles';
+import {
+    ContactFormFinalPageContainer,
+    ContactFormFinalPageMessage,
+} from './ContactFormFinalPage.styles';
 import { ContactFormFinalPageProps } from './ContactFormFinalPage.types';
 
 const ContactFormFinalPage: React.FC<ContactFormFinalPageProps> = ({
@@ -10,7 +13,7 @@ const ContactFormFinalPage: React.FC<ContactFormFinalPageProps> = ({
 
     return (
         <ContactFormFinalPageContainer>
-            <p>{message}</p>
+            <ContactFormFinalPageMessage>{message}</ContactFormFinalPageMessage>
         </ContactFormFinalPageContainer>
     );
 };

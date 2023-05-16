@@ -11,33 +11,33 @@ export const ProjectsHeadContainer = styled.div`
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    h2 {
-        text-transform: uppercase;
-        font-size: var(--fs-xl);
-        font-weight: 900;
-        text-align: center;
-    }
-    nav {
-        display: flex;
-        align-self: center;
-        column-gap: 3rem;
-        align-items: center;
-        justify-content: center;
-        row-gap: 0.5rem;
-        flex-wrap: wrap;
-    }
     ${media.md} {
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
-        h2 {
-            text-align: start;
-        }
     }
+`;
+
+export const ProjectsHeading = styled.h2`
+    text-transform: uppercase;
+    font-size: var(--fs-xl);
+    font-weight: 900;
+    text-align: center;
+    ${media.md} {
+        text-align: start;
+    }
+`;
+
+export const ProjectsNavContainer = styled.nav`
+    display: flex;
+    align-self: center;
+    column-gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
     ${media.lg} {
-        nav {
-            column-gap: 5rem;
-        }
+        column-gap: 5rem;
     }
 `;
 
