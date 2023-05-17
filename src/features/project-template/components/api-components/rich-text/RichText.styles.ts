@@ -4,11 +4,23 @@ import { RichTextContainerProps } from './RichText.types';
 import isNumber from '@/helpers/isNumber';
 
 export const RichTextContainer = styled.section<RichTextContainerProps>`
-    margin-top: ${({ marginTop }) =>
+    --rich-text-margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `3rem`};
+    --rich-text-list-margin-block: 2rem;
+    --rich-text-list-padding-left: 5rem;
+    --rich-text-list-item-margin-top: 1rem;
+    --rich-text-blockquote-padding-left: 1.5rem;
+    --rich-text-elements-margin-top: 1.5rem;
+    --rich-text-elements-color: var(--color-secondary-400);
+    margin-top: calc(var(--rich-text-margin-top) * 0.5);
     font-size: var(--fs-lg);
     font-weight: 500;
-
+    * {
+        margin-top: calc(var(--rich-text-elements-margin-top) * 0.75);
+    }
+    *:first-child {
+        margin-top: 0;
+    }
     ul {
         list-style-type: disc;
     }
@@ -17,24 +29,14 @@ export const RichTextContainer = styled.section<RichTextContainerProps>`
     }
     ul,
     ol {
-        margin-block: 2rem;
-        color: var(--color-secondary-400);
+        margin-block: calc(var(--rich-text-list-margin-block) * 0.75);
+        padding-left: calc(var(--rich-text-list-padding-left) * 0.5);
+        color: var(--rich-text-elements-color);
         font-size: var(--fs-md);
-        padding-left: 3rem;
-        * {
-            margin-top: 1rem;
-        }
-        & > :first-child {
-            margin-top: 0;
-        }
-        &:first-child {
-            margin-top: 0;
-        }
-        ${media.sm} {
-            padding-left: 5rem;
-        }
     }
-
+    li {
+        margin-top: calc(var(--rich-text-list-item-margin-top) * 0.75);
+    }
     h2 {
         font-size: var(--fs-2xl);
         font-weight: 900;
@@ -55,7 +57,6 @@ export const RichTextContainer = styled.section<RichTextContainerProps>`
         font-size: var(--fs-lg);
         font-weight: 600;
     }
-
     table,
     td,
     th {
@@ -65,19 +66,15 @@ export const RichTextContainer = styled.section<RichTextContainerProps>`
     table {
         box-shadow: var(--shadow-1);
         font-size: var(--fs-base);
-        color: var(--color-secondary-400);
+        color: var(--rich-text-elements-color);
         border-collapse: collapse;
-        * {
-            margin-top: 0;
-        }
     }
     th {
         font-weight: 600;
     }
-
     blockquote {
-        color: var(--color-secondary-400);
-        padding-left: 1.5rem;
+        color: var(--rich-text-elements-color);
+        padding-left: calc(var(--rich-text-blockquote-padding-left) * 0.75);
         position: relative;
         &::before {
             content: '';
@@ -86,22 +83,25 @@ export const RichTextContainer = styled.section<RichTextContainerProps>`
             left: 0;
             height: 100%;
             width: 0.25rem;
-            background: var(--color-secondary-400);
+            background: var(--rich-text-elements-color);
         }
     }
 
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    hr,
-    p,
-    blockquote,
-    table {
-        margin-top: 1.5rem;
-        &:first-child {
-            margin-top: 0;
+    ${media.sm} {
+        margin-top: var(--rich-text-margin-top);
+        * {
+            margin-top: var(--rich-text-elements-margin-top);
+        }
+        ul,
+        ol {
+            margin-block: var(--rich-text-list-margin-block);
+            padding-left: var(--rich-text-list-padding-left);
+        }
+        li {
+            margin-top: var(--rich-text-list-item-margin-top);
+        }
+        blockquote {
+            padding-left: var(--rich-text-blockquote-padding-left);
         }
     }
 `;

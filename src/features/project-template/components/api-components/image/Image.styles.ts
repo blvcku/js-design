@@ -1,11 +1,13 @@
 import styled, { css } from 'styled-components';
 import { ImageContainerProps } from './Image.types';
 import isNumber from '@/helpers/isNumber';
-import { pixelsToRem } from '@/styles/Mixins';
+import { media, pixelsToRem } from '@/styles/Mixins';
 
 export const ImageContainer = styled.div<ImageContainerProps>`
-    margin-top: ${({ marginTop }) =>
+    --image-margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `4rem`};
+    margin-top: calc(var(--image-margin-top) * 0.5);
+
     ${({ roundedCorners }) =>
         roundedCorners
             ? css`
@@ -13,4 +15,8 @@ export const ImageContainer = styled.div<ImageContainerProps>`
                   overflow: hidden;
               `
             : null}
+
+    ${media.sm} {
+        margin-top: var(--image-margin-top);
+    }
 `;

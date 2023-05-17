@@ -4,14 +4,16 @@ import { ColorsContainerProps, ColorBoxProps } from './Colors.types';
 import isNumber from '@/helpers/isNumber';
 
 export const ColorsContainer = styled.ul<ColorsContainerProps>`
-    margin-top: ${({ marginTop }) =>
+    --colors-margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `4rem`};
+    margin-top: calc(var(--colors-margin-top) * 0.5);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 13%;
     row-gap: 2rem;
     padding-inline: 15%;
     ${media.sm} {
+        margin-top: var(--colors-margin-top);
         grid-template-columns: repeat(2, 1fr);
         padding-inline: 0;
     }

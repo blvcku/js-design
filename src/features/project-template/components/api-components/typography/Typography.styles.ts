@@ -8,15 +8,17 @@ import { media, createFontFace, pixelsToRem } from '@/styles/Mixins';
 import isNumber from '@/helpers/isNumber';
 
 export const TypographyContainer = styled.section<TypographyContainerProps>`
+    --typography-margin-top: ${({ marginTop }) =>
+        isNumber(marginTop) ? pixelsToRem(marginTop) : `3rem`};
     background-color: var(--color-secondary-400);
     color: var(--color-primary-200);
     padding-left: 15%;
     padding-block: 3rem;
     border-radius: 15px 15px 15px 45px;
-    margin-top: ${({ marginTop }) =>
-        isNumber(marginTop) ? pixelsToRem(marginTop) : `3rem`};
+    margin-top: calc(var(--typography-margin-top) * 0.5);
 
     ${media.sm} {
+        margin-top: var(--typography-margin-top);
         background-color: transparent;
         color: var(--color-secondary-400);
         padding-block: 0;

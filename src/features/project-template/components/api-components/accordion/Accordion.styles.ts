@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { pixelsToRem } from '@/styles/Mixins';
+import { media, pixelsToRem } from '@/styles/Mixins';
 import isNumber from '@/helpers/isNumber';
 import ArrowIcon from '@/assets/icons/arrow-vertical.inline.svg';
 import {
@@ -13,12 +13,16 @@ export const AccordionIcon = styled(ArrowIcon)`
 `;
 
 export const AccordionContainer = styled.details<AccordionContainerProps>`
-    margin-top: ${({ marginTop }) =>
+    --accordion-margin-top: ${({ marginTop }) =>
         isNumber(marginTop) ? pixelsToRem(marginTop) : `3rem`};
+    margin-top: calc(var(--accordion-margin-top) * 0.5);
     &[open] {
         ${AccordionIcon} {
             transform: rotate(180deg);
         }
+    }
+    ${media.sm} {
+        margin-top: var(--accordion-margin-top);
     }
 `;
 
@@ -40,8 +44,12 @@ export const AccordionTitle = styled.summary`
 `;
 
 export const AccordionContentContainer = styled.div<AccordionContentContainerProps>`
-    padding-bottom: ${({ contentBottomMargin }) =>
+    --accordion-content-padding-bottom: ${({ contentBottomMargin }) =>
         isNumber(contentBottomMargin)
             ? pixelsToRem(contentBottomMargin)
             : `3rem`};
+    padding-bottom: calc(var(--accordion-content-padding-bottom) * 0.5);
+    ${media.sm} {
+        padding-bottom: var(--accordion-content-padding-bottom);
+    }
 `;

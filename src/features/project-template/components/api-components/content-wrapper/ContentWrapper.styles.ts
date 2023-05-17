@@ -4,17 +4,18 @@ import isNumber from '@/helpers/isNumber';
 import { media, pixelsToRem } from '@/styles/Mixins';
 
 export const ContentWrapperContainer = styled.div<ContentWrapperContainerProps>`
-    padding-inline: ${({ contentHorizontalMargin }) =>
+    --content-wrapper-margin-top: ${({ contentMarginTop }) =>
+        isNumber(contentMarginTop) ? pixelsToRem(contentMarginTop) : `0`};
+    --content-wrapper-padding-inline: ${({ contentHorizontalMargin }) =>
         isNumber(contentHorizontalMargin)
             ? pixelsToRem(contentHorizontalMargin)
             : `0`};
-    margin-top: ${({ contentMarginTop }) =>
-        isNumber(contentMarginTop) ? pixelsToRem(contentMarginTop) : `0`};
-    ${({
-        contentAlignInline,
-        contentAlignInlineBreakpoint,
-        contentHorizontalGap,
-    }) =>
+    --content-wrapper-content-horizontal-gap: ${({ contentHorizontalGap }) =>
+        isNumber(contentHorizontalGap) ? pixelsToRem(contentHorizontalGap) : 0};
+    padding-inline: calc(var(--content-wrapper-padding-inline) * 0.5);
+    margin-top: calc(var(--content-wrapper-margin-top) * 0.5);
+
+    ${({ contentAlignInline, contentAlignInlineBreakpoint }) =>
         contentAlignInline
             ? `
                   ${
@@ -23,12 +24,13 @@ export const ContentWrapperContainer = styled.div<ContentWrapperContainerProps>`
                           : media.md
                   } {
                       display: flex;
-                      column-gap: ${
-                          isNumber(contentHorizontalGap)
-                              ? pixelsToRem(contentHorizontalGap)
-                              : 0
-                      };
+                      column-gap: var(--content-wrapper-content-horizontal-gap);
                   }
               `
-            : ``}
+            : null}
+
+    ${media.sm} {
+        padding-inline: var(--content-wrapper-padding-inline);
+        margin-top: var(--content-wrapper-margin-top);
+    }
 `;
