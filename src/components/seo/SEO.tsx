@@ -1,4 +1,4 @@
-import Img from '@/assets/images/header.png';
+import SEOImg from '@/assets/images/seo-image.jpg';
 import useSiteMetadata from '@/hooks/useSiteMetadata';
 import { SEOProps, PageType } from './SEO.types';
 
@@ -22,7 +22,7 @@ const SEO: React.FC<SEOProps> = ({
         title: title || defaultTitle,
         description: description || defaultDescription,
         keywords: keywords?.toString() || defaultKeywords.toString(),
-        image: img || Img,
+        image: img || SEOImg,
         url: `${siteUrl}${pathname || ``}`,
         type: type || PageType.WEBSITE,
     };

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, layout } from '@/styles/Mixins';
+import { media, layout } from '@/styles/mixins';
 
 export const ProjectsContainer = styled.section`
     scroll-margin-top: 3rem;

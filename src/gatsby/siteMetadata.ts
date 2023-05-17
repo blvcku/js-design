@@ -1,8 +1,16 @@
 const siteMetadata: Queries.SiteMetadata = {
     title: `JS Design`,
     siteUrl: `https://www.yourdomain.tld`,
-    description: `Description`,
-    keywords: [`key`, `words`],
+    description: `JS Design portfolio website. Jacek Szczypior Graphic Designer.`,
+    keywords: [
+        `JS Design`,
+        `Graphic Designer`,
+        `Logo`,
+        `Logo Designer`,
+        `Web Designer`,
+        `Leaflet`,
+        `Mockup`,
+    ],
     facebook: {
         url: `https://www.facebook.com/jacek.szczypior.77`,
         name: `Jacek Szczypior`,

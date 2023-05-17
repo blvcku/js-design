@@ -4,7 +4,7 @@ import {
     TypographyNameProps,
     TypographyWeightProps,
 } from './Typography.types';
-import { media, createFontFace, pixelsToRem } from '@/styles/Mixins';
+import { media, createFontFace, pixelsToRem } from '@/styles/mixins';
 import isNumber from '@/helpers/isNumber';
 
 export const TypographyContainer = styled.section<TypographyContainerProps>`

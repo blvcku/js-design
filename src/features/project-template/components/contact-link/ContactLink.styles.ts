@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { media } from '@/styles/Mixins';
+import { media } from '@/styles/mixins';
 
 export const ContactLinkContainer = styled.section`
     padding-inline: 1rem;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, pixelsToRem } from '@/styles/Mixins';
+import { media, pixelsToRem } from '@/styles/mixins';
 import { RichTextContainerProps } from './RichText.types';
 import isNumber from '@/helpers/isNumber';
 

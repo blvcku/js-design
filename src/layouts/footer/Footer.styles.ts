@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, layout } from '@/styles/Mixins';
+import { media, layout } from '@/styles/mixins';
 import Wave from '@/assets/images/wave-footer.inline.svg';
 import SocialLinks from '@/components/unstyled-components/social-links/SocialLinks';
 import {

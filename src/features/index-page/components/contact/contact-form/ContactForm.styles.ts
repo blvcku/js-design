@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '@/styles/Mixins';
+import { media } from '@/styles/mixins';
 
 export const ContactFormContainer = styled.form`
     margin-top: 2rem;
