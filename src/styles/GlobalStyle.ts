@@ -1,20 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
+import colors from './colors';
 
 export const globalFontSizePercentage = 100;
 
 const GlobalStyle = createGlobalStyle`
     :root{
-        --color-primary-100: #FFFFFF;
-        --color-primary-200: #EBF2F2;
-
-        --color-secondary-100: #397374;
-        --color-secondary-200: #127369;
-        --color-secondary-300: #2c3e40;
-        --color-secondary-400: #10403B;
-
-        --color-tertiary-100: #051917;
-
-        --color-error: #b91c1c;
+        --color-primary-100: ${colors.primary[100]};
+        --color-primary-200: ${colors.primary[200]};
+        --color-secondary-100: ${colors.secondary[100]};
+        --color-secondary-200: ${colors.secondary[200]};
+        --color-secondary-300: ${colors.secondary[300]};
+        --color-secondary-400: ${colors.secondary[400]};
+        --color-tertiary-100: ${colors.tertiary[100]};
+        --color-error-100: ${colors.error[100]};
 
         --fs-xs: .9rem;
         --fs-sm: 1.1rem;

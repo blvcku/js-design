@@ -1,4 +1,5 @@
 import siteMetadata from '../../../gatsby/siteMetadata';
+import colors from '../../../styles/colors';
 
 const gatsbyPluginManifest = {
     resolve: `gatsby-plugin-manifest`,
@@ -9,8 +10,8 @@ const gatsbyPluginManifest = {
         start_url: `/`,
         lang: `en`,
         display: `standalone`,
-        background_color: `#EBF2F2`,
-        theme_color: `#EBF2F2`,
+        background_color: colors.primary[200],
+        theme_color: colors.primary[200],
         theme_color_in_head: false,
         icon: `src/assets/favicon.jpg`,
     },

@@ -1,6 +1,7 @@
 import SEOImg from '@/assets/images/seo-image.jpg';
 import useSiteMetadata from '@/hooks/useSiteMetadata';
 import { SEOProps, PageType } from './SEO.types';
+import colors from '@/styles/colors';
 
 const SEO: React.FC<SEOProps> = ({
     title,
@@ -38,7 +39,7 @@ const SEO: React.FC<SEOProps> = ({
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <meta name="theme-color" content="#EBF2F2" />
+            <meta name="theme-color" content={colors.primary[200]} />
             <meta name="color-scheme" content="light" />
             <meta property="og:title" content={seo.title} />
             <meta property="og:type" content={seo.type} />

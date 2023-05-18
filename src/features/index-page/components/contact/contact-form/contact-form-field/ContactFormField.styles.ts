@@ -41,7 +41,7 @@ export const ContactFormFieldElement = styled.input<ContactFormFieldElementProps
         showError
             ? css`
                   &:invalid {
-                      border: 1px solid var(--color-error);
+                      border: 1px solid var(--color-error-100);
                       & ~ p {
                           display: block;
                       }
@@ -57,5 +57,5 @@ export const ContactFormFieldError = styled.p`
     position: absolute;
     top: calc(100% + 0.2rem);
     left: 0;
-    color: var(--color-error);
+    color: var(--color-error-100);
 `;
