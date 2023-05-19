@@ -7,7 +7,7 @@ import {
     NotFoundPageSubTitle,
     NotFoundPageTitle,
     NotFoundPageLink,
-} from './styles/index.styles';
+} from './styles/404Page.styles';
 
 const NotFoundPage: React.FC<PageProps> = () => {
     return (

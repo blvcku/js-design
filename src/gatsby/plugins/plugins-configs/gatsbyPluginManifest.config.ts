@@ -1,4 +1,4 @@
-import siteMetadata from '../../../gatsby/siteMetadata';
+import siteMetadata from '../../siteMetadata';
 import colors from '../../../styles/colors';
 
 const gatsbyPluginManifest = {

@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 // export default
-export { default, Head } from '@/features/project-template';
+export { default, Head } from '@/features/project-template/ProjectTemplate';
 
 export const query = graphql`
     query Project($slug: String) {

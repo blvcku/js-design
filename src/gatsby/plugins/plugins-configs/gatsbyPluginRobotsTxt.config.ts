@@ -1,4 +1,4 @@
-import siteMetadata from '../../../gatsby/siteMetadata';
+import siteMetadata from '../../siteMetadata';
 
 const gatsbyPluginRobotsTxt = {
     resolve: `gatsby-plugin-robots-txt`,

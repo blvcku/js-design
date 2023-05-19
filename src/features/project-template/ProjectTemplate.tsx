@@ -4,7 +4,7 @@ import { getSrc } from 'gatsby-plugin-image';
 import {
     ProjectTemplateContentContainer,
     ProjectTemplateArticle,
-} from './styles/index.styles';
+} from './styles/ProjectTemplate.styles';
 import SEO from '@/components/seo/SEO';
 import { PageType } from '@/components/seo/SEO.types';
 import Header from './components/header/Header';

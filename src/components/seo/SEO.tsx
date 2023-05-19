@@ -30,6 +30,7 @@ const SEO: React.FC<SEOProps> = ({
 
     return (
         <>
+            <html lang="en" />
             <title>{title}</title>
             <meta name="description" content={seo.description} />
             <meta name="keywords" content={seo.keywords} />

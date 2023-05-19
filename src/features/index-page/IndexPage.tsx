@@ -1,5 +1,5 @@
 import { PageProps, HeadProps } from 'gatsby';
-import { IndexPageContentContainer } from './styles/indes.styles';
+import { IndexPageContentContainer } from './styles/IndexPage.styles';
 import SEO from '@/components/seo/SEO';
 import Header from './components/header/Header';
 import About from './components/about/About';

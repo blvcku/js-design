@@ -1,2 +1,2 @@
 // export default
-export { default, Head } from '@/features/index-page';
+export { default, Head } from '@/features/index-page/IndexPage';

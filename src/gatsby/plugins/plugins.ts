@@ -1,12 +1,12 @@
 import type { GatsbyConfig } from 'gatsby';
-import gatsbySourceContentful from './plugins-configs/gatsby-source-contentful.config';
-import gatsbySourceFilesystem from './plugins-configs/gatsby-source-filesystem.config';
-import gatsbyPluginReactSvg from './plugins-configs/gatsby-plugin-react-svg.config';
-import gatsbyPluginSharp from './plugins-configs/gatsby-plugin-sharp.config';
-import gatsbyPluginSitemap from './plugins-configs/gatsby-plugin-sitemap.config';
-import gatsbyPluginRobotsTxt from './plugins-configs/gatsby-plugin-robots-txt';
-import gatsbyOmniFontLoader from './plugins-configs/gatsby-omni-font-loader';
-import gatsbyPluginManifest from './plugins-configs/gatsby-plugin-manifest';
+import gatsbySourceContentful from './plugins-configs/gatsbySourceContentful.config';
+import gatsbySourceFilesystem from './plugins-configs/gatsbySourceFilesystem.config';
+import gatsbyPluginReactSvg from './plugins-configs/gatsbyPluginReactSvg.config';
+import gatsbyPluginSharp from './plugins-configs/gatsbyPluginSharp.config';
+import gatsbyPluginSitemap from './plugins-configs/gatsbyPluginSitemap.config';
+import gatsbyPluginRobotsTxt from './plugins-configs/gatsbyPluginRobotsTxt.config';
+import gatsbyOmniFontLoader from './plugins-configs/gatsbyOmniFontLoader.config';
+import gatsbyPluginManifest from './plugins-configs/gatsbyPluginManifest.config';
 
 const plugins: GatsbyConfig['plugins'] = [
     gatsbySourceContentful,
