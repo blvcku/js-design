@@ -1,13 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { SiteMetadataProviderProps } from './SiteMetadataContext.types';
 
 export const SiteMetadataContext = React.createContext<
     Queries.SiteMetadata | undefined
 >(undefined);
-
-interface SiteMetadataProviderProps {
-    children: React.ReactNode;
-}
 
 const SiteMetadataProvider: React.FC<SiteMetadataProviderProps> = ({
     children,

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { SiteMetadataContext } from '@/contexts/SiteMetadataContext';
+import { SiteMetadataContext } from '@/contexts/site-metadata-context/SiteMetadataContext';
 
 const useSiteMetadata = () => {
     const context = useContext(SiteMetadataContext);

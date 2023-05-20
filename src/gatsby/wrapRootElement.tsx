@@ -1,9 +1,14 @@
 import { GatsbySSR, GatsbyBrowser } from 'gatsby';
-import SiteMetadataProvider from '@/contexts/SiteMetadataContext';
+import SiteMetadataProvider from '@/contexts/site-metadata-context/SiteMetadataContext';
+import PageTransitionProvider from '@/contexts/page-transition-context/PageTransitionContext';
 
 const wrapRootElement: GatsbySSR['wrapRootElement'] &
     GatsbyBrowser['wrapRootElement'] = ({ element }) => {
-    return <SiteMetadataProvider>{element}</SiteMetadataProvider>;
+    return (
+        <PageTransitionProvider>
+            <SiteMetadataProvider>{element}</SiteMetadataProvider>
+        </PageTransitionProvider>
+    );
 };
 
 export default wrapRootElement;

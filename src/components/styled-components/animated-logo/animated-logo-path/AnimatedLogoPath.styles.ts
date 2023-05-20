@@ -3,13 +3,18 @@ import { AnimatedLogoPathElementProps } from './AnimatedLogoPath.types';
 
 export const AnimatedLogoPathElement = styled.path<AnimatedLogoPathElementProps>`
     stroke-dasharray: ${({ pathLength }) => pathLength};
-    stroke-dashoffset: ${({ toggleAnimation, pathLength }) =>
-        toggleAnimation ? 0 : pathLength};
+    stroke-dashoffset: ${({ pathLength }) => pathLength};
     ${({ toggleAnimation, durationMs, delayMs }) =>
         toggleAnimation
             ? css`
-                  transition: stroke-dashoffset ${durationMs}ms ease-out
-                      ${delayMs}ms;
+                  animation: animated-logo-path-draw ${durationMs}ms ease-out
+                      ${delayMs}ms forwards;
               `
             : null}
+
+    @keyframes animated-logo-path-draw {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
 `;

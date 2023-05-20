@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import ImageRenderer from '@/components/unstyled-components/image-renderer/ImageRenderer';
+import TransitionLink from '@/components/unstyled-components/transition-link/TransitionLink';
 
 export const ProjectContainer = styled.li``;
 
@@ -9,7 +9,7 @@ export const ProjectImageContainer = styled.div`
     transition: transform 0.2s ease;
 `;
 
-export const ProjectLink = styled(Link)`
+export const ProjectTransitionLink = styled(TransitionLink)`
     box-shadow: var(--shadow-3);
     display: block;
     border-radius: 15px;

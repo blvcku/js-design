@@ -4,6 +4,7 @@ import { DefaultLayoutProps } from './DefaultLayout.types';
 import { DefaultLayoutContainer } from './DefaultLayout.styles';
 import Navigation from '../navigation/Navigation';
 import Footer from '../footer/Footer';
+import PageTransition from '../page-transition/PageTransition';
 
 const Layout: React.FC<DefaultLayoutProps> = ({ children }) => {
     return (
@@ -11,6 +12,7 @@ const Layout: React.FC<DefaultLayoutProps> = ({ children }) => {
             <Navigation />
             {children}
             <Footer />
+            <PageTransition />
             <GlobalStyle />
         </DefaultLayoutContainer>
     );
