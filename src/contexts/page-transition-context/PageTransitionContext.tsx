@@ -23,7 +23,7 @@ const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({
 
     useEffect(() => {
         if (transitionState === PageTransitionState.INACTIVE) return;
-        let timeout: NodeJS.Timeout;
+        let timeout: NodeJS.Timeout | undefined;
         switch (transitionState) {
             case PageTransitionState.ENTRY:
                 timeout = setTimeout(() => {

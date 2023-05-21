@@ -1,5 +1,5 @@
 import SEOImg from '@/assets/images/seo-image.jpg';
-import useSiteMetadata from '@/hooks/useSiteMetadata';
+import useSiteMetadata from '@/contexts/site-metadata-context/useSiteMetadata';
 import { SEOProps, PageType } from './SEO.types';
 import colors from '@/styles/colors';
 

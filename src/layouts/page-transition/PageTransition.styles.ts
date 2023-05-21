@@ -6,7 +6,7 @@ export const PageTransitionContainer = styled.div<PageTransitionContainerProps>`
     width: 100%;
     height: 100%;
     position: fixed;
-    background: var(--color-primary-200);
+    background: var(--color-primary-100);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,10 +38,10 @@ export const PageTransitionContainer = styled.div<PageTransitionContainerProps>`
 
     @keyframes page-transition-container-slide-out {
         from {
-            transform: translateY(0);
+            opacity: 1;
         }
         to {
-            transform: translateY(-100%);
+            opacity: 0;
         }
     }
 `;

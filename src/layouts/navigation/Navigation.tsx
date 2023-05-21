@@ -9,21 +9,7 @@ import {
     NavigationLogoSmall,
     NavigationLogo,
 } from './Navigation.styles';
-
-const navigationLinks = [
-    {
-        name: `Contact`,
-        to: `/#contact`,
-    },
-    {
-        name: `Projects`,
-        to: `/#projects`,
-    },
-    {
-        name: `Home Page`,
-        to: `/`,
-    },
-];
+import navigationLinks from './Navigation.config';
 
 const Navigation: React.FC = () => {
     const [expanded, setExpanded] = useState(false);

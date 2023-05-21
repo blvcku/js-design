@@ -1,6 +1,6 @@
 import { PageTransitionContainer } from './PageTransition.styles';
 import pageTransitionConfig from './PageTransition.config';
-import usePageTransition from '@/hooks/usePageTransition';
+import usePageTransition from '@/contexts/page-transition-context/usePageTransition';
 import { PageTransitionState } from '@/contexts/page-transition-context/PageTransitionContext.types';
 import AnimatedLogo from '@/components/styled-components/animated-logo/AnimatedLogo';
 

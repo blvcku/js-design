@@ -1,7 +1,7 @@
 import FacebookLogo from '@/assets/icons/facebook-logo.inline.svg';
 import InstagramLogo from '@/assets/icons/instagram-logo.inline.svg';
 import BehanceLogo from '@/assets/icons/behance-logo.inline.svg';
-import useSiteMetadata from '@/hooks/useSiteMetadata';
+import useSiteMetadata from '@/contexts/site-metadata-context/useSiteMetadata';
 import {
     SocialLink,
     SocialLinkContainer,

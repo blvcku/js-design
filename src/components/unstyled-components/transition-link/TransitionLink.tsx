@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import { TransitionLinkProps } from './TransitionLink.types';
-import usePageTransition from '@/hooks/usePageTransition';
+import usePageTransition from '@/contexts/page-transition-context/usePageTransition';
 
 const TransitionLink: React.FC<TransitionLinkProps> = ({
     children,
