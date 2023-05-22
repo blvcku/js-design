@@ -1,7 +1,7 @@
 import { ProjectProps } from './Project.types';
 import {
     ProjectContainer,
-    ProjectTransitionLink,
+    ProjectPageTransitionLink,
     ProjectImageContainer,
     ProjectImageRenderer,
 } from './Project.styles';
@@ -9,11 +9,11 @@ import {
 const Project: React.FC<ProjectProps> = ({ slug, title, thumb }) => {
     return (
         <ProjectContainer aria-label={title}>
-            <ProjectTransitionLink to={`/projects/${slug}`}>
+            <ProjectPageTransitionLink to={`/projects/${slug}`}>
                 <ProjectImageContainer>
                     <ProjectImageRenderer image={thumb} alt={title} />
                 </ProjectImageContainer>
-            </ProjectTransitionLink>
+            </ProjectPageTransitionLink>
         </ProjectContainer>
     );
 };

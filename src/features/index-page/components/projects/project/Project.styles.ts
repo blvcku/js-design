@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ImageRenderer from '@/components/unstyled-components/image-renderer/ImageRenderer';
-import TransitionLink from '@/components/unstyled-components/transition-link/TransitionLink';
+import PageTransitionLink from '@/components/unstyled-components/page-transition-link/PageTransitionLink';
 
 export const ProjectContainer = styled.li``;
 
@@ -9,7 +9,7 @@ export const ProjectImageContainer = styled.div`
     transition: transform 0.2s ease;
 `;
 
-export const ProjectTransitionLink = styled(TransitionLink)`
+export const ProjectPageTransitionLink = styled(PageTransitionLink)`
     box-shadow: var(--shadow-3);
     display: block;
     border-radius: 15px;
