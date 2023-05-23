@@ -3,8 +3,8 @@ import { AnimatedLogoPathElement } from './AnimatedLogoPath.styles';
 import { AnimatedLogoPathProps } from './AnimatedLogoPath.types';
 
 const AnimatedLogoPath: React.FC<AnimatedLogoPathProps> = ({
-    durationMs,
-    delayMs,
+    animationDurationMs,
+    animationDelayMs,
     toggleAnimation,
     ...pathProps
 }) => {
@@ -12,8 +12,8 @@ const AnimatedLogoPath: React.FC<AnimatedLogoPathProps> = ({
 
     return (
         <AnimatedLogoPathElement
-            durationMs={durationMs}
-            delayMs={delayMs}
+            animationDurationMs={animationDurationMs}
+            animationDelayMs={animationDelayMs}
             toggleAnimation={toggleAnimation}
             pathLength={pathLength}
             ref={(ref) => {

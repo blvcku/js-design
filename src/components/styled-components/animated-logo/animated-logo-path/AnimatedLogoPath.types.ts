@@ -1,7 +1,7 @@
 export interface AnimatedLogoPathElementProps
     extends React.SVGAttributes<SVGPathElement> {
-    durationMs: number;
-    delayMs: number;
+    animationDurationMs: number;
+    animationDelayMs: number;
     toggleAnimation: boolean;
     pathLength: number;
 }

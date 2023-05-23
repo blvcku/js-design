@@ -1,11 +1,18 @@
-import { PageTransitionContainer } from './PageTransition.styles';
+import {
+    PageTransitionContainer,
+    PageTransitionAnimatedLogo,
+    PageTransitionAnimatedLogoContainer,
+} from './PageTransition.styles';
 import pageTransitionConfig from './PageTransition.config';
 import usePageTransition from '@/contexts/page-transition-context/usePageTransition';
 import { PageTransitionState } from '@/contexts/page-transition-context/PageTransitionContext.types';
-import AnimatedLogo from '@/components/styled-components/animated-logo/AnimatedLogo';
 
-const { entryDurationMs, animationDurationMs, exitDurationMs } =
-    pageTransitionConfig;
+const {
+    entryDurationMs,
+    containerAnimationDurationMs,
+    logoAnimationDurationMs,
+    exitDurationMs,
+} = pageTransitionConfig;
 
 const PageTransition: React.FC = () => {
     const { transitionState } = usePageTransition();
@@ -18,11 +25,18 @@ const PageTransition: React.FC = () => {
             entryDurationMs={entryDurationMs}
             exitDurationMs={exitDurationMs}
         >
-            <AnimatedLogo
-                toggleAnimation={true}
-                delayMs={entryDurationMs}
-                durationMs={animationDurationMs}
-            />
+            <PageTransitionAnimatedLogoContainer
+                animationDurationMs={containerAnimationDurationMs}
+                animationDelayMs={entryDurationMs}
+            >
+                <PageTransitionAnimatedLogo
+                    toggleAnimation={true}
+                    animationDelayMs={
+                        entryDurationMs + containerAnimationDurationMs
+                    }
+                    animationDurationMs={logoAnimationDurationMs}
+                />
+            </PageTransitionAnimatedLogoContainer>
         </PageTransitionContainer>
     );
 };

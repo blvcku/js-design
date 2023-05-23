@@ -5,12 +5,13 @@ import paths from './AnimatedLogo.config';
 
 const AnimatedLogo: React.FC<AnimatedLogoProps> = ({
     toggleAnimation,
-    durationMs,
-    delayMs,
+    animationDurationMs,
+    animationDelayMs,
     ...containerProps
 }) => {
-    const durationsMs = paths.map(
-        ({ durationPercentage }) => durationMs * durationPercentage,
+    const animationDurationsMs = paths.map(
+        ({ animationDurationPercentage }) =>
+            animationDurationMs * animationDurationPercentage,
     );
 
     return (
@@ -23,10 +24,10 @@ const AnimatedLogo: React.FC<AnimatedLogoProps> = ({
                 <AnimatedLogoPath
                     key={index}
                     {...path}
-                    durationMs={durationsMs[index]}
-                    delayMs={
-                        delayMs +
-                        durationsMs
+                    animationDurationMs={animationDurationsMs[index]}
+                    animationDelayMs={
+                        animationDelayMs +
+                        animationDurationsMs
                             .slice(0, index)
                             .reduce((acc, curr) => acc + curr, 0)
                     }

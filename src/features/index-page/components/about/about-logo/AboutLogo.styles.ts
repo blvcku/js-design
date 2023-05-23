@@ -8,7 +8,7 @@ export const AboutLogoContainer = styled.div<AboutLogoContainerProps>`
     left: 50%;
     transform: translateX(-50%)
         scale(${({ toggleAnimation }) => (toggleAnimation ? 1 : 0)});
-    transition: transform ${({ durationMs }) => durationMs}ms
+    transition: transform ${({ animationDurationMs }) => animationDurationMs}ms
         cubic-bezier(0.17, 0.67, 0.45, 1.63);
     background: var(--color-primary-200);
     box-shadow: var(--shadow-1);

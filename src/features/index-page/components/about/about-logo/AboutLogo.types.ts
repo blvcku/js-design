@@ -1,4 +1,10 @@
 export interface AboutLogoContainerProps {
-    durationMs: number;
+    animationDurationMs: number;
     toggleAnimation: boolean;
+}
+
+export interface AboutLogoConfig {
+    containerAnimationDurationMs: number;
+    logoAnimationDurationMs: number;
+    observerOptions: IntersectionObserverInit;
 }

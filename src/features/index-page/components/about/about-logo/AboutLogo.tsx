@@ -1,23 +1,26 @@
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import { AboutLogoContainer, AboutLogoAnimatedLogo } from './AboutLogo.styles';
+import aboutLogoConfig from './AboutLogo.config';
+
+const {
+    containerAnimationDurationMs,
+    logoAnimationDurationMs,
+    observerOptions,
+} = aboutLogoConfig;
 
 const AboutLogo: React.FC = () => {
-    const { elementRef, isVisible } = useIntersectionObserver({
-        threshold: 1,
-        rootMargin: `-20%`,
-    });
-    const containerAnimationDurationMs = 700;
+    const { elementRef, isVisible } = useIntersectionObserver(observerOptions);
 
     return (
         <AboutLogoContainer
             toggleAnimation={isVisible}
-            durationMs={containerAnimationDurationMs}
+            animationDurationMs={containerAnimationDurationMs}
             ref={elementRef}
         >
             <AboutLogoAnimatedLogo
                 toggleAnimation={isVisible}
-                durationMs={800}
-                delayMs={containerAnimationDurationMs}
+                animationDurationMs={logoAnimationDurationMs}
+                animationDelayMs={containerAnimationDurationMs}
             />
         </AboutLogoContainer>
     );

@@ -1,9 +1,13 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import colors from './colors';
+
+interface GlobalStyleProps {
+    lockScroll: boolean;
+}
 
 export const globalFontSizePercentage = 100;
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     :root{
         --color-primary-100: ${colors.primary[100]};
         --color-primary-200: ${colors.primary[200]};
@@ -35,6 +39,18 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         font-size: ${globalFontSizePercentage}%;
         color:var(--color-tertiary-100);
+
+        @supports (scrollbar-gutter: stable) {
+            scrollbar-gutter: stable;
+        }
+
+        ${({ lockScroll }) =>
+            lockScroll
+                ? css`
+                      height: 100%;
+                      overflow-y: hidden;
+                  `
+                : null}
     }
 
     *, *::before, *::after{

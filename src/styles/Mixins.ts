@@ -47,7 +47,7 @@ export const layout = {
             }
         `,
         viewportResponsive: css`
-            max-width: max(calc(100vw) - 460px, 1350px);
+            max-width: max(calc(100vw) - 450px, 1350px);
             width: 100%;
             padding-inline: 1rem;
             margin-inline: auto;

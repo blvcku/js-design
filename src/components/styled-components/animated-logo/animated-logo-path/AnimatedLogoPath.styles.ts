@@ -4,11 +4,11 @@ import { AnimatedLogoPathElementProps } from './AnimatedLogoPath.types';
 export const AnimatedLogoPathElement = styled.path<AnimatedLogoPathElementProps>`
     stroke-dasharray: ${({ pathLength }) => pathLength};
     stroke-dashoffset: ${({ pathLength }) => pathLength};
-    ${({ toggleAnimation, durationMs, delayMs }) =>
+    ${({ toggleAnimation, animationDurationMs, animationDelayMs }) =>
         toggleAnimation
             ? css`
-                  animation: animated-logo-path-draw ${durationMs}ms ease-out
-                      ${delayMs}ms forwards;
+                  animation: animated-logo-path-draw ${animationDurationMs}ms
+                      ease-out ${animationDelayMs}ms forwards;
               `
             : null}
 
