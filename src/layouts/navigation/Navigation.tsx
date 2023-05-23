@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import NavigationHamburger from './navigation-hamburger/NavigationHamburger';
 import NavigationCollapseButton from './navigation-collapse-button/NavigationCollapseButton';
 import {
@@ -10,6 +10,7 @@ import {
     NavigationLogo,
 } from './Navigation.styles';
 import navigationLinks from './Navigation.config';
+import useClickOutside from '@/hooks/useClickOutside';
 
 const Navigation: React.FC = () => {
     const [expanded, setExpanded] = useState(false);
@@ -19,28 +20,33 @@ const Navigation: React.FC = () => {
         setExpanded(true);
     };
 
-    const handleCollapse: React.MouseEventHandler<
-        HTMLButtonElement | HTMLAnchorElement
-    > = () => {
+    const handleCollapse = () => {
         setExpanded(false);
     };
+
+    const elementRef = useRef<HTMLDivElement>(null);
+    useClickOutside(elementRef, handleCollapse);
 
     return (
         <NavigationContainer>
             <NavigationLogoContainer to="/">
                 <NavigationLogoSmall />
             </NavigationLogoContainer>
-            <nav>
-                <NavigationHamburger
-                    expanded={expanded}
-                    handleExpand={handleExpand}
+            <NavigationHamburger
+                expanded={expanded}
+                handleExpand={handleExpand}
+            />
+            <NavigationExpandableContent ref={elementRef} expanded={expanded}>
+                <NavigationCollapseButton handleCollapse={handleCollapse} />
+                <NavigationLinksStyled
+                    linkProps={{
+                        tabIndex: expanded ? 0 : -1,
+                        onClick: handleCollapse,
+                    }}
+                    links={navigationLinks}
                 />
-                <NavigationExpandableContent expanded={expanded}>
-                    <NavigationCollapseButton handleCollapse={handleCollapse} />
-                    <NavigationLinksStyled links={navigationLinks} />
-                    <NavigationLogo />
-                </NavigationExpandableContent>
-            </nav>
+                <NavigationLogo />
+            </NavigationExpandableContent>
         </NavigationContainer>
     );
 };

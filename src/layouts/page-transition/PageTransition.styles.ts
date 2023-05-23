@@ -6,6 +6,7 @@ export const PageTransitionContainer = styled.div<PageTransitionContainerProps>`
     width: 100%;
     height: 100%;
     position: fixed;
+    z-index: var(--z-index-page-transition);
     background: var(--color-primary-100);
     display: flex;
     align-items: center;

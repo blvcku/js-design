@@ -29,6 +29,9 @@ const GlobalStyle = createGlobalStyle`
         --shadow-4: inset 0px 3px 6px #00000010;
         --shadow-5: 0px 3px 6px #0000007A;
 
+        --z-index-navigation: 100;
+        --z-index-page-transition: 200;
+
         font-family: 'Montserrat', sans-serif;
         font-size: ${globalFontSizePercentage}%;
         color:var(--color-tertiary-100);

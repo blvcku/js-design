@@ -7,7 +7,7 @@ import NavigationLinks from '@/components/unstyled-components/navigation-links/N
 import { NavigationLink } from '@/components/unstyled-components/navigation-links/NavigationLinks.styles';
 import { NavigationExpandableContentProps } from './Navigation.types';
 
-export const NavigationContainer = styled.div`
+export const NavigationContainer = styled.nav`
     ${layout.large.viewportResponsive}
     display: flex;
     justify-content: flex-end;
@@ -38,7 +38,7 @@ export const NavigationExpandableContent = styled.div<NavigationExpandableConten
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: var(--z-index-navigation);
     max-width: min(300px, calc(100vw - 1rem));
     width: 100%;
     display: flex;
