@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, layout } from '@/styles/mixins-temp';
+import { media, layout } from '@/styles/mixins';
 
 export const HeaderContainer = styled.header`
     ${layout.standard.default}

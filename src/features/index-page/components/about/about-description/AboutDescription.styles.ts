@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '@/styles/mixins-temp';
+import { media } from '@/styles/mixins';
 
 export const AboutDescriptionContainer = styled.section`
     padding-inline: 1rem;

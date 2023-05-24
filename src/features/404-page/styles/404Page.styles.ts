@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { media, layout } from '@/styles/mixins-temp';
+import { media, layout } from '@/styles/mixins';
 
 export const NotFoundPageContentContainer = styled.main`
     ${layout.standard.default}

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import Logo from '@/assets/icons/logo.inline.svg';
 import LogoThick from '@/assets/icons/logo-thick.inline.svg';
-import { media, layout } from '@/styles/mixins-temp';
+import { media, layout } from '@/styles/mixins';
 import NavigationLinks from '@/components/unstyled-components/navigation-links/NavigationLinks';
 import { NavigationLink } from '@/components/unstyled-components/navigation-links/NavigationLinks.styles';
 import { NavigationExpandableContentProps } from './Navigation.types';

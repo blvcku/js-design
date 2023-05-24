@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ContentWrapperContainerProps } from './ContentWrapper.types';
 import isNumber from '@/helpers/isNumber';
-import { media, pixelsToRem } from '@/styles/mixins-temp';
+import { media, pixelsToRem } from '@/styles/mixins';
 
 export const ContentWrapperContainer = styled.div<ContentWrapperContainerProps>`
     --content-wrapper-margin-top: ${({ contentMarginTop }) =>

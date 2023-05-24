@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, pixelsToRem } from '@/styles/mixins-temp';
+import { media, pixelsToRem } from '@/styles/mixins';
 import { ColorsContainerProps, ColorBoxProps } from './Colors.types';
 import isNumber from '@/helpers/isNumber';
 

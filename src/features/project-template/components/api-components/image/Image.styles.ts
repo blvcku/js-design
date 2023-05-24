@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { ImageContainerProps } from './Image.types';
 import isNumber from '@/helpers/isNumber';
-import { media, pixelsToRem } from '@/styles/mixins-temp';
+import { media, pixelsToRem } from '@/styles/mixins';
 
 export const ImageContainer = styled.div<ImageContainerProps>`
     --image-margin-top: ${({ marginTop }) =>
