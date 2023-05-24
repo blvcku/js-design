@@ -3,22 +3,38 @@ import {
     ContactFormFieldElement,
     ContactFormFieldError,
 } from './ContactFormField.styles';
-import { ContactFormFieldProps } from './ContactFormField.types';
+import {
+    ContactFormFieldChangeEvent,
+    ContactFormFieldProps,
+} from './ContactFormField.types';
+import useContactForm from '../contact-form-context/useContactForm';
+import { ContactFormAnswers } from '../ContactForm.types';
 
-const ContactFormField: React.FC<ContactFormFieldProps> = (props) => {
-    const { onChange, value, errorMessage, showError, ...fieldProps } = props;
+const ContactFormField = <T extends ContactFormAnswers>({
+    errorMessage,
+    name,
+    ...fieldProps
+}: ContactFormFieldProps<T>) => {
+    const { showInputErrors, handleChangeAnswer, answers } = useContactForm();
+
+    const handleChangeEvent = (e: ContactFormFieldChangeEvent) => {
+        handleChangeAnswer(e, name);
+    };
 
     return (
         <ContactFormFieldContainer>
             <ContactFormFieldElement
-                showError={showError}
-                onChange={onChange}
-                value={value}
+                showInputError={showInputErrors}
+                onChange={handleChangeEvent}
+                value={answers[name]}
+                name={name}
                 {...fieldProps}
             />
-            <ContactFormFieldError role="alert">
-                {errorMessage}
-            </ContactFormFieldError>
+            {showInputErrors ? (
+                <ContactFormFieldError role="alert">
+                    {errorMessage}
+                </ContactFormFieldError>
+            ) : null}
         </ContactFormFieldContainer>
     );
 };

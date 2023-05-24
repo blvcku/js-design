@@ -8,7 +8,9 @@ import {
 } from './Contact.styles';
 import ContactForm from './contact-form/ContactForm';
 import { sendMessage } from './Contact.service';
-import contactFields from './Contact.config';
+import contactConfig from './Contact.config';
+
+const { successMessage, errorMessage, contactFields } = contactConfig;
 
 const Contact: React.FC = () => {
     return (
@@ -21,9 +23,9 @@ const Contact: React.FC = () => {
                 </ContactSubHeading>
                 <ContactForm
                     fields={contactFields}
-                    succesMessage="Message sent successfully!"
-                    errorMessage="Failed to send your message, try again later."
-                    sendMessage={sendMessage}
+                    successMessage={successMessage}
+                    errorMessage={errorMessage}
+                    submitCallback={sendMessage}
                 />
             </ContactFormContainer>
             <ContactImageContainer>

@@ -37,8 +37,8 @@ export const ContactFormFieldElement = styled.input<ContactFormFieldElementProps
         resize: none;
         height: 12rem;
     }
-    ${({ showError }) =>
-        showError
+    ${({ showInputError }) =>
+        showInputError
             ? css`
                   &:invalid {
                       border: 1px solid var(--color-error-100);

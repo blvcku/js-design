@@ -1,14 +1,11 @@
 import { ContactFormField } from './contact-form-field/ContactFormField.types';
-import { ContactFormFinalPageMessages } from './contact-form-final-page/ContactFormFinalPage.types';
+import { ContactFormPageProps } from './contact-form-page/ContactFormPage.types';
 
-export type ContactFormFields<MessageFields> = Array<
-    Array<ContactFormField<MessageFields>>
->;
+export type ContactFormFields<T> = ContactFormField<T>[][];
 
-export interface ContactFormProps<MessageFields>
-    extends ContactFormFinalPageMessages {
+export interface ContactFormProps<MessageFields> extends ContactFormPageProps {
     fields: ContactFormFields<MessageFields>;
-    sendMessage: (data: MessageFields) => Promise<void>;
+    submitCallback: (data: MessageFields) => Promise<void>;
 }
 
 export interface ContactFormAnswers {

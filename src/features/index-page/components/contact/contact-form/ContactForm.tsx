@@ -1,99 +1,53 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { ContactFormContainer } from './ContactForm.styles';
-import { ContactFormProps, ContactFormAnswers } from './ContactForm.types';
-import { ContactFormFieldChangeEvent } from './contact-form-field/ContactFormField.types';
+import { ContactFormAnswers, ContactFormProps } from './ContactForm.types';
 import ProgressBar from '@/components/styled-components/progress-bar/ProgressBar';
-import ContactFormButtons from './contact-form-buttons/ContactFormButtons';
-import ContactFormField from './contact-form-field/ContactFormField';
-import ContactFormFinalPage from './contact-form-final-page/ContactFormFinalPage';
+import ContactFormNavigation from './contact-form-navigation/ContactFormNavigation';
+import ContactFormProvider, {
+    ContactFormContext,
+} from './contact-form-context/ContactFormContext';
+import ContactFormPage from './contact-form-page/ContactFormPage';
 
-const ContactForm = <MessageFields extends ContactFormAnswers>({
-    succesMessage,
+const ContactForm = <T extends ContactFormAnswers>({
+    successMessage,
     errorMessage,
     fields,
-    sendMessage,
-}: ContactFormProps<MessageFields>) => {
-    const [currentPage, setCurrentPage] = useState(0);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
-    const [showErrors, setShowErrors] = useState(false);
-    const [answers, setAnswers] = useState(
-        fields.reduce((acc, fieldsPage) => {
-            fieldsPage.forEach(({ name }) => (acc = { ...acc, [name]: `` }));
-            return acc;
-        }, {}) as MessageFields,
-    );
+    submitCallback,
+}: ContactFormProps<T>) => {
     const formRef = useRef<HTMLFormElement>(null);
-    const numberOfPages = fields.length;
-    const currentPageFields = fields[currentPage];
-
-    const handleChangeAnswer = (
-        e: ContactFormFieldChangeEvent,
-        name: string,
-    ) => {
-        e.preventDefault();
-        setAnswers((prev) => ({ ...prev, [name]: e.target.value }));
-    };
-
-    const handleSendMessage: React.FormEventHandler<HTMLFormElement> = async (
-        e,
-    ) => {
-        e.preventDefault();
-        setLoading(true);
-        try {
-            await sendMessage(answers);
-        } catch (error) {
-            setError(true);
-        } finally {
-            setCurrentPage(numberOfPages);
-            setLoading(false);
-        }
-    };
 
     return (
-        <ContactFormContainer
-            noValidate
-            onInvalid={(e) => e.preventDefault()}
-            onSubmit={handleSendMessage}
-            ref={formRef}
+        <ContactFormProvider
+            submitCallback={submitCallback}
+            numberOfPages={fields.length}
+            fields={fields}
+            formRef={formRef}
         >
-            <ProgressBar
-                currentPage={currentPage}
-                numberOfPages={numberOfPages}
-            />
-            {currentPage === numberOfPages ? (
-                <ContactFormFinalPage
-                    succesMessage={succesMessage}
-                    errorMessage={errorMessage}
-                    error={error}
-                />
-            ) : (
-                <>
-                    {currentPageFields.map((field) => {
-                        const { name } = field;
-                        return (
-                            <ContactFormField
-                                key={name}
-                                {...field}
-                                value={answers[name]}
-                                onChange={(e: ContactFormFieldChangeEvent) =>
-                                    handleChangeAnswer(e, name)
-                                }
-                                showError={showErrors}
+            <ContactFormContext.Consumer>
+                {(data) => {
+                    if (!data) return null;
+                    const { currentPage, handleSubmit, numberOfPages } = data;
+                    return (
+                        <ContactFormContainer
+                            noValidate
+                            onInvalid={(e) => e.preventDefault()}
+                            onSubmit={handleSubmit}
+                            ref={formRef}
+                        >
+                            <ProgressBar
+                                currentPage={currentPage}
+                                numberOfPages={numberOfPages}
                             />
-                        );
-                    })}
-                    <ContactFormButtons
-                        currentPage={currentPage}
-                        setCurrentPage={setCurrentPage}
-                        numberOfPages={numberOfPages}
-                        loading={loading}
-                        formRef={formRef}
-                        setShowErrors={setShowErrors}
-                    />
-                </>
-            )}
-        </ContactFormContainer>
+                            <ContactFormPage
+                                successMessage={successMessage}
+                                errorMessage={errorMessage}
+                            />
+                            <ContactFormNavigation />
+                        </ContactFormContainer>
+                    );
+                }}
+            </ContactFormContext.Consumer>
+        </ContactFormProvider>
     );
 };
 

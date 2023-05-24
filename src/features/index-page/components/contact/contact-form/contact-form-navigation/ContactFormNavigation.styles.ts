@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Button from '@/components/styled-components/button/Button';
 
-export const ContactFormButtonsWrapper = styled.div`
+export const ContactFormNavigationContainer = styled.nav`
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -11,10 +11,12 @@ export const ContactFormButtonsWrapper = styled.div`
     flex-grow: 1;
 `;
 
-export const ContactFormButtonsButton = styled(Button)`
+export const ContactFormNavigationButton = styled(Button)`
     --button-background-color: var(--color-secondary-400);
 `;
 
-export const ContactFormButtonsButtonNarrow = styled(ContactFormButtonsButton)`
+export const ContactFormNavigationButtonNarrow = styled(
+    ContactFormNavigationButton,
+)`
     --button-padding-inline: 1.4rem;
 `;

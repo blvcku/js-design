@@ -3,9 +3,9 @@ export enum ContactFormFieldVariant {
     TEXT_AREA = `textarea`,
 }
 
-export interface ContactFormInput<FieldNames extends string>
+export interface ContactFormInput<TName extends string>
     extends React.InputHTMLAttributes<HTMLInputElement> {
-    name: FieldNames;
+    name: TName;
     type: React.HTMLInputTypeAttribute;
     placeholder: string;
     errorMessage: string;
@@ -13,29 +13,25 @@ export interface ContactFormInput<FieldNames extends string>
     as: ContactFormFieldVariant.INPUT;
 }
 
-export interface ContactFormTextArea<FieldNames extends string>
+export interface ContactFormTextArea<TName extends string>
     extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-    name: FieldNames;
+    name: TName;
     placeholder: string;
     errorMessage: string;
     maxLength: number;
     as: ContactFormFieldVariant.TEXT_AREA;
 }
 
-export type ContactFormField<MessageFields> =
-    | ContactFormInput<Extract<keyof MessageFields, string>>
-    | ContactFormTextArea<Extract<keyof MessageFields, string>>;
+export type ContactFormField<T> =
+    | ContactFormInput<Extract<keyof T, string>>
+    | ContactFormTextArea<Extract<keyof T, string>>;
 
 export type ContactFormFieldChangeEvent = React.ChangeEvent<
     HTMLInputElement | HTMLTextAreaElement
 >;
 
 export interface ContactFormFieldElementProps {
-    showError: boolean;
+    showInputError: boolean;
 }
 
-export type ContactFormFieldProps = ContactFormField<any> &
-    ContactFormFieldElementProps & {
-        onChange: (e: ContactFormFieldChangeEvent) => void;
-        value: string;
-    };
+export type ContactFormFieldProps<T> = ContactFormField<T>;
