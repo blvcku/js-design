@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, layout } from '@/styles/mixins';
+import { media, layout } from '@/styles/mixins-temp';
 import SocialLinks from '@/components/unstyled-components/social-links/SocialLinks';
 import { SocialLinkIcon } from '@/components/unstyled-components/social-links/SocialLinks.styles';
 

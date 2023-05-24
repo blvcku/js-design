@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media, pixelsToRem } from '@/styles/mixins';
+import { media, pixelsToRem } from '@/styles/mixins-temp';
 import isNumber from '@/helpers/isNumber';
 import ArrowIcon from '@/assets/icons/arrow-vertical.inline.svg';
 import {

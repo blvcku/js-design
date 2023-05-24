@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { ContactFormFieldElementProps } from './ContactFormField.types';
-import { media } from '@/styles/mixins';
+import { media } from '@/styles/mixins-temp';
 
 export const ContactFormFieldContainer = styled.label`
     --contact-form-field-padding-horizontal: 0;

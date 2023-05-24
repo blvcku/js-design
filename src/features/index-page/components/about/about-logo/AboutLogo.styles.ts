@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '@/styles/mixins';
+import { media } from '@/styles/mixins-temp';
 import { AboutLogoContainerProps } from './AboutLogo.types';
 import AnimatedLogo from '@/components/styled-components/animated-logo/AnimatedLogo';
 
