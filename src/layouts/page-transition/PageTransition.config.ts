@@ -8,7 +8,7 @@ const pageTransitionConfig: PageTransitionConfig = {
     containerAnimationDurationMs,
     logoAnimationDurationMs,
     animationDurationMs: containerAnimationDurationMs + logoAnimationDurationMs,
-    exitDurationMs: 1500,
+    exitDurationMs: 1000,
 };
 
 export default pageTransitionConfig;

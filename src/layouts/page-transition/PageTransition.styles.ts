@@ -34,19 +34,19 @@ export const PageTransitionContainer = styled.div<PageTransitionContainerProps>`
 
     @keyframes page-transition-container-slide-in {
         from {
-            transform: translateY(100%);
+            transform: translateX(-100%);
         }
         to {
-            transform: translateY(0);
+            transform: translateX(0);
         }
     }
 
     @keyframes page-transition-container-slide-out {
         from {
-            transform: translateY(0);
+            transform: translateX(0);
         }
         to {
-            transform: translateY(-100%);
+            transform: translateX(100%);
         }
     }
 `;
@@ -61,6 +61,9 @@ export const PageTransitionAnimatedLogoContainer = styled.div<PageTransitionAnim
     border-radius: 50%;
     transform: scale(0);
     box-shadow: var(--shadow-1);
+    transition: opacity ${({ exitDurationMs }) => exitDurationMs * 0.3}ms ease;
+    opacity: ${({ transitionState }) =>
+        transitionState === PageTransitionState.EXIT ? 0 : 1};
     ${({ animationDurationMs, animationDelayMs }) => css`
         animation: page-transition-animated-logo-container-pop-out
             ${animationDurationMs}ms cubic-bezier(0.17, 0.67, 0.45, 1.63)

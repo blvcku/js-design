@@ -28,6 +28,8 @@ const PageTransition: React.FC = () => {
             <PageTransitionAnimatedLogoContainer
                 animationDurationMs={containerAnimationDurationMs}
                 animationDelayMs={entryDurationMs}
+                exitDurationMs={exitDurationMs}
+                transitionState={transitionState}
             >
                 <PageTransitionAnimatedLogo
                     toggleAnimation={true}

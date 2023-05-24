@@ -17,4 +17,6 @@ export interface PageTransitionContainerProps {
 export interface PageTransitionAnimatedLogoContainerProps {
     animationDurationMs: number;
     animationDelayMs: number;
+    exitDurationMs: number;
+    transitionState: PageTransitionState;
 }
