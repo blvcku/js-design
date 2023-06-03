@@ -1,4 +1,4 @@
-import { PageProps, HeadProps } from 'gatsby';
+import type { PageProps, HeadProps } from 'gatsby';
 import { IndexPageContentContainer } from './styles/IndexPage.styles';
 import SEO from '@/components/seo/SEO';
 import Header from './components/header/Header';

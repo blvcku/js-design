@@ -2,7 +2,7 @@ import {
     NavigationCollapseButtonContainer,
     NavigationCollapseButtonLine,
 } from './NavigationCollapseButton.styles';
-import { NavigationCollapseButtonProps } from './NavigationCollapseButton.types';
+import type { NavigationCollapseButtonProps } from './NavigationCollapseButton.types';
 
 const NavigationCollapseButton: React.FC<NavigationCollapseButtonProps> = ({
     handleCollapse,

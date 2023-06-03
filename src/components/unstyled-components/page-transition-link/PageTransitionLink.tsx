@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { PageTransitionLinkProps } from './PageTransitionLink.types';
+import type { PageTransitionLinkProps } from './PageTransitionLink.types';
 import usePageTransition from '@/contexts/page-transition-context/usePageTransition';
 
 const PageTransitionLink: React.FC<PageTransitionLinkProps> = ({

@@ -1,4 +1,4 @@
-import { ContactFormFields } from './contact-form/ContactForm.types';
+import type { ContactFormFields } from './contact-form/ContactForm.types';
 
 export type ContactMessage = {
     name: string;

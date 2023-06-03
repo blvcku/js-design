@@ -1,6 +1,7 @@
 import SEOImg from '@/assets/images/seo-image.jpg';
 import useSiteMetadata from '@/contexts/site-metadata-context/useSiteMetadata';
-import { SEOProps, PageType } from './SEO.types';
+import type { SEOProps } from './SEO.types';
+import { PageType } from './SEO.types';
 import colors from '@/styles/colors';
 
 const SEO: React.FC<SEOProps> = ({

@@ -1,5 +1,5 @@
 import { AnimatedLogoContainer } from './AnimatedLogo.styles';
-import { AnimatedLogoProps } from './AnimatedLogo.types';
+import type { AnimatedLogoProps } from './AnimatedLogo.types';
 import AnimatedLogoPath from './animated-logo-path/AnimatedLogoPath';
 import paths from './AnimatedLogo.config';
 

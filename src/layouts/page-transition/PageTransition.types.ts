@@ -1,4 +1,4 @@
-import { PageTransitionState } from '@/contexts/page-transition-context/PageTransitionContext.types';
+import type { PageTransitionState } from '@/contexts/page-transition-context/PageTransitionContext.types';
 
 export interface PageTransitionConfig {
     entryDurationMs: number;

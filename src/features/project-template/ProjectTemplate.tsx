@@ -1,5 +1,5 @@
-import React from 'react';
-import { PageProps, HeadProps } from 'gatsby';
+import type React from 'react';
+import type { PageProps, HeadProps } from 'gatsby';
 import { getSrc } from 'gatsby-plugin-image';
 import {
     ProjectTemplateContentContainer,

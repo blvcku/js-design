@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ContentWrapperContainerProps } from './ContentWrapper.types';
+import type { ContentWrapperContainerProps } from './ContentWrapper.types';
 import isNumber from '@/helpers/isNumber';
 import { media, pixelsToRem } from '@/styles/mixins';
 

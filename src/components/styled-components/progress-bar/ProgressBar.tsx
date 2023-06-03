@@ -4,7 +4,7 @@ import {
     ProgressBarIndicatorsContainer,
     ProgressBarIndicator,
 } from './ProgressBar.styles';
-import { ProgressBarProps } from './ProgressBar.types';
+import type { ProgressBarProps } from './ProgressBar.types';
 
 const ProgressBar: React.FC<ProgressBarProps> = ({
     currentPage,

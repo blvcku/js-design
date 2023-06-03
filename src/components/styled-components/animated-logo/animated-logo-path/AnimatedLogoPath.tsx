@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatedLogoPathElement } from './AnimatedLogoPath.styles';
-import { AnimatedLogoPathProps } from './AnimatedLogoPath.types';
+import type { AnimatedLogoPathProps } from './AnimatedLogoPath.types';
 
 const AnimatedLogoPath: React.FC<AnimatedLogoPathProps> = ({
     animationDurationMs,

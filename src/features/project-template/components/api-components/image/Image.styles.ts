@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ImageContainerProps } from './Image.types';
+import type { ImageContainerProps } from './Image.types';
 import isNumber from '@/helpers/isNumber';
 import { media, pixelsToRem } from '@/styles/mixins';
 

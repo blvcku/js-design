@@ -2,7 +2,7 @@ import {
     NavButtonContainer,
     NavButtonActiveIndicator,
 } from './NavButton.styles';
-import { NavButtonProps } from './NavButton.types';
+import type { NavButtonProps } from './NavButton.types';
 
 const NavButton: React.FC<NavButtonProps> = (props) => {
     const { children, active, onClick, ...buttonProps } = props;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { media, pixelsToRem } from '@/styles/mixins';
-import { RichTextContainerProps } from './RichText.types';
+import type { RichTextContainerProps } from './RichText.types';
 import isNumber from '@/helpers/isNumber';
 
 export const RichTextContainer = styled.section<RichTextContainerProps>`

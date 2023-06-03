@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ContactFormFieldElementProps } from './ContactFormField.types';
+import type { ContactFormFieldElementProps } from './ContactFormField.types';
 import { media } from '@/styles/mixins';
 
 export const ContactFormFieldContainer = styled.label`

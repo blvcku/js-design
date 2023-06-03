@@ -3,7 +3,7 @@ import {
     NavigationHamburgerWrapper,
     NavigationHamburgerLine,
 } from './NavigationHamburger.styles';
-import { NavigationHamburgerProps } from './NavigationHamburger.types';
+import type { NavigationHamburgerProps } from './NavigationHamburger.types';
 
 const NavigationHamburger: React.FC<NavigationHamburgerProps> = ({
     handleExpand,

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { AnimatedLogoContainerProps } from './AnimatedLogo.types';
+import type { AnimatedLogoContainerProps } from './AnimatedLogo.types';
 
 export const AnimatedLogoContainer = styled.svg<AnimatedLogoContainerProps>`
     --animated-logo-width: 5rem;

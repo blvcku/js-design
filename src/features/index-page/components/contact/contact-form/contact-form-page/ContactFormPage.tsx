@@ -4,7 +4,7 @@ import {
     ContactFormPageMessage,
 } from './ContactFormPage.styles';
 import useContactForm from '../contact-form-context/useContactForm';
-import { ContactFormPageProps } from './ContactFormPage.types';
+import type { ContactFormPageProps } from './ContactFormPage.types';
 
 const ContactFormPage: React.FC<ContactFormPageProps> = ({
     errorMessage,

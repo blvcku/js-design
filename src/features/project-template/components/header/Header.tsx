@@ -3,7 +3,7 @@ import {
     HeaderImageWrapper,
     HeaderTitle,
 } from './Header.styles';
-import { HeaderProps } from './Header.types';
+import type { HeaderProps } from './Header.types';
 import ImageRenderer from '@/components/unstyled-components/image-renderer/ImageRenderer';
 
 const Header: React.FC<HeaderProps> = ({ banner, title }) => {

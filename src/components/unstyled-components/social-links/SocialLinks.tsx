@@ -9,7 +9,7 @@ import {
     SocialLinkIcon,
     SocialLinksContainer,
 } from './SocialLinks.styles';
-import { SocialLinkObjects, SocialLinkProps } from './SocialLinks.types';
+import type { SocialLinkObjects, SocialLinkProps } from './SocialLinks.types';
 
 const SocialLinks: React.FC<SocialLinkProps> = ({
     displayName,

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import {
+import type {
     PageTransitionAnimatedLogoContainerProps,
     PageTransitionContainerProps,
 } from './PageTransition.types';

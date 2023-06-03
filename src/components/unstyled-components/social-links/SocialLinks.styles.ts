@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SocialLinksContainerProps } from './SocialLinks.types';
+import type { SocialLinksContainerProps } from './SocialLinks.types';
 
 export const SocialLinksContainer = styled.ul<SocialLinksContainerProps>``;
 

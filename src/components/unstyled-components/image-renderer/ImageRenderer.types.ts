@@ -1,4 +1,4 @@
-import { IGatsbyImageData, GatsbyImageProps } from 'gatsby-plugin-image';
+import type { IGatsbyImageData, GatsbyImageProps } from 'gatsby-plugin-image';
 
 export interface ImageRendererImage {
     gatsbyImageData: Nullable<IGatsbyImageData>;

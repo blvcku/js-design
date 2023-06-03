@@ -1,5 +1,5 @@
-import { ContactFormField } from './contact-form-field/ContactFormField.types';
-import { ContactFormPageProps } from './contact-form-page/ContactFormPage.types';
+import type { ContactFormField } from './contact-form-field/ContactFormField.types';
+import type { ContactFormPageProps } from './contact-form-page/ContactFormPage.types';
 
 export type ContactFormFields<T> = ContactFormField<T>[][];
 

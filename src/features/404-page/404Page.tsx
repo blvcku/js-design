@@ -1,4 +1,4 @@
-import { PageProps, HeadProps } from 'gatsby';
+import type { PageProps, HeadProps } from 'gatsby';
 import SEO from '@/components/seo/SEO';
 import { PageType } from '@/components/seo/SEO.types';
 import {

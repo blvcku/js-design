@@ -1,4 +1,4 @@
-import { ProjectProps } from './Project.types';
+import type { ProjectProps } from './Project.types';
 import {
     ProjectContainer,
     ProjectPageTransitionLink,

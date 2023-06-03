@@ -12,7 +12,13 @@
         "es6": true,
         "node": true
     },
-    "plugins": ["react", "jsx-a11y", "prettier", "@typescript-eslint", "styled-components-a11y"],
+    "plugins": [
+        "react",
+        "jsx-a11y",
+        "prettier",
+        "@typescript-eslint",
+        "styled-components-a11y"
+    ],
     "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
@@ -22,7 +28,7 @@
         "plugin:styled-components-a11y/recommended"
     ],
     "rules": {
-        "no-undef":"off",
+        "no-undef": "off",
         "prettier/prettier": "error",
         "react/prop-types": "off",
         "react/jsx-filename-extension": "off",
@@ -49,7 +55,13 @@
                 "avoidEscape": true
             }
         ],
-        "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }]
+        "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
+        "@typescript-eslint/consistent-type-imports": [
+            "error",
+            {
+                "disallowTypeAnnotations": false
+            }
+        ]
     },
     "settings": {
         "import/resolver": {

@@ -1,4 +1,4 @@
-import { AboutLogoConfig } from './AboutLogo.types';
+import type { AboutLogoConfig } from './AboutLogo.types';
 
 const aboutLogoConfig: AboutLogoConfig = {
     containerAnimationDurationMs: 700,

@@ -1,4 +1,4 @@
-import { ContactSendMessage } from './Contact.types';
+import type { ContactSendMessage } from './Contact.types';
 import objectToFormData from '@/helpers/objectToFormData';
 
 export const sendMessage: ContactSendMessage = async (data) => {

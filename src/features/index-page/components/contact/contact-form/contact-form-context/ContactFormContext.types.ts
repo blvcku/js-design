@@ -1,17 +1,16 @@
-import { ContactFormFields } from '../ContactForm.types';
-import { ContactFormFieldChangeEvent } from '../contact-form-field/ContactFormField.types';
+import type { ContactFormFields } from '../ContactForm.types';
+import type { ContactFormFieldChangeEvent } from '../contact-form-field/ContactFormField.types';
 
 export type ContactFormChangeAnswerHandler = (
     e: ContactFormFieldChangeEvent,
     name: string,
 ) => void;
 
-export interface ContactFormProviderProps<T> {
+export interface ContactFormProviderProps<T> extends React.PropsWithChildren {
     numberOfPages: number;
     submitCallback: (data: T) => Promise<void>;
     fields: ContactFormFields<T>;
     formRef: React.RefObject<HTMLFormElement>;
-    children: React.ReactNode;
 }
 
 export interface ContactFormContextData<T>

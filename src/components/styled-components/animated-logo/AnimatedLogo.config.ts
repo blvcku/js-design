@@ -1,4 +1,4 @@
-import { AnimatedLogoPathObjects } from './AnimatedLogo.types';
+import type { AnimatedLogoPathObjects } from './AnimatedLogo.types';
 
 const paths: AnimatedLogoPathObjects = [
     {

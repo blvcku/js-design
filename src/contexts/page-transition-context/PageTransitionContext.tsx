@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
-import {
-    PageTransitionContextData,
-    PageTransitionProviderProps,
-    PageTransitionState,
-} from './PageTransitionContext.types';
+import type { PageTransitionContextData } from './PageTransitionContext.types';
+import { PageTransitionState } from './PageTransitionContext.types';
 import pageTransitionConfig from '@/layouts/page-transition/PageTransition.config';
 
 const { entryDurationMs, animationDurationMs, exitDurationMs } =
@@ -14,7 +11,7 @@ export const PageTransitionContext = React.createContext<
     PageTransitionContextData | undefined
 >(undefined);
 
-const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({
+const PageTransitionProvider: React.FC<React.PropsWithChildren> = ({
     children,
 }) => {
     const [transitionState, setTransitionState] = useState(

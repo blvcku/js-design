@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { ContactFormContainer } from './ContactForm.styles';
-import { ContactFormAnswers, ContactFormProps } from './ContactForm.types';
+import type { ContactFormAnswers, ContactFormProps } from './ContactForm.types';
 import ProgressBar from '@/components/styled-components/progress-bar/ProgressBar';
 import ContactFormNavigation from './contact-form-navigation/ContactFormNavigation';
 import ContactFormProvider, {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { media, pixelsToRem } from '@/styles/mixins';
 import isNumber from '@/helpers/isNumber';
 import ArrowIcon from '@/assets/icons/arrow-vertical.inline.svg';
-import {
+import type {
     AccordionContainerProps,
     AccordionContentContainerProps,
 } from './Accordion.types';

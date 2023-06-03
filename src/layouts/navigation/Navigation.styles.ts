@@ -5,7 +5,7 @@ import LogoThick from '@/assets/icons/logo-thick.inline.svg';
 import { media, layout } from '@/styles/mixins';
 import NavigationLinks from '@/components/unstyled-components/navigation-links/NavigationLinks';
 import { NavigationLink } from '@/components/unstyled-components/navigation-links/NavigationLinks.styles';
-import { NavigationExpandableContentProps } from './Navigation.types';
+import type { NavigationExpandableContentProps } from './Navigation.types';
 
 export const NavigationContainer = styled.nav`
     ${layout.large.viewportResponsive}

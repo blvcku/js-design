@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { AnimatedLogoPathElementProps } from './AnimatedLogoPath.types';
+import type { AnimatedLogoPathElementProps } from './AnimatedLogoPath.types';
 
 export const AnimatedLogoPathElement = styled.path<AnimatedLogoPathElementProps>`
     stroke-dasharray: ${({ pathLength }) => pathLength};

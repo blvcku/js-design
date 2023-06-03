@@ -1,4 +1,4 @@
-import { PageTransitionConfig } from './PageTransition.types';
+import type { PageTransitionConfig } from './PageTransition.types';
 
 const containerAnimationDurationMs = 700;
 const logoAnimationDurationMs = 800;

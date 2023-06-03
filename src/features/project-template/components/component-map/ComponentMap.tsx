@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMapProps } from './ComponentMap.types';
+import type { ComponentMapProps } from './ComponentMap.types';
 import Typography from '../api-components/typography/Typography';
 import RichText from '../api-components/rich-text/RichText';
 import Accordion from '../api-components/accordion/Accordion';

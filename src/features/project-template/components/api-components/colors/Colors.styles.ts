@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { media, pixelsToRem } from '@/styles/mixins';
-import { ColorsContainerProps, ColorBoxProps } from './Colors.types';
+import type { ColorsContainerProps, ColorBoxProps } from './Colors.types';
 import isNumber from '@/helpers/isNumber';
 
 export const ColorsContainer = styled.ul<ColorsContainerProps>`

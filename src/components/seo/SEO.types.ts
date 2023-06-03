@@ -3,12 +3,11 @@ export enum PageType {
     ARTICLE = `article`,
 }
 
-export interface SEOProps {
+export interface SEOProps extends React.PropsWithChildren {
     title?: Nullable<string>;
     description?: Nullable<string>;
     keywords?: Nullable<ReadonlyArray<Nullable<string>>>;
     img?: Nullable<string>;
     pathname?: Nullable<string>;
     type?: PageType;
-    children?: React.ReactNode;
 }

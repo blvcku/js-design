@@ -1,5 +1,5 @@
 import { getImage, GatsbyImage } from 'gatsby-plugin-image';
-import {
+import type {
     ImageRendererProps,
     ImageRendererPropsWithAlt,
 } from './ImageRenderer.types';

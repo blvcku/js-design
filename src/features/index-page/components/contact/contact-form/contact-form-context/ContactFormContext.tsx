@@ -1,10 +1,10 @@
 import React, { useReducer } from 'react';
-import {
+import type {
     ContactFormChangeAnswerHandler,
     ContactFormContextData,
     ContactFormProviderProps,
 } from './ContactFormContext.types';
-import { ContactFormAnswers } from '../ContactForm.types';
+import type { ContactFormAnswers } from '../ContactForm.types';
 
 export const ContactFormContext = React.createContext<
     ContactFormContextData<ContactFormAnswers> | undefined

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { NavButtonContainerProps } from './NavButton.types';
+import type { NavButtonContainerProps } from './NavButton.types';
 
 export const NavButtonActiveIndicator = styled.span`
     width: var(--button-indicator-size);

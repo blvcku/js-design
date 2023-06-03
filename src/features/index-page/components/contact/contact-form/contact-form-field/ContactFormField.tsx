@@ -3,12 +3,12 @@ import {
     ContactFormFieldElement,
     ContactFormFieldError,
 } from './ContactFormField.styles';
-import {
+import type {
     ContactFormFieldChangeEvent,
     ContactFormFieldProps,
 } from './ContactFormField.types';
 import useContactForm from '../contact-form-context/useContactForm';
-import { ContactFormAnswers } from '../ContactForm.types';
+import type { ContactFormAnswers } from '../ContactForm.types';
 
 const ContactFormField = <T extends ContactFormAnswers>({
     errorMessage,

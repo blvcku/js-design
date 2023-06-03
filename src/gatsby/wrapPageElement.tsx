@@ -1,5 +1,5 @@
 import DefaultLayout from '@/layouts/default-layout/DefaultLayout';
-import { GatsbySSR, GatsbyBrowser } from 'gatsby';
+import type { GatsbySSR, GatsbyBrowser } from 'gatsby';
 
 const wrapPageElement: GatsbySSR['wrapPageElement'] &
     GatsbyBrowser['wrapPageElement'] = ({ element }) => {

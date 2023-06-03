@@ -1,4 +1,4 @@
-import { ContactConfig } from './Contact.types';
+import type { ContactConfig } from './Contact.types';
 import { ContactFormFieldVariant } from './contact-form/contact-form-field/ContactFormField.types';
 
 const contactConfig: ContactConfig = {

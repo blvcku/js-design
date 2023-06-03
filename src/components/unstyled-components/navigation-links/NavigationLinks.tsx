@@ -3,7 +3,7 @@ import {
     NavigationLinkContainer,
     NavigationLinksContainer,
 } from './NavigationLinks.styles';
-import { NavigationLinksProps } from './NavigationLinks.types';
+import type { NavigationLinksProps } from './NavigationLinks.types';
 
 const NavigationLinks: React.FC<NavigationLinksProps> = ({
     links,

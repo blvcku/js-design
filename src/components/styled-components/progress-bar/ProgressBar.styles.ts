@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ProgressBarContainerProps } from './ProgressBar.types';
+import type { ProgressBarContainerProps } from './ProgressBar.types';
 
 export const ProgressBarWrapper = styled.div`
     --progress-bar-horizontal-padding: 14%;

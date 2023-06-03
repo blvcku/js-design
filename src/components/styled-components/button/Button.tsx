@@ -1,5 +1,5 @@
 import { ButtonContainer, ButtonLoadingWheel } from './Button.styles';
-import { ButtonProps } from './Button.types';
+import type { ButtonProps } from './Button.types';
 
 const Button: React.FC<ButtonProps> = (props) => {
     const { children, disabled, onClick, ...buttonProps } = props;
