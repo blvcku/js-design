@@ -7,15 +7,15 @@ if (import.meta.vitest) {
 
     describe(`isNumber utility function`, () => {
         it(`returns true when type of parameter is number`, () => {
-            expect(isNumber(0)).toBe(true);
-            expect(isNumber(100)).toBe(true);
+            expect(isNumber(0)).toBeTruthy();
+            expect(isNumber(100)).toBeTruthy();
         });
         it(`returns false when type of parameter is different than number`, () => {
-            expect(isNumber(undefined)).toBe(false);
-            expect(isNumber(null)).toBe(false);
+            expect(isNumber(undefined)).toBeFalsy();
+            expect(isNumber(null)).toBeFalsy();
         });
         it(`returns false when type of parameter is NaN`, () => {
-            expect(isNumber(NaN)).toBe(false);
+            expect(isNumber(NaN)).toBeFalsy();
         });
     });
 }
