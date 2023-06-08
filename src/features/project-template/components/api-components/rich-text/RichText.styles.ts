@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { media, pixelsToRem } from '@/styles/mixins';
 import type { RichTextContainerProps } from './RichText.types';
-import isNumber from '@/helpers/isNumber';
+import isNumber from '@/utils/isNumber';
 
 export const RichTextContainer = styled.section<RichTextContainerProps>`
     --rich-text-margin-top: ${({ marginTop }) =>

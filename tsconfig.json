@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "lib": ["dom", "esnext"],
+        "lib": ["dom", "esnext", "DOM.Iterable"],
         "jsx": "react-jsx",
         "module": "esnext",
         "moduleResolution": "node",
@@ -13,8 +13,14 @@
         "paths": {
             "@/*": ["./src/*"]
         },
-        "types": ["node", "@testing-library/jest-dom"]
+        "types": ["node", "@testing-library/jest-dom", "vitest/importMeta"]
     },
     "exclude": ["node_modules"],
-    "include": ["./src/**/*", "./gatsby-config.ts", "./gatsby-node.ts", "./gatsby-ssr.tsx", "./gatsby-browser.tsx"]
+    "include": [
+        "./src/**/*",
+        "./gatsby-config.ts",
+        "./gatsby-node.ts",
+        "./gatsby-ssr.tsx",
+        "./gatsby-browser.tsx"
+    ]
 }

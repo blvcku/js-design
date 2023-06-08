@@ -5,7 +5,7 @@ import type {
     TypographyWeightProps,
 } from './Typography.types';
 import { media, createFontFace, pixelsToRem } from '@/styles/mixins';
-import isNumber from '@/helpers/isNumber';
+import isNumber from '@/utils/isNumber';
 
 export const TypographyContainer = styled.section<TypographyContainerProps>`
     --typography-margin-top: ${({ marginTop }) =>

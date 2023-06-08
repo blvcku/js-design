@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import type { ContentWrapperContainerProps } from './ContentWrapper.types';
-import isNumber from '@/helpers/isNumber';
+import isNumber from '@/utils/isNumber';
 import { media, pixelsToRem } from '@/styles/mixins';
 
 export const ContentWrapperContainer = styled.div<ContentWrapperContainerProps>`

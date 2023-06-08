@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import type { IdeaContainerProps } from './Idea.types';
-import isNumber from '@/helpers/isNumber';
+import isNumber from '@/utils/isNumber';
 import { media, pixelsToRem } from '@/styles/mixins';
 import ImageRenderer from '@/components/unstyled-components/image-renderer/ImageRenderer';
 

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import type { ImageContainerProps } from './Image.types';
-import isNumber from '@/helpers/isNumber';
+import isNumber from '@/utils/isNumber';
 import { media, pixelsToRem } from '@/styles/mixins';
 
 export const ImageContainer = styled.div<ImageContainerProps>`

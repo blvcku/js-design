@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { media, pixelsToRem } from '@/styles/mixins';
-import isNumber from '@/helpers/isNumber';
+import isNumber from '@/utils/isNumber';
 import ArrowIcon from '@/assets/icons/arrow-vertical.inline.svg';
 import type {
     AccordionContainerProps,

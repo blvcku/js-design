@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { media, pixelsToRem } from '@/styles/mixins';
 import type { ColorsContainerProps, ColorBoxProps } from './Colors.types';
-import isNumber from '@/helpers/isNumber';
+import isNumber from '@/utils/isNumber';
 
 export const ColorsContainer = styled.ul<ColorsContainerProps>`
     --colors-margin-top: ${({ marginTop }) =>
