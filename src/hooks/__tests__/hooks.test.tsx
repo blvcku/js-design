@@ -68,7 +68,6 @@ describe(`useClickOutside hook`, () => {
 });
 
 describe(`useIntersectionObserver hook`, () => {
-    // Mock intersection observer
     const intersectionObserverMockData = {
         disconnect: vi.fn(),
         observe: vi.fn(),
@@ -79,6 +78,8 @@ describe(`useIntersectionObserver hook`, () => {
 
     beforeEach(() => {
         vi.clearAllMocks();
+
+        // Mock intersection observer
         const intersectionObserverMock = vi.fn((callback) => {
             intersectionObserverMockData.callback = callback;
             return intersectionObserverMockData;
