@@ -9,14 +9,15 @@ describe(`isNumber utility function`, () => {
     it(`returns false when type of parameter is different than number`, () => {
         expect(isNumber(undefined)).toBe(false);
         expect(isNumber(null)).toBe(false);
+        expect(isNumber(`str`)).toBe(false);
     });
-    it(`returns false when type of parameter is NaN`, () => {
+    it(`returns false when parameter is NaN`, () => {
         expect(isNumber(NaN)).toBe(false);
     });
 });
 
 describe(`objectToFormData utility function`, () => {
-    it(`returns correct FormData for given object as parameter`, () => {
+    it(`returns correct form data for given object as parameter`, () => {
         const testObject = {
             field: `field`,
         };

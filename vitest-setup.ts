@@ -16,5 +16,6 @@ vi.mock(`gatsby`, async () => {
         ),
         StaticQuery: vi.fn(),
         useStaticQuery: vi.fn(),
+        navigate: vi.fn(),
     };
 });

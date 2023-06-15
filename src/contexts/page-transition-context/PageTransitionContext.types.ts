@@ -4,7 +4,16 @@ export enum PageTransitionState {
     EXIT,
 }
 
+export type PageTransitionStartFunction = (
+    destination: string,
+    timings: {
+        entryDurationMs: number;
+        animationDurationMs: number;
+        exitDurationMs: number;
+    },
+) => void;
+
 export interface PageTransitionContextData {
     transitionState: PageTransitionState;
-    startTransition: (destination: string) => void;
+    startTransition: PageTransitionStartFunction;
 }

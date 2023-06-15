@@ -5,7 +5,6 @@ import {
 } from './PageTransition.styles';
 import pageTransitionConfig from './PageTransition.config';
 import usePageTransition from '@/contexts/page-transition-context/usePageTransition';
-import { PageTransitionState } from '@/contexts/page-transition-context/PageTransitionContext.types';
 
 const {
     entryDurationMs,
@@ -16,8 +15,6 @@ const {
 
 const PageTransition: React.FC = () => {
     const { transitionState } = usePageTransition();
-
-    if (transitionState === PageTransitionState.INACTIVE) return null;
 
     return (
         <PageTransitionContainer

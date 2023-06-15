@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
-import type { PageTransitionContextData } from './PageTransitionContext.types';
+import type {
+    PageTransitionContextData,
+    PageTransitionStartFunction,
+} from './PageTransitionContext.types';
 import { PageTransitionState } from './PageTransitionContext.types';
-import pageTransitionConfig from '@/layouts/page-transition/PageTransition.config';
-
-const { entryDurationMs, animationDurationMs, exitDurationMs } =
-    pageTransitionConfig;
 
 export const PageTransitionContext = React.createContext<
     PageTransitionContextData | undefined
@@ -14,6 +13,14 @@ export const PageTransitionContext = React.createContext<
 const PageTransitionProvider: React.FC<React.PropsWithChildren> = ({
     children,
 }) => {
+    const [
+        { entryDurationMs, animationDurationMs, exitDurationMs },
+        setTransitionTimings,
+    ] = useState({
+        entryDurationMs: 0,
+        animationDurationMs: 0,
+        exitDurationMs: 0,
+    });
     const [transitionState, setTransitionState] = useState(
         PageTransitionState.INACTIVE,
     );
@@ -34,13 +41,17 @@ const PageTransitionProvider: React.FC<React.PropsWithChildren> = ({
                 break;
         }
         return () => clearTimeout(timeout);
-    }, [transitionState]);
+    }, [transitionState, entryDurationMs, animationDurationMs, exitDurationMs]);
 
-    const startTransition = (destination: string) => {
+    const startTransition: PageTransitionStartFunction = (
+        destination,
+        timings,
+    ) => {
+        setTransitionTimings(timings);
         setTransitionState(PageTransitionState.ENTRY);
         setTimeout(() => {
             navigate(destination);
-        }, entryDurationMs);
+        }, timings.entryDurationMs);
     };
 
     const value = { transitionState, startTransition };

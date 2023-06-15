@@ -9,16 +9,15 @@ import { PageTransitionState } from '@/contexts/page-transition-context/PageTran
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
     const { transitionState } = usePageTransition();
+    const transitionActive = transitionState !== PageTransitionState.INACTIVE;
 
     return (
         <DefaultLayoutContainer>
             <Navigation />
             {children}
             <Footer />
-            <PageTransition />
-            <GlobalStyle
-                lockScroll={transitionState !== PageTransitionState.INACTIVE}
-            />
+            {transitionActive ? <PageTransition /> : null}
+            <GlobalStyle lockScroll={transitionActive} />
         </DefaultLayoutContainer>
     );
 };
