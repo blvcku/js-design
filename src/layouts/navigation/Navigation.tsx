@@ -36,7 +36,11 @@ const Navigation: React.FC = () => {
                 expanded={expanded}
                 handleExpand={handleExpand}
             />
-            <NavigationExpandableContent ref={elementRef} expanded={expanded}>
+            <NavigationExpandableContent
+                data-testid="navigation-expandable-content"
+                ref={elementRef}
+                expanded={expanded}
+            >
                 <NavigationCollapseButton handleCollapse={handleCollapse} />
                 <NavigationLinksStyled
                     linkProps={{
