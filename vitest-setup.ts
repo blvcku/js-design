@@ -1,6 +1,7 @@
 import { vi } from 'vitest';
 import React from 'react';
 import '@testing-library/jest-dom';
+import siteMetadata from './src/gatsby/siteMetadata';
 
 vi.mock(`gatsby`, async () => {
     const gatsby = await vi.importActual<typeof import('gatsby')>(`gatsby`);
@@ -15,7 +16,9 @@ vi.mock(`gatsby`, async () => {
             }),
         ),
         StaticQuery: vi.fn(),
-        useStaticQuery: vi.fn(),
+        useStaticQuery: vi.fn().mockImplementation(() => ({
+            site: { siteMetadata },
+        })),
         navigate: vi.fn(),
     };
 });

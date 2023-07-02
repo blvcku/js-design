@@ -7,28 +7,13 @@ import siteMetadata from '@/gatsby/siteMetadata';
 import expectToThrow from '@/__tests__/utils/expectToThrow';
 
 describe(`SiteMetadata context`, async () => {
-    const siteMetadataMockData = {
-        site: {
-            siteMetadata,
-        },
-    };
-    vi.spyOn(gatsby, `useStaticQuery`).mockImplementation(
-        () => siteMetadataMockData,
-    );
-
-    beforeEach(() => {
-        vi.clearAllMocks();
-    });
-
     describe(`useSiteMetadata hook`, () => {
         it(`returns site metadata when used within SiteMetadataProvider`, () => {
             const { result } = renderHook(() => useSiteMetadata(), {
                 wrapper: SiteMetadataProvider,
             });
 
-            expect(result.current).toEqual(
-                siteMetadataMockData.site.siteMetadata,
-            );
+            expect(result.current).toEqual(siteMetadata);
         });
 
         it(`throws error when used outside of SiteMetadataProvider`, () => {
@@ -41,11 +26,15 @@ describe(`SiteMetadata context`, async () => {
 
     it(`throws error when fetching site metadata failed`, () => {
         // mock useStaticQuery without data
-        vi.spyOn(gatsby, `useStaticQuery`).mockImplementation(() => ({}));
+        const siteMetadataMock = vi
+            .spyOn(gatsby, `useStaticQuery`)
+            .mockImplementation(() => ({}));
 
         expectToThrow(
             () => render(<SiteMetadataProvider />),
             Error(`Site metadata not found`),
         );
+
+        siteMetadataMock.mockClear();
     });
 });

@@ -37,18 +37,21 @@ describe(`Navigation component`, () => {
         expect(collapseButton).not.toBeVisible();
     });
 
-    test(`navigation content collapses when focus is lost`, () => {
+    test(`navigation content collapses when click occurs outside of the navigation`, async () => {
         const testId = `outside-element`;
         render(<div data-testid={testId}></div>);
         const outsideElement = screen.getByTestId(testId);
 
+        // Open the navigation
         fireEvent.click(hamburgerButton);
-        fireEvent.click(outsideElement);
 
-        waitFor(() => {
+        // Click outside of the navigation
+        fireEvent.mouseDown(outsideElement);
+
+        await waitFor(() => {
             expect(hamburgerButton).toHaveAttribute(`aria-expanded`, `false`);
-            expect(expandableContent).not.toBeVisible();
-            expect(collapseButton).not.toBeVisible();
         });
+        expect(expandableContent).not.toBeVisible();
+        expect(collapseButton).not.toBeVisible();
     });
 });

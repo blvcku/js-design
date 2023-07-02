@@ -21,6 +21,7 @@ const PageTransition: React.FC = () => {
             transitionState={transitionState}
             entryDurationMs={entryDurationMs}
             exitDurationMs={exitDurationMs}
+            data-testid="page-transition"
         >
             <PageTransitionAnimatedLogoContainer
                 animationDurationMs={containerAnimationDurationMs}
