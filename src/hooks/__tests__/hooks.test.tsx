@@ -75,15 +75,15 @@ describe(`useIntersectionObserver hook`, () => {
         unobserve: vi.fn(),
         callback: vi.fn(),
     };
+    const intersectionObserverMock = vi.fn((callback) => {
+        intersectionObserverMockData.callback = callback;
+        return intersectionObserverMockData;
+    });
 
     beforeEach(() => {
         vi.clearAllMocks();
 
         // Mock intersection observer
-        const intersectionObserverMock = vi.fn((callback) => {
-            intersectionObserverMockData.callback = callback;
-            return intersectionObserverMockData;
-        });
         vi.stubGlobal(`IntersectionObserver`, intersectionObserverMock);
     });
 
