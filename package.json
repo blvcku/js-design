@@ -22,7 +22,8 @@
 		"postinstall": "husky install",
 		"test": "vitest",
 		"test:watch": "vitest watch",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"migrate": "bash migrations/migrate.sh"
 	},
 	"engines": {
 		"node": ">=18.0.0"
@@ -63,6 +64,7 @@
 		"@testing-library/jest-dom": "5.16.5",
 		"@testing-library/react": "14.0.0",
 		"@testing-library/react-hooks": "8.0.1",
+		"@types/inquirer": "7.3.3",
 		"@types/node": "18.15.3",
 		"@types/react": "18.0.28",
 		"@types/react-dom": "18.0.11",
@@ -74,6 +76,7 @@
 		"babel-plugin-styled-components": "2.0.7",
 		"babel-preset-gatsby": "3.7.0",
 		"c8": "7.13.0",
+		"contentful-migration": "4.14.0",
 		"eslint": "8.36.0",
 		"eslint-config-prettier": "8.7.0",
 		"eslint-config-standard": "17.0.0",
@@ -88,6 +91,7 @@
 		"eslint-plugin-styled-components-a11y": "0.1.0",
 		"husky": "8.0.3",
 		"identity-obj-proxy": "3.0.0",
+		"inquirer": "8.0.0",
 		"jsdom": "21.1.1",
 		"lint-staged": "13.2.0",
 		"postcss-styled-syntax": "0.4.0",

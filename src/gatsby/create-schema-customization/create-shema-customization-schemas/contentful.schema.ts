@@ -1,4 +1,10 @@
 const contentfulSchema = `
+    type ContentfulAsset {
+        url: String
+        title: String 
+        description: String
+    }
+
     union ContentfulProjectContent = 
         ContentfulTypography | 
         ContentfulRichText | 
@@ -8,7 +14,7 @@ const contentfulSchema = `
         ContentfulImage |
         ContentfulContentWrapper
 
-    type ContentfulProject{
+    type ContentfulProject {
         createdAt: Date!
         title: String!
         slug: String!
