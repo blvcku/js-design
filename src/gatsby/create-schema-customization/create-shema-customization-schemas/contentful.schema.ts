@@ -16,6 +16,7 @@ const contentfulSchema = `
 
     type ContentfulProject {
         createdAt: Date!
+        updatedAt: Date!
         title: String!
         slug: String!
         category: String!
