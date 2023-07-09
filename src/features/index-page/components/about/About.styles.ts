@@ -19,4 +19,6 @@ export const AboutWaveWrapper = styled.div`
 export const AboutWave = styled.svg`
     color: var(--color-secondary-100);
     display: block;
+    position: relative;
+    z-index: -1;
 `;

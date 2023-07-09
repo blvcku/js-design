@@ -32,7 +32,7 @@ const SEO: React.FC<SEOProps> = ({
     return (
         <>
             <html lang="en" />
-            <title>{title}</title>
+            <title>{seo.title}</title>
             <meta name="description" content={seo.description} />
             <meta name="keywords" content={seo.keywords} />
             <meta charSet="UTF-8" />

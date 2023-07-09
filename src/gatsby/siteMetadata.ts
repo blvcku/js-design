@@ -1,6 +1,10 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 const siteMetadata: Queries.SiteMetadata = {
     title: `JS Design`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: process.env.SITE_URL || ``,
     description: `JS Design portfolio website. Jacek Szczypior Graphic Designer.`,
     keywords: [
         `JS Design`,

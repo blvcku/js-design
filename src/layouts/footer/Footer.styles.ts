@@ -17,6 +17,12 @@ export const FooterContainer = styled.footer`
 export const FooterWave = styled(Wave)`
     color: var(--color-secondary-100);
     display: block;
+
+    /* On some browsers there is a small gap between
+    the wave and the content so we have to fill this
+    gap by moving the element by 1 px */
+    position: relative;
+    top: 1px;
 `;
 
 export const FooterContentWrapper = styled.div`

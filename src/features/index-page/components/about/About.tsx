@@ -16,14 +16,20 @@ const About: React.FC = () => {
         <AboutContainer>
             <AboutWaveWrapper>
                 <AboutLogo />
-                <AboutWave as={FirstWave} />
+                {/* On some browsers there is a small gap between
+                the wave and the content so we have to fill this
+                gap by moving the element by 1 px */}
+                <AboutWave as={FirstWave} style={{ top: `1px` }} />
             </AboutWaveWrapper>
             <AboutContentContainer>
                 <AboutDescription />
                 <AboutBadges />
                 <AboutWorkTypes />
             </AboutContentContainer>
-            <AboutWave as={SecondWave} />
+            {/* On some browsers there is a small gap between
+            the wave and the content so we have to fill this
+            gap by moving the element by 1 px */}
+            <AboutWave as={SecondWave} style={{ bottom: `1px` }} />
         </AboutContainer>
     );
 };
