@@ -7,6 +7,7 @@ import gatsbyPluginSitemap from './plugins-configs/gatsbyPluginSitemap.config';
 import gatsbyPluginRobotsTxt from './plugins-configs/gatsbyPluginRobotsTxt.config';
 import gatsbyOmniFontLoader from './plugins-configs/gatsbyOmniFontLoader.config';
 import gatsbyPluginManifest from './plugins-configs/gatsbyPluginManifest.config';
+import gatsbyPluginOffline from './plugins-configs/gatsbyPluginOffline.config';
 
 const plugins: GatsbyConfig['plugins'] = [
     gatsbySourceContentful,
@@ -17,10 +18,10 @@ const plugins: GatsbyConfig['plugins'] = [
     gatsbyPluginSharp,
     gatsbyOmniFontLoader,
     gatsbyPluginManifest,
+    gatsbyPluginOffline,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-offline`,
 ];
 
 export default plugins;
