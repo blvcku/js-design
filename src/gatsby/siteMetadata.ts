@@ -24,7 +24,7 @@ const siteMetadata: Queries.SiteMetadata = {
         name: `js_design004`,
     },
     behance: {
-        url: `https://www.behance.net/JSDsg`,
+        url: `https://www.behance.net/JSDsgn`,
         name: `JSDsgn`,
     },
 };
