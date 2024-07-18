@@ -21,7 +21,7 @@ const useProjects = () => {
 
 const query = graphql`
     query Projects {
-        allContentfulProject(sort: { createdAt: DESC }) {
+        allContentfulProject(sort: { createdAt: ASC }) {
             groupedProjects: group(limit: 6, field: { category: SELECT }) {
                 category: fieldValue
                 projects: nodes {
