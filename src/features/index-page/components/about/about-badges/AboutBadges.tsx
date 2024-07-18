@@ -25,9 +25,7 @@ const AboutBadges: React.FC = () => {
                 </AboutBadge>
                 <AboutBadge>
                     <AboutBadgeIcon as={QuickCompletitionTimeIcon} />
-                    <AboutBadgeHeading>
-                        Quick completition time
-                    </AboutBadgeHeading>
+                    <AboutBadgeHeading>Quick completion time</AboutBadgeHeading>
                 </AboutBadge>
             </AboutBadgesList>
         </AboutBadgesContainer>
